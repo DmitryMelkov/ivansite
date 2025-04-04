@@ -93,19 +93,20 @@ input::placeholder {
   margin: 0 auto;
   padding-left: 10px;
   padding-right: 10px;
+  @media (max-width: 1280px) {
+    max-width: 688px;
+  }
 }
 .section {
   padding-top: 70px;
 }
 
 .primary-btn {
-  @include text-style(16px, 16px, 400, $black);
   background: linear-gradient($white, $white) padding-box,
     linear-gradient(90deg, $qing-dynasty-dragon 0%, $qing-dynasty-dragon 93%, rgba($qing-dynasty-dragon, 0.3) 100%)
       border-box;
   border: 1px solid transparent;
   border-radius: 10px;
-  padding: 10px 20px;
   cursor: pointer;
   transition: opacity 0.9s ease-in-out;
   @media (min-width: 1024px) {

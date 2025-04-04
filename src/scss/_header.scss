@@ -36,7 +36,7 @@
   }
   &__link {
     @include text-style(12px, 12px, 400, $black);
-    transition: color .3s ease-in-out;
+    transition: color 0.3s ease-in-out;
     @media (min-width: 1024px) {
       &:hover {
         color: $qing-dynasty-dragon;
@@ -50,7 +50,29 @@
       outline: none;
     }
   }
-  
+  &__btn {
+    padding: 10px 20px;
+    @include text-style(16px, 16px, 400, $black);
+  }
 }
 
-
+@media (max-width: 1280px) {
+  .header {
+    &__logo {
+      font-size: 25px;
+      line-height: 25px;
+    }
+    &__nav {
+      padding: 10px 25px;
+    }
+    &__link {
+      font-size: 10px;
+      line-height: 10px;
+    }
+    &__btn {
+      padding: 8px 25px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+  }
+}

@@ -1,8 +1,109 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
 .intro {
+  padding-top: 100px;
   background-image: url('../img/intro-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
   width: 100%;
-  height: 700px;
+  height: 100%;
+  min-height: 560px;
+
+  &__container {
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    position: relative;
+  }
+
+  &__title {
+    max-width: 822px;
+    @include text-style(60px, 90%, 500, $black);
+    font-family: 'Manrope', sans-serif;
+    text-align: center;
+    span {
+      color: $qing-dynasty-dragon;
+    }
+  }
+  &__descr {
+    max-width: 510px;
+    text-align: center;
+    @include text-style(16px, 20px, 400, $black);
+  }
+  &__btn {
+    padding: 15px 40px;
+    @include text-style(16px, 20px, 400, $white);
+    border-radius: 10px;
+    background: linear-gradient(90deg, $qing-dynasty-dragon 0%, rgba($qing-dynasty-dragon, 0.8) 100%) padding-box,
+      linear-gradient(90deg, $qing-dynasty-dragon 0%, $qing-dynasty-dragon 93%, rgba($qing-dynasty-dragon, 0.3) 100%);
+    transition: opacity 0.9s ease-in-out;
+    @media (min-width: 1024px) {
+      &:hover {
+        opacity: 0.4;
+      }
+    }
+    &:active {
+      opacity: 0.4;
+    }
+    &:focus-visible {
+      opacity: 0.4;
+      outline: none;
+    }
+  }
+  &__svg-1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  &__svg-2 {
+    position: absolute;
+    top: 6%;
+    right: 20%;
+    z-index: 1;
+  }
+  &__svg-3 {
+    position: absolute;
+    bottom: 7%;
+    right: 0%;
+    z-index: 1;
+  }
+}
+
+@media (max-width: 1280px) {
+  .intro {
+    padding-top: 50px;
+    min-height: 426px;
+    &__container {
+      gap: 20px;
+    }
+    &__title {
+      max-width: 658px;
+      font-size: 40px;
+    }
+    &__descr {
+      max-width: 441px;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__btn {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    &__svg-1 {
+      top: 70%;
+    }
+    &__svg-2 {
+      top: 65%;
+      right: 6%;
+    }
+    &__svg-3 {
+      display: none;
+    }
+  }
 }
