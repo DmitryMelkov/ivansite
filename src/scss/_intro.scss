@@ -59,23 +59,35 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 0;
+  }
+  &__svg-1 svg {
+    width: 98px;
+    height: 93px;
   }
   &__svg-2 {
     position: absolute;
     top: 6%;
     right: 20%;
-    z-index: 1;
+    z-index: 0;
+  }
+  &__svg-2 svg {
+    width: 109px;
+    height: 102px;
   }
   &__svg-3 {
     position: absolute;
     bottom: 7%;
     right: 0%;
-    z-index: 1;
+    z-index: 0;
+  }
+  &__svg-3 svg {
+    width: 98px;
+    height: 103px;
   }
 }
 
-@media (max-width: 1280px) {
+@media (max-width: 1279px) {
   .intro {
     padding-top: 50px;
     min-height: 426px;
@@ -106,4 +118,8 @@
       display: none;
     }
   }
+}
+
+@media (max-width: 767px) {
+
 }

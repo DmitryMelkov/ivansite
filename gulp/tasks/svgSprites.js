@@ -1,4 +1,4 @@
-import svgSprite from "gulp-svg-sprite";
+import svgSprite from 'gulp-svg-sprite';
 
 export const svgSprites = () => {
   return app.gulp
@@ -6,19 +6,39 @@ export const svgSprites = () => {
     .pipe(
       app.plugins.plumber(
         app.plugins.notify.onError({
-          title: "SVG",
-          message: "Error: <%= error.message %>",
+          title: 'SVG',
+          message: 'Error: <%= error.message %>',
         })
       )
     )
     .pipe(
       svgSprite({
         mode: {
-          stack: {
-            sprite: `../icons/icons.svg`,
-            //Создавать страницу с перечнем иконок
+          symbol: {
+            sprite: '../icons/icons.svg',
             example: true,
           },
+        },
+        svg: {
+          xmlDeclaration: false,
+          doctypeDeclaration: false,
+          namespaceIDs: false,
+          namespaceClassnames: false,
+        },
+        shape: {
+          transform: [
+            {
+              svgo: {
+                plugins: [
+                  { removeUselessDefs: false },
+                  { cleanupIDs: false },
+                  { removeViewBox: false },
+                  { mergePaths: false },
+                  { inlineStyles: false },
+                ],
+              },
+            },
+          ],
         },
       })
     )
