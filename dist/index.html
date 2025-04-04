@@ -4,25 +4,48 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/style.min.css?_v=20250403204926" />
+  <link rel="stylesheet" href="css/style.min.css" />
   <title>Главная</title>
 </head>
 
   <body>
-    <header>
-  <h1>header я шапка</h1>
+    <header class="header">
+  <div class="container header__container">
+    <div class="header__logo">ivan<span>site</span></div>
+    <nav class="header__nav">
+      <ul class="header__list">
+        <li class="header__item">
+          <a class="header__link" href="#">Обо мне</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="#">Стоимость</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="#">Кейсы</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="#">Отзывы</a>
+        </li>
+        <li class="header__item">
+          <a class="header__link" href="#">Контакты</a>
+        </li>
+      </ul>
+    </nav>
+    <button class="header__btn primary-btn btn-reset">Консультация</button>
+  </div>
 </header>
     <main>
-      <h1>hello world</h1>
-      <span>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut soluta corporis rerum, sapiente excepturi
-        similique? Alias, rem eveniet. Distinctio alias doloremque magnam dolores praesentium enim voluptatem nisi,
-        expedita est rem!
-      </span>
-      <a href="./about.html">link</a>
-      <picture><source srcset="./img/2.webp" type="image/webp"><img src="./img/2.png" alt="" /></picture>
+      <section class="intro">
+  <div class="container">
+    <h1 class="visually-hidden">intro section</h1>
+  </div>
+</section>
+
+
+      <!-- <a href="./about.html">link</a> -->
+      <!-- <img src="./img/2.png" alt="" /> -->
     </main>
     <footer><h2>footer я футер </h2></footer>
-    <script src="js/app.min.js?_v=20250403204926"></script>
+    <script src="js/app.min.js"></script>
   </body>
 </html>

@@ -1,9 +1,6 @@
-body {
-  background-color: blueviolet;
-  h1 {
-    color: red;
-  }
-  span {
-    color: blue;
-  }
-}
+@use 'fonts';
+@use '_common.scss';
+@use '_mixins.scss';
+@use '_header.scss';
+@use '_intro.scss';
+

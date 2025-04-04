@@ -1,11 +1,359 @@
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-ExtraBold.woff2") format("woff2"), url("../fonts/Manrope-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-ExtraBold.woff2") format("woff2"), url("../fonts/Manrope-ExtraBold.woff") format("woff");
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Regular.woff2") format("woff2"), url("../fonts/Manrope-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-SemiBold.woff2") format("woff2"), url("../fonts/Manrope-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-SemiBold.woff2") format("woff2"), url("../fonts/Manrope-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: Manrope;
+  font-display: swap;
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2"), url("../fonts/Manrope-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-Medium.woff2") format("woff2"), url("../fonts/Raleway-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-Light.woff2") format("woff2"), url("../fonts/Raleway-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-Medium.woff2") format("woff2"), url("../fonts/Raleway-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-Regular.woff2") format("woff2"), url("../fonts/Raleway-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: TildaSans;
+  font-display: swap;
+  src: url("../fonts/TildaSans-Medium.woff2") format("woff2"), url("../fonts/TildaSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: TildaSans;
+  font-display: swap;
+  src: url("../fonts/TildaSans-Medium.woff2") format("woff2"), url("../fonts/TildaSans-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: TildaSans;
+  font-display: swap;
+  src: url("../fonts/TildaSans-Regular.woff2") format("woff2"), url("../fonts/TildaSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: TildaSans;
+  font-display: swap;
+  src: url("../fonts/TildaSans-Regular.woff2") format("woff2"), url("../fonts/TildaSans-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Raleway;
+  font-display: swap;
+  src: url("../fonts/Raleway-Light.woff2") format("woff2"), url("../fonts/Raleway-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  list-style-type: none;
+  font-family: "Raleway", sans-serif;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+}
+
 body {
-  background-color: blueviolet;
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: "Raleway", sans-serif;
 }
 
-body h1 {
-  color: red;
+.body {
+  display: flex;
 }
 
-body span {
-  color: blue;
+label {
+  display: block;
+  cursor: pointer;
+}
+
+input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 40px;
+  color: #999;
+}
+
+.title-reset {
+  margin: 0;
+}
+
+.descr-reset {
+  margin: 0;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.btn-reset {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 0px;
+  border-width: initial;
+  border-style: none;
+  border-color: initial;
+  border-image: initial;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0, 0, 0, 0);
+  overflow: hidden;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.section {
+  padding-top: 70px;
+}
+
+.primary-btn {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #25262F;
+  background: linear-gradient(#FFF, #FFF) padding-box, linear-gradient(90deg, #415be7 0%, #415be7 93%, rgba(65, 91, 231, 0.3) 100%) border-box;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: opacity 0.9s ease-in-out;
+}
+@media (min-width: 1024px) {
+  .primary-btn:hover {
+    opacity: 0.4;
+  }
+}
+.primary-btn:active {
+  opacity: 0.4;
+}
+.primary-btn:focus-visible {
+  opacity: 0.4;
+  outline: none;
+}
+
+input[type=text]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=text]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+  display: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+.swiper-button-next.swiper-button-disabled .special-offers__button-next-svg,
+.swiper-button-prev.swiper-button-disabled .special-offers__button-prev-svg {
+  border-color: #999;
+  color: #999;
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 1;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+}
+.header__container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.header__logo {
+  font-size: 30px;
+  line-height: 30px;
+  font-weight: 600;
+  color: #25262F;
+  font-family: "Manrope", sans-serif;
+}
+.header__logo span {
+  color: #415be7;
+}
+.header__nav {
+  padding: 15px 30px;
+  max-width: 437px;
+  width: 100%;
+  background-color: #FFF;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(37, 38, 47, 0.1);
+}
+.header__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.header__link {
+  font-size: 12px;
+  line-height: 12px;
+  font-weight: 400;
+  color: #25262F;
+  transition: color 0.3s ease-in-out;
+}
+@media (min-width: 1024px) {
+  .header__link:hover {
+    color: #415be7;
+  }
+}
+.header__link:active {
+  color: #415be7;
+}
+.header__link:focus-visible {
+  color: #415be7;
+  outline: none;
+}
+
+.intro {
+  background-image: url("../img/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 700px;
 }
