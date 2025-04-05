@@ -121,5 +121,15 @@
 }
 
 @media (max-width: 767px) {
-
+  .intro {
+    &__title {
+      font-size: 30px;
+    }
+    &__descr {
+      font-size: 14px;
+    }
+    &__svg-2, &__svg-3, &__svg-1 {
+      display: none;
+    }
+  }
 }
