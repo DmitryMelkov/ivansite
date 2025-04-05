@@ -13,4 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Инициализация обработчика формы модал 1
   initFormHandler('contactForm');
+
+  // Инициализация обработчика формы модал 2
+  initFormHandler('anotherForm');
 });

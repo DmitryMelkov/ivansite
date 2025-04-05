@@ -233,7 +233,7 @@ input::placeholder {
   border: 1px solid transparent;
   border-radius: 10px;
   cursor: pointer;
-  transition: opacity 0.9s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
 @media (min-width: 1024px) {
   .primary-btn:hover {
@@ -249,9 +249,6 @@ input::placeholder {
 }
 
 .secondary-btn {
-  max-width: 274px;
-  height: 39px;
-  padding: 10px 20px;
   background-color: #415be7;
   border: 1px solid transparent;
   border-radius: 5px;
@@ -397,12 +394,15 @@ input[type=number] {
   line-height: 18px;
   font-weight: 400;
   color: #25262F;
+  font-family: "Raleway", sans-serif;
   border: 1px solid rgba(65, 91, 231, 0.4);
   border-radius: 5px;
   transition: opacity 0.3s ease-in-out, border-color 0.3s ease-in-out;
 }
 .modal__input::placeholder, .modal__textarea::placeholder {
+  font-size: 14px;
   color: rgba(37, 38, 47, 0.6);
+  font-family: "Raleway", sans-serif;
 }
 @media (min-width: 1024px) {
   .modal__input:hover, .modal__textarea:hover {
@@ -412,17 +412,20 @@ input[type=number] {
 .modal__input:active, .modal__textarea:active {
   opacity: 0.5;
 }
-.modal__input:focus-visible, .modal__textarea:focus-visible {
+.modal__input:focus, .modal__textarea:focus {
   border-color: #415be7;
   outline: none;
   opacity: 1;
 }
-.modal__input:focus-visible:hover, .modal__input:focus-visible:active, .modal__textarea:focus-visible:hover, .modal__textarea:focus-visible:active {
+.modal__input:focus:hover, .modal__input:focus:active, .modal__textarea:focus:hover, .modal__textarea:focus:active {
   opacity: 1;
+}
+.modal__input {
+  height: 36px;
 }
 .modal__textarea {
   resize: none;
-  height: 100px;
+  height: 72px;
 }
 .modal__form-btn-container {
   margin-top: 20px;
@@ -432,6 +435,9 @@ input[type=number] {
 }
 .modal__form-btn {
   width: 100%;
+  max-width: 274px;
+  height: 39px;
+  padding: 5px 10px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -455,6 +461,29 @@ input[type=number] {
   align-items: center;
   gap: 7px;
 }
+.modal__select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #25262F;
+  font-family: "Raleway", sans-serif;
+  border: 1px solid rgba(65, 91, 231, 0.4);
+  border-radius: 5px;
+  background-color: #fff;
+  transition: border-color 0.3s ease-in-out;
+}
+.modal__select:focus {
+  border-color: #415be7;
+  outline: none;
+}
+.modal__label--checkbox {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: rgba(37, 38, 47, 0.6);
+}
 
 .modal.show {
   visibility: visible;
@@ -465,6 +494,52 @@ input[type=number] {
   transform: translateY(0);
 }
 
+@media (max-width: 1279px) {
+  .modal__content {
+    padding: 30px;
+  }
+  .modal__title {
+    font-size: 25px;
+  }
+  .modal__descr {
+    font-size: 14px;
+  }
+  .modal__input {
+    font-size: 12px;
+  }
+  .modal__select {
+    font-size: 14px;
+  }
+  .modal__form-btn {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  .modal__content {
+    padding: 20px;
+    max-width: 280px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .modal__title {
+    margin-bottom: 15px;
+  }
+  .modal__descr {
+    margin-bottom: 15px;
+  }
+  .modal__item {
+    grid-column: span 10;
+  }
+  .modal__item--checkbox {
+    gap: 4px;
+  }
+  .modal__label--checkbox {
+    font-size: 10px;
+  }
+  .modal__textarea {
+    height: 57px;
+  }
+}
 .header {
   position: fixed;
   z-index: 1;

@@ -134,7 +134,12 @@
             </li>
             <li class="modal__item">
               <label for="contactMethod"></label>
-              <input class="modal__input" type="text" id="contactMethod" name="contactMethod" placeholder="Как с вами связаться" required>
+              <select class="modal__select" id="contactMethod" name="contactMethod" required>
+                <option value="" disabled selected>Как с вами связаться?</option>
+                <option value="email">Email</option>
+                <option value="phone">Телефон</option>
+                <option value="messenger">Мессенджер</option>
+              </select>
             </li>
             <li class="modal__item modal__item--textarea" >
               <label for="taskDescription"></label>
@@ -142,7 +147,7 @@
             </li>
             <li class="modal__item modal__item--checkbox" >
               <input class="modal__input-checkbox" type="checkbox" id="agreement" name="agreement" required>
-              <label for="agreement">Согласие с политикой конфиденциальности </label>
+              <label class="modal__label--checkbox" for="agreement">Согласие с политикой конфиденциальности </label>
             </li>
           </ul>
           <div class="modal__form-btn-container">
@@ -161,12 +166,36 @@
     <div class="modal__content">
       <span class="modal__close" id="closeModalBtn2">&times;</span>
       <h2 class="modal__title" id="modalTitle2">Заголовок второго модального окна</h2>
-      <form class="modal__form">
-        <!-- Ваша форма здесь -->
-        <input type="text" name="name" placeholder="Ваше имя" required>
-        <input type="email" name="email" placeholder="Ваш email" required>
-        <textarea name="message" placeholder="Ваше сообщение" required></textarea>
-        <button type="submit">Отправить</button>
+      <form class="modal__form" id="anotherForm">
+        <ul class="modal__list list-reset">
+          <li class="modal__item">
+            <label for="name"></label>
+            <input class="modal__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+          </li>
+          <li class="modal__item">
+            <label for="phone"></label>
+            <input class="modal__input" type="tel" id="phone" name="phone" placeholder="Ваш номер телефона" required>
+          </li>
+          <li class="modal__item">
+            <label for="email"></label>
+            <input class="modal__input" type="email" id="email" name="email" placeholder="Ваш email" required>
+          </li>
+          <li class="modal__item">
+            <label for="contactMethod"></label>
+            <input class="modal__input" type="text" id="contactMethod" name="contactMethod" placeholder="Как с вами связаться" required>
+          </li>
+          <li class="modal__item modal__item--textarea" >
+            <label for="taskDescription"></label>
+            <textarea class="modal__textarea" id="taskDescription" name="taskDescription" placeholder="Краткое описание задачи" required></textarea>
+          </li>
+          <li class="modal__item modal__item--checkbox" >
+            <input class="modal__input-checkbox" type="checkbox" id="agreement" name="agreement" required>
+            <label for="agreement">Согласие с политикой конфиденциальности </label>
+          </li>
+        </ul>
+        <div class="modal__form-btn-container">
+          <button class="modal__form-btn secondary-btn btn-reset" type="submit">Отправить</button>
+        </div>
       </form>
     </div>
   </div>
