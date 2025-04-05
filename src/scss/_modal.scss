@@ -1,0 +1,149 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+.modal {
+  visibility: hidden;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  &__content {
+    margin: 10% auto;
+    padding: 40px;
+    width: 100%;
+    max-width: 570px;
+    position: relative;
+
+    background-color: $white;
+    border-radius: 10px;
+    border: 1px solid #888;
+
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-in-out;
+  }
+  &__close {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -16px;
+    right: -22px;
+    z-index: 1;
+
+    font-size: 30px;
+    color: $qing-dynasty-dragon;
+
+    background-color: $white;
+    border: 2px solid $qing-dynasty-dragon;
+    border-radius: 50%;
+
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+      background-color: $qing-dynasty-dragon;
+      color: $white;
+    }
+  }
+  &__container {
+    max-width: 446px;
+    margin: 0 auto;
+  }
+  &__title {
+    margin-bottom: 20px;
+    @include text-style(35px, 90%, 500, $black);
+    text-align: center;
+    font-family: 'Manrope', sans-serif;
+    span {
+      color: $qing-dynasty-dragon;
+    }
+  }
+  &__descr {
+    margin-bottom: 20px;
+    text-align: center;
+    @include text-style(16px, 20px, 400, $black);
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+  &__input,
+  &__textarea {
+    width: 100%;
+    padding: 10px 20px;
+    @include text-style(14px, 18px, 400, $black);
+    border: 1px solid rgba($qing-dynasty-dragon, 0.4);
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out, border-color 0.3s ease-in-out;
+    &::placeholder {
+      color: rgba($black, 0.6);
+    }
+    @media (min-width: 1024px) {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    &:active {
+      opacity: 0.5;
+    }
+    &:focus-visible {
+      border-color: $qing-dynasty-dragon;
+      outline: none;
+      opacity: 1;
+
+      &:hover,
+      &:active {
+        opacity: 1;
+      }
+    }
+  }
+  &__textarea {
+    resize: none;
+    height: 100px;
+  }
+  &__form-btn-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__form-btn {
+    width: 100%;
+    @include text-style(16px, 20px, 400, $white);
+    font-family: 'Raleway', sans-serif;
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+  }
+  &__item {
+    grid-column: span 5;
+  }
+  &__item--textarea {
+    grid-column: span 10;
+  }
+  &__item--checkbox {
+    grid-column: span 10;
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+}
+
+.modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.modal.show .modal__content {
+  transform: translateY(0);
+}

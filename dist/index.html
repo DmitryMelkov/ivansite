@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,8 +8,9 @@
   <title>Главная</title>
 </head>
 
-  <body>
-    <header class="header">
+
+<body>
+  <header class="header">
   <div class="header__box">
     <div class="container header__container">
       <div class="header__menu">
@@ -19,11 +20,9 @@
             <span class="header__burger-close-line"></span>
           </button>
         </div>
-
         <div class="header__logo">
           ivan
           <span>site</span>
-
         </div>
         <nav class="header__nav">
           <ul class="header__list">
@@ -44,28 +43,24 @@
             </li>
           </ul>
         </nav>
-
         <button class="header__btn primary-btn btn-reset">Консультация</button>
       </div>
       <div class="header__logo header__logo--mobile">
         ivan
         <span>site</span>
-
       </div>
       <button class="header__burger btn-reset">
         <span class="header__burger-line"></span>
         <span class="header__burger-line"></span>
         <span class="header__burger-line"></span>
       </button>
-
-
       <div class="header__overlay"></div>
     </div>
   </div>
 
 </header>
-    <main>
-      <section class="intro">
+  <main>
+    <section class="intro">
   <div class="container intro__container">
     <h1 class="intro__title title-reset">
       Сайты на Битрикс, которые приносят клиентов
@@ -75,8 +70,11 @@
       Разработка, редизайн и доработка сайтов для бизнеса
       Настраиваю под задачи, интегрирую с CRM
     </p>
-    <button class="intro__btn btn-reset">
+    <button class="intro__btn btn-reset" id="openModalBtn1">
       Бесплатная консультация
+    </button>
+    <button class="intro__btn btn-reset" id="openModalBtn2">
+      Другая консультация
     </button>
     <div class="intro__svg-1">
       <svg>
@@ -101,14 +99,78 @@
 </section>
 
 
-      <!-- <a href="./about.html">link</a> -->
-      <!-- <img src="./img/2.png" alt="" /> -->
-    </main>
-    <footer>
+    <!-- <a href="./about.html">link</a> -->
+    <!-- <img src="./img/2.png" alt="" /> -->
+  </main>
+  <footer>
   <div class="container">
     <h2>footer я футер </h2>
   </div>
 </footer>
-    <script src="js/app.min.js"></script>
-  </body>
+  <!-- Первое модальное окно -->
+  <div class="modal" id="consultationModal1">
+    <div class="modal__content">
+      <button class="modal__close btn-reset" id="closeModalBtn1">
+        &times;
+      </button>
+      <div class="modal__container">
+        <h2 class="modal__title title-reset" id="modalTitle1">Бесплатная <span>консультация</span></h2>
+        <p class="modal__descr descr-reset">
+          Заполните форму и я свяжусь с вами в ближайшее время
+        </p>
+        <form class="modal__form" id="contactForm">
+          <ul class="modal__list list-reset">
+            <li class="modal__item">
+              <label for="name"></label>
+              <input class="modal__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+            </li>
+            <li class="modal__item">
+              <label for="phone"></label>
+              <input class="modal__input" type="tel" id="phone" name="phone" placeholder="Ваш номер телефона" required>
+            </li>
+            <li class="modal__item">
+              <label for="email"></label>
+              <input class="modal__input" type="email" id="email" name="email" placeholder="Ваш email" required>
+            </li>
+            <li class="modal__item">
+              <label for="contactMethod"></label>
+              <input class="modal__input" type="text" id="contactMethod" name="contactMethod" placeholder="Как с вами связаться" required>
+            </li>
+            <li class="modal__item modal__item--textarea" >
+              <label for="taskDescription"></label>
+              <textarea class="modal__textarea" id="taskDescription" name="taskDescription" placeholder="Краткое описание задачи" required></textarea>
+            </li>
+            <li class="modal__item modal__item--checkbox" >
+              <input class="modal__input-checkbox" type="checkbox" id="agreement" name="agreement" required>
+              <label for="agreement">Согласие с политикой конфиденциальности </label>
+            </li>
+          </ul>
+          <div class="modal__form-btn-container">
+            <button class="modal__form-btn secondary-btn btn-reset" type="submit">Отправить</button>
+          </div>
+        </form>
+
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Второе модальное окно -->
+  <div class="modal" id="consultationModal2">
+    <div class="modal__content">
+      <span class="modal__close" id="closeModalBtn2">&times;</span>
+      <h2 class="modal__title" id="modalTitle2">Заголовок второго модального окна</h2>
+      <form class="modal__form">
+        <!-- Ваша форма здесь -->
+        <input type="text" name="name" placeholder="Ваше имя" required>
+        <input type="email" name="email" placeholder="Ваш email" required>
+        <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+        <button type="submit">Отправить</button>
+      </form>
+    </div>
+  </div>
+  <script src="js/app.min.js"></script>
+</body>
+
 </html>

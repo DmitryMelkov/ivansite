@@ -123,6 +123,28 @@ input::placeholder {
   }
 }
 
+.secondary-btn {
+  max-width: 274px;
+  height: 39px;
+  padding: 10px 20px;
+  background-color: $qing-dynasty-dragon;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
+  @media (min-width: 1024px) {
+    &:hover {
+      opacity: 0.4;
+    }
+  }
+  &:active {
+    opacity: 0.4;
+  }
+  &:focus-visible {
+    opacity: 0.4;
+    outline: none;
+  }
+}
+
 //убрать крестик у инпута
 input[type='text']::-ms-clear {
   display: none;
