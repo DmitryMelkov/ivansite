@@ -1,5 +1,11 @@
 @use './_variables.scss' as *;
 @use './_mixins.scss' as *;
+@use '../../node_modules/swiper/swiper.scss';
+@use '../../node_modules/swiper/modules/navigation/navigation.scss';
+@use '../../node_modules/swiper/modules/pagination/pagination.scss';
+@use '../../node_modules/swiper/modules/grid/grid.scss';
+@use '../../node_modules/swiper/modules/free-mode/free-mode.scss';
+@use '../../node_modules/swiper/modules/thumbs/thumbs.scss';
 *,
 *:before,
 *:after {
@@ -47,6 +53,16 @@ h3 {
   }
   @media (max-width: 767px) {
     font-size: 16px;
+  }
+}
+
+p {
+  @include text-style(16px, 100%, 400, $black);
+  @media (max-width: 1279px) {
+    font-size: 14px;
+  }
+  @media (max-width: 767px) {
+    font-size: 14px;
   }
 }
 
@@ -197,21 +213,13 @@ input[type='number'] {
 .swiper-button-prev::after {
   display: none;
 }
-.swiper-button-next.swiper-button-disabled .special-offers__button-next-svg,
-.swiper-button-prev.swiper-button-disabled .special-offers__button-prev-svg {
-  border-color: $grey;
-  color: $grey;
-}
 
 .swiper-button-prev.swiper-button-disabled,
 .swiper-button-next.swiper-button-disabled {
-  opacity: 1;
+  opacity: 0.4;
 }
 
-// import swiper
-// @import "../../node_modules/swiper/swiper.scss";
-// @import "../../node_modules/swiper/modules/pagination/pagination.scss";
-// @import "../../node_modules/swiper/modules/navigation/navigation.scss";
-// @import "../../node_modules/swiper/modules/grid/grid.scss";
-// @import "../../node_modules/swiper/modules/free-mode/free-mode.scss";
-// @import "../../node_modules/swiper/modules/thumbs/thumbs.scss";
+
+.slider__button-next .slider__button-next-svg {
+  color: $coronation;
+}

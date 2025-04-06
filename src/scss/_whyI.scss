@@ -1,0 +1,110 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+.why-i {
+  margin-top: 100px;
+  &__title {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    span {
+      color: $qing-dynasty-dragon;
+    }
+  }
+  &__descr {
+    margin-bottom: 20px;
+    text-align: center;
+    @include text-style(16px, 20px, 400, $black);
+  }
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20px;
+  }
+  &__item {
+    padding: 20px;
+    min-height: 202px;
+    grid-column: span 6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: $gram-s-hair;
+    border-radius: 15px;
+    border: 1px solid $cool-frost;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: $qing-dynasty-dragon;
+    }
+    &:active {
+      background-color: $qing-dynasty-dragon;
+    }
+    &:focus-visible {
+      background-color: $qing-dynasty-dragon;
+      outline: none;
+    }
+  }
+  &__item--3 {
+    grid-column: span 7;
+  }
+  &__item--4 {
+    grid-column: span 5;
+  }
+  &__item-title {
+    transition: color 0.3s ease-in-out;
+    span {
+      color: $qing-dynasty-dragon;
+      transition: color 0.3s ease-in-out;
+    }
+  }
+  &__item-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__svg {
+    width: 40px;
+    height: 40px;
+  }
+  &__item-descr {
+    @include text-style(16px, 20px, 400, $black);
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__item:hover &__item-title {
+    color: $white;
+    span {
+      color: $white;
+    }
+  }
+
+  &__item:hover &__item-descr {
+    color: $white;
+    span {
+      color: $white;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .why-i {
+    &__item {
+      min-width: 140px;
+    }
+    &__svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .why-i {
+    &__item {
+      min-height: auto;
+      grid-column: span 12;
+    }
+  }
+}
