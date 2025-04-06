@@ -1,19 +1,33 @@
-export const setupModal = (openBtnId, closeBtnId, modalId) => {
-  const openModalBtn = document.getElementById(openBtnId);
-  const closeModalBtn = document.getElementById(closeBtnId);
-  const modal = document.getElementById(modalId);
+// Функция для открытия модального окна
+export const openModal = (title) => {
+  modalTitle.textContent = title; // Устанавливаем заголовок
+  universalModal.classList.add('show'); // Показываем модалку
+};
 
-  openModalBtn.addEventListener('click', function () {
-    modal.classList.add('show');
-  });
+// Функция для закрытия модального окна
+export const closeModal = () => {
+  universalModal.classList.remove('show'); // Скрываем модалку
+};
 
-  closeModalBtn.addEventListener('click', function () {
-    modal.classList.remove('show');
-  });
+export const setupModal = () => {
+  const universalModal = document.getElementById('universalModal');
+  const modalTitle = document.getElementById('modalTitle');
 
-  window.addEventListener('click', function (event) {
-    if (event.target == modal) {
-      modal.classList.remove('show');
+  // Кнопка закрытия модалки
+  document.getElementById('closeUniversalModal').addEventListener('click', closeModal);
+
+  // Закрытие по клику вне модалки
+  window.addEventListener('click', (event) => {
+    if (event.target === universalModal) {
+      closeModal();
     }
+  });
+
+  // Обработка кнопок для открытия модалок
+  document.querySelectorAll('[data-open-modal]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const title = button.getAttribute('data-modal-title'); // Получаем заголовок из атрибута
+      openModal(title);
+    });
   });
 };

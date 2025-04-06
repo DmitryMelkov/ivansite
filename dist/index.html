@@ -70,31 +70,24 @@
       Разработка, редизайн и доработка сайтов для бизнеса
       Настраиваю под задачи, интегрирую с CRM
     </p>
-    <button class="intro__btn btn-reset" id="openModalBtn1">
+    <button class="intro__btn btn-reset" data-open-modal data-modal-title="Бесплатная консультация">
       Бесплатная консультация
-    </button>
-    <button class="intro__btn btn-reset" id="openModalBtn2">
-      Другая консультация
     </button>
     <div class="intro__svg-1">
       <svg>
         <use xlink:href="img/icons/icons.svg#intro-1"></use>
       </svg>
-
     </div>
-
     <div class="intro__svg-2">
       <svg>
         <use xlink:href="img/icons/icons.svg#intro-2"></use>
       </svg>
     </div>
-
     <div class="intro__svg-3">
       <svg>
         <use xlink:href="img/icons/icons.svg#intro-3"></use>
       </svg>
     </div>
-
   </div>
 </section>
 
@@ -107,66 +100,16 @@
     <h2>footer я футер </h2>
   </div>
 </footer>
-  <!-- Первое модальное окно -->
-  <div class="modal" id="consultationModal1">
-    <div class="modal__content">
-      <button class="modal__close btn-reset" id="closeModalBtn1">
-        &times;
-      </button>
-      <div class="modal__container">
-        <h2 class="modal__title title-reset" id="modalTitle1">Бесплатная <span>консультация</span></h2>
-        <p class="modal__descr descr-reset">
-          Заполните форму и я свяжусь с вами в ближайшее время
-        </p>
-        <form class="modal__form" id="contactForm">
-          <ul class="modal__list list-reset">
-            <li class="modal__item">
-              <label for="name"></label>
-              <input class="modal__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
-            </li>
-            <li class="modal__item">
-              <label for="phone"></label>
-              <input class="modal__input" type="tel" id="phone" name="phone" placeholder="Ваш номер телефона" required>
-            </li>
-            <li class="modal__item">
-              <label for="email"></label>
-              <input class="modal__input" type="email" id="email" name="email" placeholder="Ваш email" required>
-            </li>
-            <li class="modal__item">
-              <label for="contactMethod"></label>
-              <select class="modal__select" id="contactMethod" name="contactMethod" required>
-                <option value="" disabled selected>Как с вами связаться?</option>
-                <option value="email">Email</option>
-                <option value="phone">Телефон</option>
-                <option value="messenger">Мессенджер</option>
-              </select>
-            </li>
-            <li class="modal__item modal__item--textarea" >
-              <label for="taskDescription"></label>
-              <textarea class="modal__textarea" id="taskDescription" name="taskDescription" placeholder="Краткое описание задачи" required></textarea>
-            </li>
-            <li class="modal__item modal__item--checkbox" >
-              <input class="modal__input-checkbox" type="checkbox" id="agreement" name="agreement" required>
-              <label class="modal__label--checkbox" for="agreement">Согласие с политикой конфиденциальности </label>
-            </li>
-          </ul>
-          <div class="modal__form-btn-container">
-            <button class="modal__form-btn secondary-btn btn-reset" type="submit">Отправить</button>
-          </div>
-        </form>
-
-
-      </div>
-
-    </div>
-  </div>
-
-  <!-- Второе модальное окно -->
-  <div class="modal" id="consultationModal2">
-    <div class="modal__content">
-      <span class="modal__close" id="closeModalBtn2">&times;</span>
-      <h2 class="modal__title" id="modalTitle2">Заголовок второго модального окна</h2>
-      <form class="modal__form" id="anotherForm">
+  <!-- Универсальное модальное окно -->
+  <div class="modal" id="universalModal">
+  <div class="modal__content">
+    <button class="modal__close btn-reset" id="closeUniversalModal">&times;</button>
+    <div class="modal__container">
+      <h2 class="modal__title title-reset" id="modalTitle">Заголовок по умолчанию</h2>
+      <p class="modal__descr descr-reset">
+        Заполните форму и я свяжусь с вами в ближайшее время
+      </p>
+      <form class="modal__form" id="universalForm" novalidate>
         <ul class="modal__list list-reset">
           <li class="modal__item">
             <label for="name"></label>
@@ -182,15 +125,22 @@
           </li>
           <li class="modal__item">
             <label for="contactMethod"></label>
-            <input class="modal__input" type="text" id="contactMethod" name="contactMethod" placeholder="Как с вами связаться" required>
+            <select class="modal__select" id="contactMethod" name="contactMethod" required>
+              <option value="" disabled selected>Как с вами связаться?</option>
+              <option value="email">Email</option>
+              <option value="phone">Телефон</option>
+              <option value="messenger">Мессенджер</option>
+            </select>
           </li>
           <li class="modal__item modal__item--textarea" >
             <label for="taskDescription"></label>
             <textarea class="modal__textarea" id="taskDescription" name="taskDescription" placeholder="Краткое описание задачи" required></textarea>
           </li>
-          <li class="modal__item modal__item--checkbox" >
-            <input class="modal__input-checkbox" type="checkbox" id="agreement" name="agreement" required>
-            <label for="agreement">Согласие с политикой конфиденциальности </label>
+          <li class="modal__item modal__item--checkbox">
+            <div class="checkbox-container">
+              <input class="modal__input-checkbox" type="checkbox" id="agreement" name="agreement" required>
+              <label class="modal__label--checkbox" for="agreement">Согласие с политикой конфиденциальности</label>
+            </div>
           </li>
         </ul>
         <div class="modal__form-btn-container">
@@ -199,6 +149,8 @@
       </form>
     </div>
   </div>
+</div>
+
   <script src="js/app.min.js"></script>
 </body>
 

@@ -5,15 +5,9 @@ import { setupModal } from './modules/modal.js';
 document.addEventListener('DOMContentLoaded', () => {
   burgerMenu();
 
-  // Настройка первого модального окна
-  setupModal('openModalBtn1', 'closeModalBtn1', 'consultationModal1');
+  // Настройка универсальной модалки
+  setupModal();
 
-  // Настройка второго модального окна
-  setupModal('openModalBtn2', 'closeModalBtn2', 'consultationModal2');
-
-  // Инициализация обработчика формы модал 1
-  initFormHandler('contactForm');
-
-  // Инициализация обработчика формы модал 2
-  initFormHandler('anotherForm');
+  // Инициализация обработчика формы
+  initFormHandler('universalForm');
 });
