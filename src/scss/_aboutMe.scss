@@ -2,6 +2,11 @@
 @use '_mixins' as *;
 
 .about-me {
+  padding-top: 76px;
+  background-color: $white;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0px -19px 18.6px 0px rgba(0, 0, 0, 0.05);
+
   &__container {
     display: flex;
     gap: 20px;
@@ -30,10 +35,18 @@
     object-fit: cover;
     border-radius: 15px;
   }
+  &__subtitle {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    span {
+      color: $qing-dynasty-dragon;
+    }
+  }
 }
 
 @media (max-width: 1279px) {
   .about-me {
+    padding-top: 59px;
     &__left {
       padding: 20px 32px 20px 20px;
     }
@@ -55,6 +68,7 @@
 
 @media (max-width: 767px) {
   .about-me {
+    padding-top: 20px;
     &__left {
       max-width: 280px;
       padding: 20px;
