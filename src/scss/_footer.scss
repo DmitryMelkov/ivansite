@@ -1,0 +1,178 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+.footer {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-image: url('../img/creation-or-refinement-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 100%;
+  min-height: 157px;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+  &__left {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+  }
+  &__logo {
+    @include text-style(30px, 30px, 600, $white);
+    font-family: 'Manrope', sans-serif;
+  }
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__contacts-link {
+    @include text-style(14px, 18px, 400, $white);
+    transition: color 0.3s ease-in-out;
+    @media (min-width: 1024px) {
+      &:hover {
+        color: $pinball;
+      }
+    }
+    &:active {
+      color: $pinball;
+    }
+    &:focus-visible {
+      color: $pinball;
+      outline: none;
+    }
+  }
+  &__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  &__span {
+    @include text-style(12px, 16px, 400, $white);
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 316px;
+    width: 100%;
+    gap: 15px;
+  }
+  &__link {
+    @include text-style(12px, 16px, 400, $white);
+    transition: color 0.3s ease-in-out;
+    @media (min-width: 1024px) {
+      &:hover {
+        color: $pinball;
+      }
+    }
+    &:active {
+      color: $pinball;
+    }
+    &:focus-visible {
+      color: $pinball;
+      outline: none;
+    }
+  }
+  &__right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+  }
+  &__social-link {
+    outline: none;
+  }
+  &__social-link svg {
+    width: 58px;
+    height: 58px;
+    color: $white;
+    transition: color 0.3s ease-in-out;
+  }
+  @media (min-width: 1024px) {
+    &__social-link:hover svg {
+      color: $pinball;
+    }
+  }
+  &__social-link:active svg {
+    color: $pinball;
+  }
+  &__social-link:focus-visible svg {
+    color: $pinball;
+  }
+  &__rules--mobile {
+    display: none;
+  }
+  &__politic-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .footer {
+    padding-top: 30px;
+    &__contacts-link {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    &__list {
+      gap: 10px;
+    }
+    &__link {
+      font-size: 12px;
+      line-height: 16px;
+    }
+    &__social {
+      gap: 12px;
+    }
+    &__social-link svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .footer {
+    padding-top: 20px;
+    &__container {
+      flex-direction: column;
+    }
+    &__left {
+      align-items: center;
+    }
+    &__contacts {
+      flex-direction: row;
+      gap: 30px;
+    }
+    &__rules--desctop {
+      display: none;
+    }
+    &__rules--mobile {
+      display: block;
+    }
+    &__social {
+      gap: 22px;
+    }
+    &__social-link svg {
+      width: 53px;
+      height: 53px;
+    }
+  }
+}
