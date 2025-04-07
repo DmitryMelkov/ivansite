@@ -1,0 +1,96 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+.creation-website {
+  padding-top: 65px;
+  border-radius: 15px 15px 0 0;
+  background-color: $gram-s-hair;
+  &__container {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+  }
+  &__left {
+    max-width: 378px;
+    flex-shrink: 0;
+  }
+  &__right {
+    flex-grow: 1;
+  }
+  &__title {
+    max-width: 378px;
+    margin-bottom: 20px;
+    font-family: 'Manrope', sans-serif;
+    span {
+      color: $qing-dynasty-dragon;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 30px;
+    background-color: $white;
+    border: 1px solid $cool-frost;
+    border-radius: 10px;
+  }
+  &__item-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__item-list {
+    max-width: 378px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  &__item-list-item {
+    position: relative;
+    padding-left: 15px;
+    @include text-style(16px, 24px, 400, rgba($black, 0.6));
+
+    &::before {
+      content: '•';
+      color: $qing-dynasty-dragon;
+      font-size: 20px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__item-num {
+    @include text-style(128px, 90%, 800, $gram-s-hair);
+    font-family: 'Manrope', sans-serif;
+  }
+
+  &__result {
+    margin-top: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    min-height: 120px;
+    background-image: url('../img/creation-or-refinement-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 10px;
+  }
+  &__result-title {
+    color: $white;
+  }
+  &__btn {
+    padding: 5px 20px;
+    @include text-style(16px, 24px, 400, $white);
+  }
+}
