@@ -1776,6 +1776,61 @@ input[type=number] {
 .what-can-i-do__btn {
   padding: 10px 40px;
 }
+.what-can-i-do__cards {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.what-can-i-do__cards-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 10px;
+  border: 1px solid #e7e7ef;
+  width: 100%;
+  min-height: 264px;
+  height: 100%;
+}
+.what-can-i-do__cards-item--1 {
+  background-image: url("../img/what-can-i-do-card-1.jpg");
+}
+.what-can-i-do__cards-item--2 {
+  background-image: url("../img/what-can-i-do-card-2.jpg");
+}
+.what-can-i-do__cards-intro {
+  padding: 20px;
+  min-height: 128px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 15px;
+  background-color: #f5f7f9;
+  border-radius: 10px;
+}
+.what-can-i-do__cards-title {
+  max-width: 276px;
+}
+.what-can-i-do__cards-subtitle-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.what-can-i-do__cards-subtitle {
+  max-width: 180px;
+  color: rgba(37, 38, 47, 0.6);
+}
+.what-can-i-do__cards-btn {
+  padding: 5px 20px;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #25262F;
+}
 
 @media (max-width: 1279px) {
   .what-can-i-do__subtitle {
@@ -1800,6 +1855,17 @@ input[type=number] {
   }
   .what-can-i-do__btn {
     padding: 10px 30px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .what-can-i-do__cards-item {
+    border-radius: 11px;
+    min-height: 209px;
+  }
+  .what-can-i-do__cards-intro {
+    min-height: 114px;
+  }
+  .what-can-i-do__cards-btn {
     font-size: 14px;
     line-height: 18px;
   }
@@ -1830,5 +1896,15 @@ input[type=number] {
     width: 100%;
     display: flex;
     justify-content: flex-end;
+  }
+  .what-can-i-do__cards {
+    flex-direction: column;
+  }
+  .what-can-i-do__cards-subtitle-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .what-can-i-do__cards-item {
+    min-height: 248px;
   }
 }

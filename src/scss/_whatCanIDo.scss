@@ -73,7 +73,58 @@
   &__btn {
     padding: 10px 40px;
   }
-  
+  &__cards {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  &__cards-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    border: 1px solid $cool-frost;
+    width: 100%;
+    min-height: 264px;
+    height: 100%;
+  }
+  &__cards-item--1 {
+    background-image: url('../img/what-can-i-do-card-1.jpg');
+  }
+  &__cards-item--2 {
+    background-image: url('../img/what-can-i-do-card-2.jpg');
+  }
+  &__cards-intro {
+    padding: 20px;
+    min-height: 128px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 15px;
+    background-color: $gram-s-hair;
+    border-radius: 10px;
+  }
+  &__cards-title {
+    max-width: 276px;
+  }
+  &__cards-subtitle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  &__cards-subtitle {
+    max-width: 180px;
+    color: rgba($black, 0.6);
+  }
+  &__cards-btn {
+    padding: 5px 20px;
+    @include text-style(16px, 24px, 400, $black);
+  }
 }
 
 @media (max-width: 1279px) {
@@ -103,6 +154,18 @@
       padding: 10px 30px;
       font-size: 14px;
       line-height: 18px;
+    }
+    &__cards-item {
+      border-radius: 11px;
+      min-height: 209px;
+    }
+    &__cards-intro {
+      min-height: 114px;
+    }
+    &__cards-btn {
+      font-size: 14px;
+      line-height: 18px;
+
     }
   }
 }
@@ -135,6 +198,16 @@
       width: 100%;
       display: flex;
       justify-content: flex-end;
+    }
+    &__cards {
+      flex-direction: column;
+    }
+    &__cards-subtitle-container {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__cards-item {
+      min-height: 248px;
     }
   }
 }
