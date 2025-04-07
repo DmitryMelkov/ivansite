@@ -2,6 +2,7 @@ import { aboutMeSlider } from './modules/aboutMeSlider.js';
 import { burgerMenu } from './modules/burger.js';
 import { initFormHandler } from './modules/formHandler.js';
 import { setupModal } from './modules/modal.js';
+import { initActiveCard } from './modules/modules/activeCard.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   burgerMenu();
@@ -14,4 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // слайдер в секии обо мне
   aboutMeSlider();
+
+  // Инициализация логики активной карточки
+  initActiveCard();
 });

@@ -1,0 +1,19 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+.cases {
+  padding-top: 100px;
+  background-color: $gram-s-hair;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__descr {
+    margin-bottom: 17px;
+    text-align: center;
+  }
+}

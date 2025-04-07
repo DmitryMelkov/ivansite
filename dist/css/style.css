@@ -2031,11 +2031,19 @@ input[type=number] {
   gap: 15px;
 }
 .creation-website__left {
+  position: relative;
   max-width: 378px;
   flex-shrink: 0;
 }
 .creation-website__right {
   flex-grow: 1;
+}
+.creation-website__left-wrapper {
+  margin-top: 50px;
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
 }
 .creation-website__title {
   max-width: 378px;
@@ -2059,6 +2067,7 @@ input[type=number] {
   background-color: #FFF;
   border: 1px solid #e7e7ef;
   border-radius: 10px;
+  transition: background-color 0.5s ease-in-out;
 }
 .creation-website__item-container {
   display: flex;
@@ -2078,6 +2087,7 @@ input[type=number] {
   line-height: 24px;
   font-weight: 400;
   color: rgba(37, 38, 47, 0.6);
+  transition: color 0.5s ease-in-out;
 }
 .creation-website__item-list-item::before {
   content: "•";
@@ -2087,6 +2097,7 @@ input[type=number] {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+  transition: color 0.5s ease-in-out;
 }
 .creation-website__item-num {
   font-size: 128px;
@@ -2094,6 +2105,19 @@ input[type=number] {
   font-weight: 800;
   color: #f5f7f9;
   font-family: "Manrope", sans-serif;
+  transition: color 0.5s ease-in-out;
+}
+.creation-website__item-title {
+  transition: color 0.5s ease-in-out;
+}
+.creation-website__item.active {
+  background-color: #415be7;
+}
+.creation-website__item.active .creation-website__item-title, .creation-website__item.active .creation-website__item-list-item, .creation-website__item.active .creation-website__item-num {
+  color: #FFF;
+}
+.creation-website__item.active .creation-website__item-list-item::before {
+  color: #FFF;
 }
 .creation-website__result {
   margin-top: 20px;
@@ -2110,6 +2134,7 @@ input[type=number] {
   border-radius: 10px;
 }
 .creation-website__result-title {
+  max-width: 273px;
   color: #FFF;
 }
 .creation-website__btn {
@@ -2118,4 +2143,21 @@ input[type=number] {
   line-height: 24px;
   font-weight: 400;
   color: #FFF;
+}
+
+.cases {
+  padding-top: 100px;
+  background-color: #f5f7f9;
+}
+.cases__container {
+  display: flex;
+  flex-direction: column;
+}
+.cases__title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.cases__descr {
+  margin-bottom: 17px;
+  text-align: center;
 }

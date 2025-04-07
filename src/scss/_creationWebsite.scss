@@ -12,11 +12,19 @@
     gap: 15px;
   }
   &__left {
+    position: relative;
     max-width: 378px;
     flex-shrink: 0;
   }
   &__right {
     flex-grow: 1;
+  }
+  &__left-wrapper {
+    margin-top: 50px;
+    position: sticky;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
   }
   &__title {
     max-width: 378px;
@@ -40,7 +48,9 @@
     background-color: $white;
     border: 1px solid $cool-frost;
     border-radius: 10px;
+    transition: background-color 0.5s ease-in-out;
   }
+
   &__item-container {
     display: flex;
     flex-direction: column;
@@ -56,7 +66,7 @@
     position: relative;
     padding-left: 15px;
     @include text-style(16px, 24px, 400, rgba($black, 0.6));
-
+    transition: color 0.5s ease-in-out;
     &::before {
       content: '•';
       color: $qing-dynasty-dragon;
@@ -65,13 +75,28 @@
       left: 0;
       top: 50%;
       transform: translateY(-50%);
+      transition: color 0.5s ease-in-out;
     }
   }
   &__item-num {
     @include text-style(128px, 90%, 800, $gram-s-hair);
     font-family: 'Manrope', sans-serif;
+    transition: color .5s ease-in-out;
   }
-
+  &__item-title {
+    transition: color 0.5s ease-in-out;
+  }
+  &__item.active {
+    background-color: $qing-dynasty-dragon;
+  }
+  &__item.active &__item-title,
+  &__item.active &__item-list-item,
+  &__item.active &__item-num {
+    color: $white;
+  }
+  &__item.active &__item-list-item::before {
+    color: $white;
+  }
   &__result {
     margin-top: 20px;
     padding: 30px;
@@ -87,6 +112,7 @@
     border-radius: 10px;
   }
   &__result-title {
+    max-width: 273px;
     color: $white;
   }
   &__btn {
