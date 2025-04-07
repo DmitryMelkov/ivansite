@@ -1531,6 +1531,7 @@ input[type=number] {
   position: relative;
   padding-left: 50px;
   padding-right: 50px;
+  z-index: 0;
 }
 .about-me__slider {
   position: relative;
@@ -2020,15 +2021,17 @@ input[type=number] {
   }
 }
 .creation-website {
+  margin-top: -10px;
   padding-top: 65px;
   border-radius: 15px 15px 0 0;
   background-color: #f5f7f9;
+  box-shadow: 0px -19px 18.6px 0px rgba(0, 0, 0, 0.05);
 }
 .creation-website__container {
   margin-top: 10px;
   display: flex;
   justify-content: space-between;
-  gap: 15px;
+  gap: 25px;
 }
 .creation-website__left {
   position: relative;
@@ -2039,7 +2042,7 @@ input[type=number] {
   flex-grow: 1;
 }
 .creation-website__left-wrapper {
-  margin-top: 50px;
+  margin-top: 45px;
   position: sticky;
   top: 50%;
   transform: translateY(-50%);
@@ -2062,7 +2065,7 @@ input[type=number] {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 10px;
+  gap: 15px;
   padding: 30px;
   background-color: #FFF;
   border: 1px solid #e7e7ef;
@@ -2124,7 +2127,6 @@ input[type=number] {
   padding: 30px;
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
   width: 100%;
   min-height: 120px;
   background-image: url("../img/creation-or-refinement-bg.jpg");
@@ -2137,6 +2139,10 @@ input[type=number] {
   max-width: 273px;
   color: #FFF;
 }
+.creation-website__btn-container {
+  display: flex;
+  align-items: flex-end;
+}
 .creation-website__btn {
   padding: 5px 20px;
   font-size: 16px;
@@ -2145,6 +2151,60 @@ input[type=number] {
   color: #FFF;
 }
 
+@media (max-width: 1279px) {
+  .creation-website {
+    padding-top: 29px;
+  }
+  .creation-website__title {
+    max-width: 288px;
+  }
+  .creation-website__item {
+    padding: 20px;
+    align-items: flex-end;
+  }
+  .creation-website__item-list-item {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .creation-website__result {
+    padding: 20px;
+    flex-direction: column;
+  }
+  .creation-website__item-num {
+    font-size: 86px;
+  }
+}
+@media (max-width: 767px) {
+  .creation-website__container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .creation-website__left {
+    max-width: max-content;
+    width: 100%;
+  }
+  .creation-website__left-wrapper {
+    margin-top: 0;
+    width: 100%;
+    position: static;
+    transform: none;
+  }
+  .creation-website__title {
+    text-align: center;
+    max-width: max-content;
+  }
+  .creation-website__descr {
+    text-align: center;
+  }
+  .creation-website__result-title {
+    text-align: center;
+    max-width: max-content;
+  }
+  .creation-website__btn-container {
+    align-items: center;
+    justify-content: center;
+  }
+}
 .cases {
   padding-top: 100px;
   background-color: #f5f7f9;

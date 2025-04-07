@@ -4,11 +4,18 @@ export function initActiveCard() {
 
   // Функция для обновления активной карточки
   const updateActiveItem = () => {
-    // Получаем координаты заголовка
-    const titleRect = title.getBoundingClientRect();
-    const titleCenter = titleRect.top + titleRect.height / 2;
+    let referencePoint;
 
-    // Находим карточку, которая ближе всего к центру заголовка
+    if (window.innerWidth > 767) {
+      // Для больших экранов используем центр заголовка
+      const titleRect = title.getBoundingClientRect();
+      referencePoint = titleRect.top + titleRect.height / 2;
+    } else {
+      // Для маленьких экранов используем центр окна
+      referencePoint = window.innerHeight / 2;
+    }
+
+    // Находим карточку, которая ближе всего к точке отсчета
     let closestItem = null;
     let smallestDistance = Infinity;
 
@@ -16,8 +23,8 @@ export function initActiveCard() {
       const itemRect = item.getBoundingClientRect();
       const itemCenter = itemRect.top + itemRect.height / 2;
 
-      // Вычисляем расстояние от центра карточки до центра заголовка
-      const distance = Math.abs(itemCenter - titleCenter);
+      // Вычисляем расстояние от центра карточки до точки отсчета
+      const distance = Math.abs(itemCenter - referencePoint);
 
       if (distance < smallestDistance) {
         smallestDistance = distance;
@@ -35,7 +42,12 @@ export function initActiveCard() {
     });
   };
 
+  // Слушаем событие scroll на window
   window.addEventListener('scroll', updateActiveItem);
 
+  // Слушаем изменение размера окна
+  window.addEventListener('resize', updateActiveItem);
+
+  // Инициализация при загрузке страницы
   updateActiveItem();
 }
