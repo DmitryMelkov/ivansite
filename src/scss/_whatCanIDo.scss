@@ -125,6 +125,30 @@
     padding: 5px 20px;
     @include text-style(16px, 24px, 400, $black);
   }
+  &__seo {
+    margin-top: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    background-color: $gram-s-hair;
+    border: 1px solid $cool-frost;
+    border-radius: 10px;
+  }
+  &__seo-title {
+    margin-bottom: 20px;
+    span {
+      color: $qing-dynasty-dragon;
+    }
+  }
+  &__seo-descr {
+    margin-bottom: 25px;
+    max-width: 506px;
+    color: rgba($black, 0.6);
+  }
+  &__seo-btn {
+    padding: 5px 20px;
+  }
 }
 
 @media (max-width: 1279px) {
@@ -165,7 +189,12 @@
     &__cards-btn {
       font-size: 14px;
       line-height: 18px;
-
+    }
+    &__seo {
+      padding: 20px;
+    }
+    &__seo-descr {
+      max-width: 354px;
     }
   }
 }
@@ -208,6 +237,12 @@
     }
     &__cards-item {
       min-height: 248px;
+    }
+    &__seo {
+      flex-direction: column;
+    }
+    &__seo-descr {
+      max-width: max-content;
     }
   }
 }

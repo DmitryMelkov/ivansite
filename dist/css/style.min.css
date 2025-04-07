@@ -1831,6 +1831,30 @@ input[type=number] {
   font-weight: 400;
   color: #25262F;
 }
+.what-can-i-do__seo {
+  margin-top: 20px;
+  padding: 30px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #f5f7f9;
+  border: 1px solid #e7e7ef;
+  border-radius: 10px;
+}
+.what-can-i-do__seo-title {
+  margin-bottom: 20px;
+}
+.what-can-i-do__seo-title span {
+  color: #415be7;
+}
+.what-can-i-do__seo-descr {
+  margin-bottom: 25px;
+  max-width: 506px;
+  color: rgba(37, 38, 47, 0.6);
+}
+.what-can-i-do__seo-btn {
+  padding: 5px 20px;
+}
 
 @media (max-width: 1279px) {
   .what-can-i-do__subtitle {
@@ -1869,6 +1893,12 @@ input[type=number] {
     font-size: 14px;
     line-height: 18px;
   }
+  .what-can-i-do__seo {
+    padding: 20px;
+  }
+  .what-can-i-do__seo-descr {
+    max-width: 354px;
+  }
 }
 @media (max-width: 767px) {
   .what-can-i-do__price--ml {
@@ -1906,5 +1936,11 @@ input[type=number] {
   }
   .what-can-i-do__cards-item {
     min-height: 248px;
+  }
+  .what-can-i-do__seo {
+    flex-direction: column;
+  }
+  .what-can-i-do__seo-descr {
+    max-width: max-content;
   }
 }
