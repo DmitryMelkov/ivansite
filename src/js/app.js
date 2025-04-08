@@ -5,6 +5,7 @@ import { initActiveCard } from './modules/activeCard.js';
 import { initTabs } from './modules/tabs.js';
 import { setupFormModal } from './modules/formModal.js';
 import { initCasesModals } from './modules/casesModal.js';
+import { reviewsSlider } from './modules/reviewsSlider.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   burgerMenu();
@@ -29,4 +30,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Инициализация обработчика формы discussProject
   initFormHandler('discussForm');
+
+  // слайдер отзывов
+  reviewsSlider()
 });

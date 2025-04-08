@@ -7,6 +7,9 @@
   border-radius: 15px 15px 0 0;
   background-color: $gram-s-hair;
   box-shadow: 0px -19px 18.6px 0px rgba(0, 0, 0, 0.05);
+  &__container {
+    margin-bottom: 50px;
+  }
   &__title {
     margin-bottom: 20px;
     text-align: center;
@@ -17,5 +20,74 @@
   &__descr {
     margin-bottom: 17px;
     text-align: center;
+  }
+  &__slider-container {
+    position: relative;
+    z-index: 0;
+  }
+  &__slider {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  &__swiper-wrapper {
+    display: flex;
+  }
+  &__slide {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 5px;
+    min-height: 332px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid $cool-frost;
+  }
+  &__avatar-container {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  &__avatar img {
+    border-radius: 50%;
+  }
+  &__slide-descr {
+    margin-bottom: 40px;
+  }
+  &__link-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  &__link {
+    padding: 5px;
+    @include text-style(12px, 100%, 400, $white);
+  }
+  &__link--more {
+    @include text-style(12px, 100%, 400, rgba($black, 0.6));
+    text-decoration: underline;
+    transition: color 0.3s ease-in-out;
+    @media (min-width: 1024px) {
+      &:hover {
+        color: $qing-dynasty-dragon;
+      }
+    }
+    &:active {
+      color: $qing-dynasty-dragon;
+    }
+    &:focus-visible {
+      color: $qing-dynasty-dragon;
+      outline: none;
+    }
+  }
+  &__button-prev {
+    left: -50px;
+  }
+  &__button-next {
+    right: -50px;
   }
 }
