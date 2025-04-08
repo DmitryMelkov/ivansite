@@ -768,6 +768,24 @@ input::placeholder {
   outline: none;
 }
 
+.primary-link {
+  background-color: #415be7;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
+}
+@media (min-width: 1024px) {
+  .primary-link:hover {
+    opacity: 0.5;
+  }
+}
+.primary-link:active {
+  opacity: 0.5;
+}
+.primary-link:focus-visible {
+  opacity: 0.5;
+  outline: none;
+}
+
 input[type=text]::-ms-clear {
   display: none;
   width: 0;
@@ -2429,7 +2447,7 @@ input[type=number] {
   margin: 10% auto;
   padding: 40px;
   width: 100%;
-  max-width: 570px;
+  max-width: 814px;
   position: relative;
   background-color: #FFF;
   border-radius: 10px;
@@ -2479,6 +2497,68 @@ input[type=number] {
 .cases-modal__span {
   position: static;
 }
+.cases-modal__title {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.cases-modal__descr {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.cases-modal__slider-container {
+  position: relative;
+  padding-left: 50px;
+  padding-right: 50px;
+  z-index: 0;
+}
+.cases-modal__slider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.cases-modal__swiper-wrapper {
+  display: flex;
+}
+.cases-modal__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out;
+}
+@media (min-width: 1024px) {
+  .cases-modal__slide:hover {
+    opacity: 0.5;
+  }
+}
+.cases-modal__slide:active {
+  opacity: 0.5;
+}
+.cases-modal__slide:focus-visible {
+  opacity: 0.5;
+  outline: none;
+}
+.cases-modal__pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+.cases-modal__descr--full {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.cases-modal__link-container {
+  display: flex;
+  justify-content: center;
+}
+.cases-modal__link {
+  padding: 10px 82px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #FFF;
+}
 
 .cases-modal--active {
   visibility: visible;
@@ -2489,6 +2569,34 @@ input[type=number] {
   transform: translateY(0);
 }
 
+@media (max-width: 1279px) {
+  .cases-modal__content {
+    max-width: 570px;
+  }
+  .cases-modal__link {
+    padding: 5px 79px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .cases-modal__content {
+    padding: 20px;
+    max-width: 280px;
+  }
+  .cases-modal__slider-container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .cases-modal__button-prev, .cases-modal__button-next {
+    display: none;
+  }
+  .cases-modal__link {
+    width: 100%;
+    padding: 5px 30px;
+    text-align: center;
+  }
+}
 .footer {
   padding-top: 40px;
   padding-bottom: 20px;
