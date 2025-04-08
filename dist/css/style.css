@@ -1834,25 +1834,17 @@ input[type=number] {
   gap: 20px;
 }
 .what-can-i-do__cards-item {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 10px;
-  border: 1px solid #e7e7ef;
-  width: 100%;
-  min-height: 264px;
-  height: 100%;
-}
-.what-can-i-do__cards-item--1 {
-  background-image: url("../img/what-can-i-do-card-1.jpg");
-}
-.what-can-i-do__cards-item--2 {
-  background-image: url("../img/what-can-i-do-card-2.jpg");
 }
 .what-can-i-do__cards-intro {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
   padding: 20px;
   min-height: 128px;
   display: flex;
@@ -1935,7 +1927,11 @@ input[type=number] {
   }
   .what-can-i-do__cards-item {
     border-radius: 11px;
+  }
+  .what-can-i-do__cards-item img {
+    border-radius: 12px;
     min-height: 209px;
+    object-fit: cover;
   }
   .what-can-i-do__cards-intro {
     min-height: 114px;
@@ -1986,7 +1982,11 @@ input[type=number] {
     align-items: flex-start;
   }
   .what-can-i-do__cards-item {
+    width: 100%;
     min-height: 248px;
+  }
+  .what-can-i-do__cards-item img {
+    min-height: 234px;
   }
   .what-can-i-do__seo {
     flex-direction: column;
@@ -2265,18 +2265,12 @@ input[type=number] {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
   border-radius: 10px;
   width: 100%;
   min-height: 313px;
 }
-.cases__item--1 {
-  background-image: url("../img/cases-bg-1.jpg");
-}
-.cases__item--2 {
-  background-image: url("../img/cases-bg-2.jpg");
+.cases__item img {
+  border-radius: 10px;
 }
 .cases__span {
   position: absolute;
@@ -2299,6 +2293,10 @@ input[type=number] {
   right: 20px;
 }
 .cases__box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
   padding: 20px;
   width: 100%;
   min-height: 108px;
@@ -2421,6 +2419,12 @@ input[type=number] {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
+  }
+  .cases__item img {
+    min-height: 247px;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
   }
 }
 @media (max-width: 767px) {

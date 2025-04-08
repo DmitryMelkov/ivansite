@@ -80,25 +80,17 @@
     gap: 20px;
   }
   &__cards-item {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
-    border: 1px solid $cool-frost;
-    width: 100%;
-    min-height: 264px;
-    height: 100%;
-  }
-  &__cards-item--1 {
-    background-image: url('../img/what-can-i-do-card-1.jpg');
-  }
-  &__cards-item--2 {
-    background-image: url('../img/what-can-i-do-card-2.jpg');
   }
   &__cards-intro {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
     padding: 20px;
     min-height: 128px;
     display: flex;
@@ -181,7 +173,11 @@
     }
     &__cards-item {
       border-radius: 11px;
+    }
+    &__cards-item img {
+      border-radius: 12px;
       min-height: 209px;
+      object-fit: cover;
     }
     &__cards-intro {
       min-height: 114px;
@@ -221,7 +217,6 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-
     }
     &__price-value--mobile {
       width: 100%;
@@ -236,7 +231,13 @@
       align-items: flex-start;
     }
     &__cards-item {
+      width: 100%;
       min-height: 248px;
+    }
+    &__cards-item img {
+
+      min-height: 234px;
+
     }
     &__seo {
       flex-direction: column;

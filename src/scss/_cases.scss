@@ -29,18 +29,12 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover;
     border-radius: 10px;
     width: 100%;
     min-height: 313px;
   }
-  &__item--1 {
-    background-image: url('../img/cases-bg-1.jpg');
-  }
-  &__item--2 {
-    background-image: url('../img/cases-bg-2.jpg');
+  &__item img {
+    border-radius: 10px;
   }
   &__span {
     position: absolute;
@@ -61,6 +55,10 @@
     right: 20px;
   }
   &__box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
     padding: 20px;
     width: 100%;
     min-height: 108px;
@@ -179,6 +177,12 @@
       flex-direction: column;
       align-items: flex-start;
       gap: 15px;
+    }
+    &__item img {
+      min-height: 247px;
+      width: 100%;
+      object-fit: cover;
+      object-position: left;
     }
   }
 }
