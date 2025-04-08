@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Главная</title>
+</head>
+
+
+<body>
+  <header class="header">
+    <div class="header__box">
+      <div class="container header__container">
+        <div class="header__menu">
+          <div class="header__burger-close-box">
+            <button class="header__burger-close btn-reset">
+              <span class="header__burger-close-line"></span>
+              <span class="header__burger-close-line"></span>
+            </button>
+          </div>
+          <div class="header__logo">
+            ivan
+            <span>site</span>
+          </div>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="#">Обо мне</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Стоимость</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Кейсы</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Отзывы</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="header__btn primary-btn btn-reset" data-open-modal
+            data-modal-title="Бесплатная консультация">Консультация</button>
+        </div>
+        <div class="header__logo header__logo--mobile">
+          ivan
+          <span>site</span>
+        </div>
+        <button class="header__burger btn-reset">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
+        <div class="header__overlay"></div>
+      </div>
+    </div>
+
+  </header>
+  <main>
+    <section class="intro">
+      <div class="container intro__container">
+        <h1 class="intro__title title-reset">
+          Сайты на Битрикс, которые приносят клиентов
+          и <span>увеличивают прибыль</span>
+        </h1>
+        <p class="intro__descr descr-reset">
+          Разработка, редизайн и доработка сайтов для бизнеса
+          Настраиваю под задачи, интегрирую с CRM
+        </p>
+        <button class="intro__btn btn-reset" data-open-modal data-modal-title="Бесплатная консультация">
+          Бесплатная консультация
+        </button>
+        <div class="intro__svg-1">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#intro-1"></use>
+          </svg>
+        </div>
+        <div class="intro__svg-2">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#intro-2"></use>
+          </svg>
+        </div>
+        <div class="intro__svg-3">
+          <svg>
+            <use xlink:href="img/icons/icons.svg#intro-3"></use>
+          </svg>
+        </div>
+      </div>
+    </section>
+    <section class="about-me">
+      <div class="container about-me__container">
+        <div class="about-me__left">
+          <h2 class="about-me__title title-reset">
+            Создаю <span>сайты, которые работают</span> на вас
+          </h2>
+          <p class="about-me__descr descr-reset">
+            Занимаюсь полным циклом разработки сайтов на 1С-Битрикс.
+            От прототипирования и дизайна до разработки фронтенда
+            и бэкенда
+          </p>
+          <p class="about-me__descr descr-reset">
+            Опыт работы более 8 лет, 5 лет из них работал в веб-студии
+            по разработке сайтов
+          </p>
+          <p class="about-me__descr descr-reset">
+            Разрабатывал проекты различной сложности, от лендингов
+            до высоконагруженных корпоративных порталов со своим API
+          </p>
+        </div>
+        <div class="about-me__right">
+          <picture>
+            <source media="(max-width: 520px)" srcset="img/about-me-1920.png">
+            <source media="(max-width: 767px)" srcset="img/about-me-767.png">
+            <source media="(max-width: 1279px)" srcset="img/about-me-1279.png">
+            <img class="about-me__right-img" src="img/about-me-1920.png" alt="about-me">
+          </picture>
+        </div>
+      </div>
+      <div class="container">
+        <h3 class="about-me__subtitle title-reset">
+          <span>Сертификаты</span> подтверждающие квалификацию
+        </h3>
+
+        <div class="about-me__slider-container">
+          <div class="swiper-container about-me__slider">
+            <div class="swiper-wrapper about-me__swiper-wrapper">
+              <a class="swiper-slide about-me__slide" href="#">
+                <img src="img/about-me-slide.svg" alt="img-1">
+              </a>
+              <a class="swiper-slide about-me__slide" href="#">
+                <img src="img/about-me-slide.svg" alt="img-1">
+              </a>
+              <a class="swiper-slide about-me__slide" href="#">
+                <img src="img/about-me-slide.svg" alt="img-1">
+              </a>
+              <a class="swiper-slide about-me__slide" href="#">
+                <img src="img/about-me-slide.svg" alt="img-1">
+              </a>
+              <a class="swiper-slide about-me__slide" href="#">
+                <img src="img/about-me-slide.svg" alt="img-1">
+              </a>
+              <a class="swiper-slide about-me__slide" href="#">
+                <img src="img/about-me-slide.svg" alt="img-1">
+              </a>
+            </div>
+          </div>
+          <!-- Стрелки навигации -->
+          <button class="swiper-button-prev about-me__button-prev slider__button-prev btn-reset">
+            <svg class="slider__button-prev-svg">
+              <use xlink:href="img/icons/icons.svg#btn-prev"></use>
+            </svg>
+          </button>
+          <button class="swiper-button-next about-me__button-next slider__button-next btn-reset">
+            <svg class="slider__button-next-svg">
+              <use xlink:href="img/icons/icons.svg#btn-next"></use>
+            </svg>
+          </button>
+
+        </div>
+
+      </div>
+    </section>
+    <section class="why-i">
+      <div class="container why-i__container">
+        <h2 class="why-i__title title-reset">
+          <span>Почему</span> выбирают меня?
+        </h2>
+        <p class="why-i__descr descr-reset">
+          Создавая сайт, я забочусь не только о результате, но и о вашем бизнесе
+        </p>
+        <ul class="why-i__list">
+          <li class="why-i__item">
+            <div class="why-i__item-container">
+              <h3 class="why-i__item-title title-reset">
+                <span>Индивидуальный</span>
+                подход
+              </h3>
+              <svg class="why-i__svg">
+                <use xlink:href="img/icons/icons.svg#why-i-1"></use>
+              </svg>
+            </div>
+            <p class="why-i__item-descr descr-reset">
+              Предлагаю оптимальные решения
+              и внедряю лучшую практику
+              для роста прибыли
+            </p>
+          </li>
+          <li class="why-i__item">
+            <div class="why-i__item-container">
+              <h3 class="why-i__item-title title-reset">
+                <span>Оптимизированный </span>
+                код
+              </h3>
+              <svg class="why-i__svg">
+                <use xlink:href="img/icons/icons.svg#why-i-2"></use>
+              </svg>
+            </div>
+            <p class="why-i__item-descr descr-reset">
+              Следую лучшим практикам разработки: минимизирую нагрузку, оптимизирую базу данных и использую последние
+              технологии
+            </p>
+          </li>
+          <li class="why-i__item why-i__item--3">
+            <div class="why-i__item-container">
+              <h3 class="why-i__item-title title-reset">
+                <span>Автоматизация </span>
+                и удобство
+              </h3>
+              <svg class="why-i__svg">
+                <use xlink:href="img/icons/icons.svg#why-i-3"></use>
+              </svg>
+            </div>
+            <p class="why-i__item-descr descr-reset">
+              Следую лучшим практикам разработки: минимизирую нагрузку, оптимизирую базу данных и использую последние
+              технологии
+            </p>
+          </li>
+          <li class="why-i__item why-i__item--4">
+            <div class="why-i__item-container">
+              <h3 class="why-i__item-title title-reset">
+                <span>Опыт </span>
+                сложных интеграций
+              </h3>
+              <svg class="why-i__svg">
+                <use xlink:href="img/icons/icons.svg#why-i-4"></use>
+              </svg>
+            </div>
+            <p class="why-i__item-descr descr-reset">
+              Работаю с 1С, CRM (Битрикс24, AmoCRM), платежными системами, маркетплейсами
+              и другими сервисами
+            </p>
+          </li>
+          <li class="why-i__item">
+            <div class="why-i__item-container">
+              <h3 class="why-i__item-title title-reset">
+                <span>Гарантия </span>
+                результата и поддержка
+              </h3>
+              <svg class="why-i__svg">
+                <use xlink:href="img/icons/icons.svg#why-i-5"></use>
+              </svg>
+            </div>
+            <p class="why-i__item-descr descr-reset">
+              Провожу обучение, гарантирую исправление возможных ошибок
+              и предлагаю долгосрочную поддержку
+            </p>
+          </li>
+          <li class="why-i__item">
+            <div class="why-i__item-container">
+              <h3 class="why-i__item-title title-reset">
+                Работа по договору,
+                <span> официально и прозрачно </span>
+              </h3>
+              <svg class="why-i__svg">
+                <use xlink:href="img/icons/icons.svg#why-i-6"></use>
+              </svg>
+            </div>
+            <p class="why-i__item-descr descr-reset">
+              Оформляю договор на услуги, что гарантирует надежность
+              и прозрачность сотрудничества
+            </p>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="what-can-i-do">
+      <div class="container what-can-i-do__container">
+        <h2 class="what-can-i-do__title title-reset">
+          <span>Что я могу</span>
+          сделать для вас?
+        </h2>
+        <p class="what-can-i-do__descr descr-reset">
+          Широкий спектр услуг, которые принесут вам результат
+        </p>
+        <div class="what-can-i-do__price">
+          <h3 class="what-can-i-do__subtitle title-reset">
+            Разработка сайтов
+          </h3>
+          <ul class="what-can-i-do__price-list">
+            <li class="what-can-i-do__price-item">
+              <div class="what-can-i-do__price-service what-can-i-do__price-service--mobile">
+                <span class="what-can-i-do__price-description">
+                  Сайт-визитка. Одностраничный лендинг с уникальным дизайном
+                </span>
+                <span class="what-can-i-do__price-value what-can-i-do__price-value--mobile">
+                  от 130 000 руб
+                </span>
+              </div>
+              <div class="what-can-i-do__price-service">
+                <span class="what-can-i-do__price-description what-can-i-do__price--ml">
+                  На готовом шаблоне
+                </span>
+                <span class="what-can-i-do__price-value what-can-i-do__price-value--val">
+                  от 70 000 руб
+                </span>
+              </div>
+            </li>
+            <li class="what-can-i-do__price-item">
+              <div class="what-can-i-do__price-service what-can-i-do__price-service--mobile">
+                <span class="what-can-i-do__price-description">
+                  Корпоративный сайт, многостраничный с уникальным дизайном
+                </span>
+                <span class="what-can-i-do__price-value what-can-i-do__price-value--mobile">
+                  от 200 000 руб
+                </span>
+              </div>
+              <div class="what-can-i-do__price-service">
+                <span class="what-can-i-do__price-description what-can-i-do__price--ml">
+                  На готовом шаблоне
+                </span>
+                <span class="what-can-i-do__price-value what-can-i-do__price-value--val">
+                  от 130 000 руб
+                </span>
+              </div>
+            </li>
+            <li class="what-can-i-do__price-item">
+              <div class="what-can-i-do__price-service what-can-i-do__price-service--mobile">
+                <span class="what-can-i-do__price-description">
+                  Интернет магазин с уникальным дизайном
+                </span>
+                <span class="what-can-i-do__price-value what-can-i-do__price-value--mobile">
+                  от 300 000 руб
+                </span>
+              </div>
+              <div class="what-can-i-do__price-service">
+                <span class="what-can-i-do__price-description what-can-i-do__price--ml">
+                  На готовом шаблоне
+                </span>
+                <span class="what-can-i-do__price-value what-can-i-do__price-value--val">
+                  от 190 000 руб
+                </span>
+              </div>
+            </li>
+          </ul>
+          <div class="what-can-i-do__result">
+            <span class="what-can-i-do__result-text">
+              Итоговая стоимость зависит от сложности проекта
+            </span>
+            <button class="what-can-i-do__btn primary-btn btn-reset" data-open-modal
+              data-modal-title="Обсудим ваш проект?">
+              Уточнить стоимость
+            </button>
+          </div>
+        </div>
+        <ul class="what-can-i-do__cards">
+          <li class="what-can-i-do__cards-item what-can-i-do__cards-item--1">
+            <div class="what-can-i-do__cards-intro">
+              <h3 class="what-can-i-do__cards-title title-reset">
+                Доработка
+                и кастомизация
+              </h3>
+              <div class="what-can-i-do__cards-subtitle-container">
+                <p class="what-can-i-do__cards-subtitle descr-reset">
+                  от 2000 руб./час или
+                  по договоренности
+                </p>
+                <button class="what-can-i-do__cards-btn primary-btn btn-reset" data-open-modal
+                  data-modal-title="Доработка и кастомизация ">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+          </li>
+          <li class="what-can-i-do__cards-item what-can-i-do__cards-item--2">
+            <div class="what-can-i-do__cards-intro">
+              <h3 class="what-can-i-do__cards-title title-reset">
+                Техническая поддержка и администрирование
+              </h3>
+              <div class="what-can-i-do__cards-subtitle-container">
+                <p class="what-can-i-do__cards-subtitle descr-reset">
+                  от 2000 руб./час или
+                  по договоренности
+                </p>
+                <button class="what-can-i-do__cards-btn primary-btn btn-reset" data-open-modal
+                  data-modal-title="Техническая поддержка и администрирование ">
+                  Подробнее
+                </button>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div class="what-can-i-do__seo">
+          <div class="what-can-i-do__seo-left">
+            <h3 class="what-can-i-do__seo-title title-reset">
+              <span>SEO-оптимизация</span>
+              и продвижение
+            </h3>
+            <p class="what-can-i-do__seo-descr descr-reset">
+              Цена зависит от конкретного проекта и обсуждается
+              в зависимости от сложности и выбранных методов продвижения
+            </p>
+            <button class="what-can-i-do__seo-btn primary-btn btn-reset" data-open-modal
+              data-modal-title="Обсудим ваш проект?">Узнать больше</button>
+          </div>
+          <div class="what-can-i-do__seo-right">
+            <img src="img/what-can-i-do-seo.svg" alt="seo">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="creation-or-refinement">
+      <div class="container creation-or-refinement__container">
+        <h2 class="creation-or-refinement__title title-reset">
+          Создание или доработка?
+        </h2>
+        <p class="creation-or-refinement__descr descr-reset">
+          Оставьте заявку и получите бесплатный разбор вашего сайта или рекомендации по созданию нового
+        </p>
+        <button class="creation-or-refinement__btn tertiary-btn btn-reset" data-open-modal
+          data-modal-title="Обсудим ваш проект?">
+          Бесплатная консультация
+        </button>
+      </div>
+    </section>
+    <section class="creation-website">
+      <div class="container creation-website__container">
+        <div class="creation-website__left">
+          <div class="creation-website__left-wrapper" id="sticky-title">
+            <h2 class="creation-website__title title-reset">
+              Как я <span>создаю сайты</span>, которые работают?
+            </h2>
+            <p class="creation-website__descr descr-reset">
+              Понятный процесс без лишних сложностей
+            </p>
+          </div>
+        </div>
+        <div class="creation-website__right">
+          <div class="creation-website__scroll-container">
+            <ul class="creation-website__list ">
+              <li class="creation-website__item">
+                <div class="creation-website__item-container">
+                  <h3 class="creation-website__item-title title-reset">
+                    Брифинг и анализ
+                  </h3>
+                  <ul class="creation-website__item-list">
+                    <li class="creation-website__item-list-item">
+                      Определяем цели, задачи и требования к сайту
+                    </li>
+                    <li class="creation-website__item-list-item">
+                      Анализ конкурентов и целевой аудитории
+                    </li>
+                    <li class="creation-website__item-list-item">
+                      Формируем техническое задание
+                    </li>
+                  </ul>
+                </div>
+                <span class="creation-website__item-num">1</span>
+              </li>
+              <li class="creation-website__item">
+                <div class="creation-website__item-container">
+                  <h3 class="creation-website__item-title title-reset">
+                    Проектирование и дизайн
+                  </h3>
+                  <ul class="creation-website__item-list">
+                    <li class="creation-website__item-list-item">
+                      Разработка структуры и прототипа сайта
+                    </li>
+                    <li class="creation-website__item-list-item">
+                      Создание уникального дизайна
+                      или адаптация шаблона
+                    </li>
+                    <li class="creation-website__item-list-item">
+                      Согласование макетов с клиентом
+                    </li>
+                  </ul>
+                </div>
+                <span class="creation-website__item-num">2</span>
+              </li>
+              <li class="creation-website__item">
+                <div class="creation-website__item-container">
+                  <h3 class="creation-website__item-title title-reset">
+                    Разработка и интеграция
+                  </h3>
+                  <ul class="creation-website__item-list">
+                    <li class="creation-website__item-list-item">
+                      Установка и настройка 1С-Битрикс
+                    </li>
+                    <li class="creation-website__item-list-item">
+                      Верстка и адаптация дизайна (HTML, CSS, JS)
+                    </li>
+                    <li class="creation-website__item-list-item">
+                      Разработка и настройка функционала (модули, компоненты, интеграции)
+                    </li>
+                  </ul>
+                </div>
+                <span class="creation-website__item-num">3</span>
+              </li>
+              <li class="creation-website__item">
+                <div class="creation-website__item-container">
+                  <h3 class="creation-website__item-title title-reset">
+                    Тестирование и оптимизация
+                  </h3>
+                  <ul class="creation-website__item-list">
+                    <li class="creation-website__item-list-item">
+                      Проверка работоспособности
+                      и корректности отображения
+                    </li>
+                    <li class="creation-website__item-list-item">
+                      Оптимизация скорости загрузки
+                      и базовые SEO-настройки
+                    </li>
+                    <li class="creation-website__item-list-item">
+                      Тестирование на разных устройствах и браузерах
+                    </li>
+                  </ul>
+                </div>
+                <span class="creation-website__item-num">4</span>
+              </li>
+              <li class="creation-website__item">
+                <div class="creation-website__item-container">
+                  <h3 class="creation-website__item-title title-reset">
+                    Запуск и обучение
+                  </h3>
+                  <ul class="creation-website__item-list">
+                    <li class="creation-website__item-list-item">
+                      Перенос сайта на основной хостинг и настройка домена
+                    </li>
+                    <li class="creation-website__item-list-item">
+                      Настройка системы уведомлений
+                    </li>
+                    <li class="creation-website__item-list-item">
+                      Обучение работе с админ-панелью
+                    </li>
+                  </ul>
+                </div>
+                <span class="creation-website__item-num">5</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="creation-website__result">
+            <h3 class="creation-website__result-title title-reset">
+              Гарантия результата
+              и долгосрочная поддержка
+            </h3>
+            <div class="creation-website__btn-container">
+              <button class="creation-website__btn tertiary-btn btn-reset" data-open-modal
+                data-modal-title="Обсудим ваш проект?">
+                Подробнее
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="cases">
+      <div class="container cases__container">
+        <h2 class="cases__title title-reset">
+          Кейсы
+        </h2>
+        <p class="cases__descr descr-reset">
+          Примеры моих работ и реализованных проектов
+        </p>
+
+        <!-- Табы -->
+        <div class="cases__tabs tabs">
+          <button class="tabs__btn tabs__btn--active btn-reset" data-tab="landing">Лендинг</button>
+          <button class="tabs__btn btn-reset" data-tab="shop">Интернет-магазин</button>
+          <button class="tabs__btn btn-reset" data-tab="multi-page">Многостраничный сайт</button>
+        </div>
+
+        <!-- Контент табов -->
+        <div class="cases__content">
+          <div class="tabs__content tabs__content--active">
+            <ul class="cases__list">
+              <li class="cases__item cases__item--1">
+                <span class="cases__span cases__span--type">Многостраничный сайт</span>
+                <span class="cases__span cases__span--year">2025</span>
+                <div class="cases__box">
+                  <h3 class="cases__item-title title-reset">
+                    Онегинъ
+                  </h3>
+                  <div class="cases__item-descr-content">
+                    <p class="cases__item-descr descr-reset">
+                      Сайт для фитнес клуба
+                      в Москве
+                    </p>
+                    <button class="cases__item-btn primary-btn btn-reset" data-cases-modal-id="case-1">
+                      Подробнее
+                    </button>
+                  </div>
+                </div>
+              </li>
+              <li class="cases__item cases__item--2">
+                <span class="cases__span cases__span--type">Многостраничный сайт</span>
+                <span class="cases__span cases__span--year">2025</span>
+                <div class="cases__box">
+                  <h3 class="cases__item-title title-reset">
+                    Контейнер маркет
+                  </h3>
+                  <div class="cases__item-descr-content">
+                    <p class="cases__item-descr descr-reset">
+                      Сайт для продажи и аренды
+                      блок контейнеров в Москве
+                    </p>
+                    <button class="cases__item-btn primary-btn btn-reset" data-cases-modal-id="case-2">
+                      Подробнее
+                    </button>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="tabs__content">
+            <p>Контент для интернет-магазина: товары, корзина, оплата.</p>
+          </div>
+          <div class="tabs__content" data-tab-content="multi-page">
+            <p>Контент для многостраничного сайта: разделы, навигация, SEO.</p>
+          </div>
+        </div>
+
+        <div class="cases__btn-container">
+          <button class="cases__btn btn-reset">Показать еще</button>
+        </div>
+      </div>
+    </section>
+    <section class="discuss-project">
+      <div class="container discuss-project__container">
+        <div class="discuss-project__left">
+          <div class="discuss-project__info discuss-project__info--desktop">
+            <h2 class="discuss-project__title title-reset">
+              Обсудим ваш проект?
+            </h2>
+            <p class="discuss-project__descr descr-reset">
+              Заполните форму и мы подберем для вас решение
+            </p>
+          </div>
+          <ul class="discuss-project__social">
+            <li class="discuss-project__social-item">
+              <a class="discuss-project__social-link" href="#">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#telegram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="discuss-project__social-item">
+              <a class="discuss-project__social-link" href="#">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#whatsapp"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="discuss-project__social-item">
+              <a class="discuss-project__social-link" href="#">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="discuss-project__social-item">
+              <a class="discuss-project__social-link" href="#">
+                <svg>
+                  <use xlink:href="img/icons/icons.svg#instagram"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="discuss-project__right">
+          <form class="discuss-project__form" id="discussForm" novalidate>
+            <ul class="discuss-project__list list-reset">
+              <li class="discuss-project__item">
+                <label for="discussName"></label>
+                <input class="discuss-project__input" type="text" id="discussName" name="discussName"
+                  placeholder="Ваше имя" required>
+              </li>
+              <li class="discuss-project__item">
+                <label for="discussPhone"></label>
+                <input class="discuss-project__input" type="tel" id="discussPhone" name="discussPhone"
+                  placeholder="Ваш номер телефона" required>
+              </li>
+              <li class="discuss-project__item">
+                <label for="discussEmail"></label>
+                <input class="discuss-project__input" type="email" id="discussEmail" name="discussEmail"
+                  placeholder="Ваш email" required>
+              </li>
+              <li class="discuss-project__item">
+                <label for="discussContactMethod"></label>
+                <select class="discuss-project__select" id="discussContactMethod" name="discussContactMethod" required>
+                  <option value="" disabled selected>Как с вами связаться?</option>
+                  <option value="email">Email</option>
+                  <option value="phone">Телефон</option>
+                  <option value="messenger">Мессенджер</option>
+                </select>
+              </li>
+              <li class="discuss-project__item discuss-project__item--textarea">
+                <label for="discussTaskDescription"></label>
+                <textarea class="discuss-project__textarea" id="discussTaskDescription" name="discussTaskDescription"
+                  placeholder="Краткое описание задачи" required></textarea>
+              </li>
+              <li class="discuss-project__item discuss-project__item--checkbox">
+                <div class="checkbox-container">
+                  <input class="discuss-project__input-checkbox" type="checkbox" id="duscussAgreement"
+                    name="duscussAgreement" required>
+                  <label class="discuss-project__label--checkbox" for="duscussAgreement">Согласие с политикой
+                    конфиденциальности</label>
+                </div>
+              </li>
+            </ul>
+            <div class="discuss-project__form-btn-container">
+              <button class="discuss-project__form-btn tertiary-btn btn-reset" type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="reviews">
+      <div class="container reviews__container">
+        <h2 class="reviews__title title-reset">
+          <span>Что говорят</span>
+          мои клиенты?
+        </h2>
+        <p class="reviews__descr descr-reset">
+          Довольные клиенты — лучшая рекомендация
+        </p>
+      </div>
+    </section>
+
+
+  </main>
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__left">
+        <div class="footer__logo">
+          ivansite
+        </div>
+        <div class="footer__contacts">
+          <a class="footer__contacts-link" href="#">+7(666) 999 69 69</a>
+          <a class="footer__contacts-link" href="#">Мой сайт</a>
+        </div>
+      </div>
+      <div class="footer__center">
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Обо мне
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Стоимость
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Кейсы
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Отзывы
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <span class="footer__span footer__rules--desctop">2025, Все права защищены</span>
+      </div>
+      <div class="footer__right">
+        <ul class="footer__social">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#whatsapp"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="footer__politic-container">
+          <span class="footer__span footer__rules--mobile">2025, Все права защищены</span>
+          <a class="footer__link" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Универсальное модальное окно -->
+  <div class="modal" id="universalModal">
+    <div class="modal__content">
+      <button class="modal__close btn-reset" id="closeUniversalModal">&times;</button>
+      <div class="modal__container">
+        <h2 class="modal__title title-reset" id="modalTitle">Заголовок по умолчанию</h2>
+        <p class="modal__descr descr-reset">
+          Заполните форму и я свяжусь с вами в ближайшее время
+        </p>
+        <form class="modal__form" id="universalForm" novalidate>
+          <ul class="modal__list list-reset">
+            <li class="modal__item">
+              <label for="name"></label>
+              <input class="modal__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+            </li>
+            <li class="modal__item">
+              <label for="phone"></label>
+              <input class="modal__input" type="tel" id="phone" name="phone" placeholder="Ваш номер телефона" required>
+            </li>
+            <li class="modal__item">
+              <label for="email"></label>
+              <input class="modal__input" type="email" id="email" name="email" placeholder="Ваш email" required>
+            </li>
+            <li class="modal__item">
+              <label for="contactMethod"></label>
+              <select class="modal__select" id="contactMethod" name="contactMethod" required>
+                <option value="" disabled selected>Как с вами связаться?</option>
+                <option value="email">Email</option>
+                <option value="phone">Телефон</option>
+                <option value="messenger">Мессенджер</option>
+              </select>
+            </li>
+            <li class="modal__item modal__item--textarea">
+              <label for="taskDescription"></label>
+              <textarea class="modal__textarea" id="taskDescription" name="taskDescription"
+                placeholder="Краткое описание задачи" required></textarea>
+            </li>
+            <li class="modal__item modal__item--checkbox">
+              <div class="checkbox-container">
+                <input class="modal__input-checkbox" type="checkbox" id="agreement" name="agreement" required>
+                <label class="modal__label--checkbox" for="agreement">Согласие с политикой конфиденциальности</label>
+              </div>
+            </li>
+          </ul>
+          <div class="modal__form-btn-container">
+            <button class="modal__form-btn secondary-btn btn-reset" type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- cases-modal -->
+  <div id="case-1" class="cases-modal" data-cases-modal>
+    <div class="cases-modal__content">
+      <button class="cases-modal__close" data-cases-modal-close>&times;</button>
+      <div class="cases-modal__top-box">
+        <span class="cases__span cases__span--type cases-modal__span">Многостраничный сайт</span>
+        <span class="cases__span cases__span--year cases-modal__span">2025</span>
+      </div>
+      <h2 class="cases-modal__title title-reset">Онегинъ</h2>
+      <p class="cases-modal__descr descr-reset">
+        Сайт для фитнес клуба
+        в Москве
+      </p>
+      <div class="cases-modal__slider-container">
+        <div class="swiper-container cases-modal__slider">
+          <div class="swiper-wrapper cases-modal__swiper-wrapper">
+            <div class="swiper-slide cases-modal__slide">
+              <img src="img/cases-bg-1.jpg" alt="img-1">
+            </div>
+            <div class="swiper-slide cases-modal__slide">
+              <img src="img/cases-bg-1.jpg" alt="img-1">
+            </div>
+            <div class="swiper-slide cases-modal__slide">
+              <img src="img/cases-bg-1.jpg" alt="img-1">
+            </div>
+          </div>
+        </div>
+        <!-- Стрелки навигации -->
+        <button class="swiper-button-prev cases-modal__button-prev slider__button-prev btn-reset">
+          <svg class="slider__button-prev-svg">
+            <use xlink:href="img/icons/icons.svg#btn-prev"></use>
+          </svg>
+        </button>
+        <button class="swiper-button-next cases-modal__button-next slider__button-next btn-reset">
+          <svg class="slider__button-next-svg">
+            <use xlink:href="img/icons/icons.svg#btn-next"></use>
+          </svg>
+        </button>
+        <!-- Пагинация -->
+        <div class="cases-modal__pagination"></div>
+      </div>
+      <p class="cases-modal__descr--full descr-reset">
+        Тут необходимо в несколько предложений описать проект.
+        Какая была задача, как вы её реализовали, какой использовали подход и т.д.
+        Формировать предложнния необходимо простым языком с минимумом технических терминов. Чтобы кажды понял суть
+
+        Так же можно перечислить плюсы/реализованные задачи после создания сайта:
+
+        Разгрузили сотрудников по операционке
+        Поднялись в поисковике на несколько страниц вверх
+        После редизайна поднялась конверсия
+        и т.д.
+      </p>
+      <div class="cases-modal__link-container">
+        <a class="cases-modal__link primary-link" href="#">
+          Посмотреть сайт
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div id="case-2" class="cases-modal" data-cases-modal>
+    <div class="cases-modal__content">
+      <button class="cases-modal__close" data-cases-modal-close>&times;</button>
+      <div class="cases-modal__top-box">
+        <span class="cases__span cases__span--type cases-modal__span">Интернет-магазин</span>
+        <span class="cases__span cases__span--year cases-modal__span">2025</span>
+      </div>
+      <h2 class="cases-modal__title title-reset">Контейнер маркет</h2>
+      <p class="cases-modal__descr descr-reset">
+        Сайт для продажи и аренды
+        блок контейнеров в Москве
+      </p>
+      <div class="cases-modal__slider-container">
+        <div class="swiper-container cases-modal__slider">
+          <div class="swiper-wrapper cases-modal__swiper-wrapper">
+            <div class="swiper-slide cases-modal__slide">
+              <img src="img/cases-modal-slide.png" alt="img-1">
+            </div>
+            <div class="swiper-slide cases-modal__slide">
+              <img src="img/cases-modal-slide.png" alt="img-1">
+            </div>
+            <div class="swiper-slide cases-modal__slide">
+              <img src="img/cases-modal-slide.png" alt="img-1">
+            </div>
+          </div>
+        </div>
+        <!-- Стрелки навигации -->
+        <button class="swiper-button-prev cases-modal__button-prev slider__button-prev btn-reset">
+          <svg class="slider__button-prev-svg">
+            <use xlink:href="img/icons/icons.svg#btn-prev"></use>
+          </svg>
+        </button>
+        <button class="swiper-button-next cases-modal__button-next slider__button-next btn-reset">
+          <svg class="slider__button-next-svg">
+            <use xlink:href="img/icons/icons.svg#btn-next"></use>
+          </svg>
+        </button>
+        <!-- Пагинация -->
+        <div class="cases-modal__pagination"></div>
+      </div>
+      <p class="cases-modal__descr--full descr-reset">
+        Тут необходимо в несколько предложений описать проект.
+        Какая была задача, как вы её реализовали, какой использовали подход и т.д.
+        Формировать предложнния необходимо простым языком с минимумом технических терминов. Чтобы кажды понял суть
+
+        Так же можно перечислить плюсы/реализованные задачи после создания сайта:
+
+        Разгрузили сотрудников по операционке
+        Поднялись в поисковике на несколько страниц вверх
+        После редизайна поднялась конверсия
+        и т.д.
+      </p>
+      <div class="cases-modal__link-container">
+        <a class="cases-modal__link primary-link" href="#">
+          Посмотреть сайт
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>
