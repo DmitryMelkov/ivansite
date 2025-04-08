@@ -3,7 +3,6 @@ import { closeModal } from './formModal.js';
 
 export function initFormHandler(formId) {
   const contactForm = document.getElementById(formId);
-
   if (contactForm) {
     // Валидация на лету (input)
     contactForm.addEventListener('input', (event) => {
@@ -23,8 +22,7 @@ export function initFormHandler(formId) {
       clearErrors(contactForm);
 
       // Валидация формы
-      const isValid = validateForm(contactForm);
-
+      const isValid = validateForm(contactForm, formId);
       if (isValid) {
         // Если форма валидна, собираем данные
         const formData = new FormData(contactForm);

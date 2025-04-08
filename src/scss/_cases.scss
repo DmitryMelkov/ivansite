@@ -188,6 +188,9 @@
     &__item {
       grid-column: span 12;
     }
+    &__btn-container {
+      padding-bottom: 57px;
+    }
   }
   .tabs {
     flex-wrap: wrap;

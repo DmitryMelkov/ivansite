@@ -37,29 +37,20 @@ export const validatePhoneField = (input, message) => {
 };
 
 export const validateCheckboxField = (input, message) => {
-  const container = input.closest('.checkbox-container'); // Находим родительский контейнер
-  const label = input.nextElementSibling; // Находим лейбл рядом с чекбоксом
+  const container = input.closest('.checkbox-container');
+  const label = input.nextElementSibling;
 
   if (!input.checked) {
     input.classList.add('input-error');
     input.classList.remove('input-success');
-    if (container) {
-      container.classList.add('error'); // Добавляем класс ошибки к контейнеру
-    }
-    if (label && label.tagName === 'LABEL') {
-      label.classList.add('label-error'); // Добавляем класс ошибки к лейблу
-    }
+    if (container) container.classList.add('error');
+    if (label && label.tagName === 'LABEL') label.classList.add('label-error');
     return false;
   }
 
   input.classList.remove('input-error');
-  input.classList.remove('input-success');
-  if (container) {
-    container.classList.remove('error'); // Удаляем класс ошибки у контейнера
-  }
-  if (label && label.tagName === 'LABEL') {
-    label.classList.remove('label-error'); // Удаляем класс ошибки у лейбла
-  }
+  if (container) container.classList.remove('error');
+  if (label && label.tagName === 'LABEL') label.classList.remove('label-error');
   return true;
 };
 
@@ -82,11 +73,9 @@ export const removeError = (input) => {
 
 export const showError = (input, message) => {
   removeError(input);
-
   const errorElement = document.createElement('div');
   errorElement.className = 'error-message';
   errorElement.textContent = message;
-
   input.classList.add('input-error');
   input.classList.remove('input-success');
   input.insertAdjacentElement('afterend', errorElement);
@@ -99,55 +88,37 @@ export const showSuccess = (input) => {
 };
 
 export const handleValidation = (target) => {
-  if (target.matches('#name')) {
+  if (target.matches('#name, #discussName')) {
     validateField(target, 'Пожалуйста, введите ваше имя.');
-  } else if (target.matches('#phone')) {
+  } else if (target.matches('#phone, #discussPhone')) {
     validatePhoneField(target, 'Пожалуйста, введите номер телефона.');
-  } else if (target.matches('#email')) {
+  } else if (target.matches('#email, #discussEmail')) {
     validateEmailField(target, 'Пожалуйста, введите ваш email.');
-  } else if (target.matches('#contactMethod')) {
+  } else if (target.matches('#contactMethod, #discussContactMethod')) {
     validateSelectField(target, 'Пожалуйста, выберите способ связи.');
-  } else if (target.matches('#taskDescription')) {
+  } else if (target.matches('#taskDescription, #discussTaskDescription')) {
     validateField(target, 'Пожалуйста, опишите задачу.');
-  } else if (target.matches('#agreement')) {
+  } else if (target.matches('#agreement, #duscussAgreement')) {
     validateCheckboxField(target, 'Необходимо согласиться с политикой конфиденциальности.');
   }
 };
 
-
-export const validateForm = (form) => {
+export const validateForm = (form, formId) => {
   let isValid = true;
 
-  const nameInput = form.querySelector('#name');
-  const phoneInput = form.querySelector('#phone');
-  const emailInput = form.querySelector('#email');
-  const contactMethodInput = form.querySelector('#contactMethod');
-  const taskDescriptionInput = form.querySelector('#taskDescription');
-  const agreementInput = form.querySelector('#agreement');
+  const nameInput = form.querySelector(`#${formId === 'universalForm' ? 'name' : 'discussName'}`);
+  const phoneInput = form.querySelector(`#${formId === 'universalForm' ? 'phone' : 'discussPhone'}`);
+  const emailInput = form.querySelector(`#${formId === 'universalForm' ? 'email' : 'discussEmail'}`);
+  const contactMethodInput = form.querySelector(`#${formId === 'universalForm' ? 'contactMethod' : 'discussContactMethod'}`);
+  const taskDescriptionInput = form.querySelector(`#${formId === 'universalForm' ? 'taskDescription' : 'discussTaskDescription'}`);
+  const agreementInput = form.querySelector(`#${formId === 'universalForm' ? 'agreement' : 'duscussAgreement'}`);
 
-  if (!validateField(nameInput, 'Пожалуйста, введите ваше имя.')) {
-    isValid = false;
-  }
-
-  if (!validatePhoneField(phoneInput, 'Пожалуйста, введите номер телефона.')) {
-    isValid = false;
-  }
-
-  if (!validateEmailField(emailInput, 'Пожалуйста, введите ваш email.')) {
-    isValid = false;
-  }
-
-  if (!validateSelectField(contactMethodInput, 'Пожалуйста, выберите способ связи.')) {
-    isValid = false;
-  }
-
-  if (!validateField(taskDescriptionInput, 'Пожалуйста, опишите задачу.')) {
-    isValid = false;
-  }
-
-  if (!validateCheckboxField(agreementInput, 'Необходимо согласиться с политикой конфиденциальности.')) {
-    isValid = false;
-  }
+  if (!validateField(nameInput, 'Пожалуйста, введите ваше имя.')) isValid = false;
+  if (!validatePhoneField(phoneInput, 'Пожалуйста, введите номер телефона.')) isValid = false;
+  if (!validateEmailField(emailInput, 'Пожалуйста, введите ваш email.')) isValid = false;
+  if (!validateSelectField(contactMethodInput, 'Пожалуйста, выберите способ связи.')) isValid = false;
+  if (!validateField(taskDescriptionInput, 'Пожалуйста, опишите задачу.')) isValid = false;
+  if (!validateCheckboxField(agreementInput, 'Необходимо согласиться с политикой конфиденциальности.')) isValid = false;
 
   return isValid;
 };

@@ -1,0 +1,84 @@
+<section class="discuss-project">
+  <div class="container discuss-project__container">
+    <div class="discuss-project__left">
+      <div class="discuss-project__info discuss-project__info--desktop">
+        <h2 class="discuss-project__title title-reset">
+          Обсудим ваш проект?
+        </h2>
+        <p class="discuss-project__descr descr-reset">
+          Заполните форму и мы подберем для вас решение
+        </p>
+      </div>
+      <ul class="discuss-project__social">
+        <li class="discuss-project__social-item">
+          <a class="discuss-project__social-link" href="#" >
+            <svg>
+              <use xlink:href="img/icons/icons.svg#telegram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="discuss-project__social-item">
+          <a class="discuss-project__social-link" href="#" >
+            <svg>
+              <use xlink:href="img/icons/icons.svg#whatsapp"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="discuss-project__social-item">
+          <a class="discuss-project__social-link" href="#" >
+            <svg>
+              <use xlink:href="img/icons/icons.svg#vk"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="discuss-project__social-item">
+          <a class="discuss-project__social-link" href="#" >
+            <svg>
+              <use xlink:href="img/icons/icons.svg#instagram"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="discuss-project__right">
+      <form class="discuss-project__form" id="discussForm" novalidate>
+        <ul class="discuss-project__list list-reset">
+          <li class="discuss-project__item">
+            <label for="discussName"></label>
+            <input class="discuss-project__input" type="text" id="discussName" name="discussName" placeholder="Ваше имя" required>
+          </li>
+          <li class="discuss-project__item">
+            <label for="discussPhone"></label>
+            <input class="discuss-project__input" type="tel" id="discussPhone" name="discussPhone" placeholder="Ваш номер телефона" required>
+          </li>
+          <li class="discuss-project__item">
+            <label for="discussEmail"></label>
+            <input class="discuss-project__input" type="email" id="discussEmail" name="discussEmail" placeholder="Ваш email" required>
+          </li>
+          <li class="discuss-project__item">
+            <label for="discussContactMethod"></label>
+            <select class="discuss-project__select" id="discussContactMethod" name="discussContactMethod" required>
+              <option value="" disabled selected>Как с вами связаться?</option>
+              <option value="email">Email</option>
+              <option value="phone">Телефон</option>
+              <option value="messenger">Мессенджер</option>
+            </select>
+          </li>
+          <li class="discuss-project__item discuss-project__item--textarea" >
+            <label for="discussTaskDescription"></label>
+            <textarea class="discuss-project__textarea" id="discussTaskDescription" name="discussTaskDescription" placeholder="Краткое описание задачи" required></textarea>
+          </li>
+          <li class="discuss-project__item discuss-project__item--checkbox">
+            <div class="checkbox-container">
+              <input class="discuss-project__input-checkbox" type="checkbox" id="duscussAgreement" name="duscussAgreement" required>
+              <label class="discuss-project__label--checkbox" for="duscussAgreement">Согласие с политикой конфиденциальности</label>
+            </div>
+          </li>
+        </ul>
+        <div class="discuss-project__form-btn-container">
+          <button class="discuss-project__form-btn tertiary-btn btn-reset" type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

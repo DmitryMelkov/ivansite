@@ -1,0 +1,21 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+.reviews {
+  margin-top: -10px;
+  padding-top: 65px;
+  border-radius: 15px 15px 0 0;
+  background-color: $gram-s-hair;
+  box-shadow: 0px -19px 18.6px 0px rgba(0, 0, 0, 0.05);
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    span {
+      color: $qing-dynasty-dragon;
+    }
+  }
+  &__descr {
+    margin-bottom: 17px;
+    text-align: center;
+  }
+}

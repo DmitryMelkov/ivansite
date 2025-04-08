@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Настройка универсальной модалки
   setupFormModal();
 
-  // Инициализация обработчика формы
+  // Инициализация обработчика формы модалки
   initFormHandler('universalForm');
 
   // Слайдер в секции обо мне
@@ -26,4 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Инициализация модальных окон кейсов
   initCasesModals();
+
+  // Инициализация обработчика формы discussProject
+  initFormHandler('discussForm');
 });
