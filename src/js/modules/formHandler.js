@@ -1,9 +1,5 @@
-import {
-  clearErrors,
-  handleValidation,
-  validateForm,
-} from './formValidate.js';
-import { closeModal } from './modal.js';
+import { clearErrors, handleValidation, validateForm } from './formValidate.js';
+import { closeModal } from './formModal.js';
 
 export function initFormHandler(formId) {
   const contactForm = document.getElementById(formId);

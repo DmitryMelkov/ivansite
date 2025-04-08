@@ -1,20 +1,21 @@
 import { aboutMeSlider } from './modules/aboutMeSlider.js';
 import { burgerMenu } from './modules/burger.js';
 import { initFormHandler } from './modules/formHandler.js';
-import { setupModal } from './modules/modal.js';
 import { initActiveCard } from './modules/activeCard.js';
 import { initTabs } from './modules/tabs.js';
+import { setupFormModal } from './modules/formModal.js';
+import { initCasesModals } from './modules/casesModal.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   burgerMenu();
 
   // Настройка универсальной модалки
-  setupModal();
+  setupFormModal();
 
   // Инициализация обработчика формы
   initFormHandler('universalForm');
 
-  // слайдер в секии обо мне
+  // Слайдер в секции обо мне
   aboutMeSlider();
 
   // Инициализация логики активной карточки
@@ -22,4 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Инициализация табов
   initTabs();
+
+  // Инициализация модальных окон кейсов
+  initCasesModals();
 });

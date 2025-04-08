@@ -9,7 +9,7 @@ export const closeModal = () => {
   universalModal.classList.remove('show'); // Скрываем модалку
 };
 
-export const setupModal = () => {
+export const setupFormModal = () => {
   const universalModal = document.getElementById('universalModal');
   const modalTitle = document.getElementById('modalTitle');
 

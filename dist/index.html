@@ -564,7 +564,7 @@
 
     <!-- Контент табов -->
     <div class="cases__content">
-      <div class="tabs__content tabs__content--active" data-tab-content="landing">
+      <div class="tabs__content tabs__content--active">
         <ul class="cases__list">
           <li class="cases__item cases__item--1">
             <span class="cases__span cases__span--type">Многостраничный сайт</span>
@@ -578,7 +578,7 @@
                   Сайт для фитнес клуба
                   в Москве
                 </p>
-                <button class="cases__item-btn primary-btn btn-reset">
+                <button class="cases__item-btn primary-btn btn-reset" data-cases-modal-id="case-1">
                   Подробнее
                 </button>
               </div>
@@ -596,7 +596,7 @@
                   Сайт для продажи и аренды
                   блок контейнеров в Москве
                 </p>
-                <button class="cases__item-btn primary-btn btn-reset">
+                <button class="cases__item-btn primary-btn btn-reset" data-cases-modal-id="case-2">
                   Подробнее
                 </button>
               </div>
@@ -604,7 +604,7 @@
           </li>
         </ul>
       </div>
-      <div class="tabs__content" data-tab-content="shop">
+      <div class="tabs__content">
         <p>Контент для интернет-магазина: товары, корзина, оплата.</p>
       </div>
       <div class="tabs__content" data-tab-content="multi-page">
@@ -749,6 +749,28 @@
     </div>
   </div>
 </div>
+  <!-- cases-modal -->
+  <div id="case-1" class="cases-modal" data-cases-modal>
+  <div class="cases-modal__content">
+    <div class="cases-modal__top-box">
+      <span class="cases__span cases__span--type cases-modal__span">Многостраничный сайт</span>
+      <span class="cases__span cases__span--year cases-modal__span">2025</span>
+    </div>
+
+    <h3>Онегинъ</h3>
+    <p>Подробное описание проекта для фитнес клуба в Москве.</p>
+    <button class="cases-modal__close" data-cases-modal-close>&times;</button>
+  </div>
+</div>
+
+<div id="case-2" class="cases-modal" data-cases-modal>
+  <div class="cases-modal__content">
+    <h3>Контейнер маркет</h3>
+    <p>Подробное описание проекта для продажи и аренды блок контейнеров в Москве.</p>
+    <button class="cases-modal__close" data-cases-modal-close>&times;</button>
+  </div>
+</div>
+
 
   <script src="js/app.min.js"></script>
 </body>

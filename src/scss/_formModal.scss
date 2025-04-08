@@ -47,10 +47,20 @@
 
     transition: background-color 0.3s, color 0.3s;
     cursor: pointer;
-    &:hover,
-    &:focus {
+    @media (min-width: 1024px) {
+      &:hover {
+        background-color: $qing-dynasty-dragon;
+        color: $white;
+      }
+    }
+    &:active {
       background-color: $qing-dynasty-dragon;
       color: $white;
+    }
+    &:focus-visible {
+      background-color: $qing-dynasty-dragon;
+      color: $white;
+      outline: none;
     }
   }
   &__container {

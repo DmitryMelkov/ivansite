@@ -1,7 +1,7 @@
 @use 'fonts';
 @use '_common.scss';
 @use '_mixins.scss';
-@use '_modal.scss';
+@use '_formModal.scss';
 @use '_header.scss';
 @use '_intro.scss';
 @use '_aboutMe.scss';
@@ -10,14 +10,6 @@
 @use '_creationOrRefinement.scss';
 @use '_creationWebsite.scss';
 @use '_cases.scss';
+@use '_casesModal.scss';
 
 @use '_footer.scss';
-
-
-
-
-
-
-
-
-

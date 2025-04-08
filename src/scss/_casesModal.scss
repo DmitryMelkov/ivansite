@@ -1,0 +1,84 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+.cases-modal {
+  visibility: hidden;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  &__content {
+    margin: 10% auto;
+    padding: 40px;
+    width: 100%;
+    max-width: 570px;
+    position: relative;
+
+    background-color: $white;
+    border-radius: 10px;
+    border: 1px solid #888;
+
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-in-out;
+  }
+  &__close {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -16px;
+    right: -22px;
+    z-index: 1;
+
+    font-size: 30px;
+    color: $qing-dynasty-dragon;
+
+    background-color: $white;
+    border: 2px solid $qing-dynasty-dragon;
+    border-radius: 50%;
+
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    @media (min-width: 1024px) {
+      &:hover {
+        background-color: $qing-dynasty-dragon;
+        color: $white;
+      }
+    }
+    &:active {
+      background-color: $qing-dynasty-dragon;
+      color: $white;
+    }
+    &:focus-visible {
+      background-color: $qing-dynasty-dragon;
+      color: $white;
+      outline: none;
+    }
+  }
+  &__top-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  &__span {
+    position: static;
+  }
+}
+
+.cases-modal--active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.cases-modal--active .cases-modal__content {
+  transform: translateY(0);
+}
