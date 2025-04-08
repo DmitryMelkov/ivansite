@@ -2,7 +2,8 @@ import { aboutMeSlider } from './modules/aboutMeSlider.js';
 import { burgerMenu } from './modules/burger.js';
 import { initFormHandler } from './modules/formHandler.js';
 import { setupModal } from './modules/modal.js';
-import { initActiveCard } from './modules/modules/activeCard.js';
+import { initActiveCard } from './modules/activeCard.js';
+import { initTabs } from './modules/tabs.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   burgerMenu();
@@ -18,4 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Инициализация логики активной карточки
   initActiveCard();
+
+  // Инициализация табов
+  initTabs();
 });
