@@ -8,6 +8,7 @@ import { initCasesModals } from './modules/casesModal.js';
 import { reviewsSlider } from './modules/reviewsSlider.js';
 import { initReviewsModals } from './modules/reviewsModal.js';
 import { initAccordion } from './modules/accordion.js';
+import { initSmoothScroll } from './modules/smoothScroll.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   burgerMenu();
@@ -44,4 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Инициализация валидации формы
   initFormHandler('questionsForm');
+
+  // Инициализация плавного скролла
+  initSmoothScroll();
 });
