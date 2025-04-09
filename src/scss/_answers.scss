@@ -1,0 +1,139 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+.answers {
+  margin-top: -10px;
+  padding-top: 65px;
+  padding-bottom: 50px;
+  border-radius: 15px 15px 0 0;
+  background-color: $gram-s-hair;
+  box-shadow: 0px -19px 18.6px 0px rgba(0, 0, 0, 0.05);
+
+  &__title {
+    text-align: center;
+    margin-bottom: 20px;
+
+    span {
+      color: $qing-dynasty-dragon;
+    }
+  }
+
+  &__descr {
+    text-align: center;
+  }
+
+  &__accordion {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  &__accordion-item {
+    padding: 20px;
+    background-color: $white;
+    border-radius: 10px;
+    border: 1px solid $cool-frost;
+  }
+}
+
+.accordion-item {
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+
+    @media (min-width: 1024px) {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    &:active {
+      opacity: 0.5;
+    }
+  }
+
+  &__title {
+    span {
+      color: $qing-dynasty-dragon;
+    }
+  }
+
+  &__toggle {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: $qing-dynasty-dragon;
+    transition: transform 0.3s ease-in-out;
+
+    &--horizontal {
+      width: 30px;
+      height: 1px;
+      transform: translate(-50%, -50%);
+    }
+
+    &--vertical {
+      width: 1px;
+      height: 30px;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__toggle.active {
+    transform: rotate(45deg);
+
+    .accordion-item__icon {
+      &--horizontal {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      &--vertical {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+  }
+
+  &__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    padding: 0 0 0 15px;
+
+    &.active {
+      max-height: 200px; // Установите максимальную высоту контента
+      padding: 10px 0 0 0;
+    }
+  }
+}
+
+@media (max-width: 1279px) {
+  .answers {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+}
+
+
+@media (max-width: 1279px) {
+  .answers {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+  }
+  .accordion-item {
+    &__title {
+      max-width: 180px;
+    }
+  }
+}

@@ -7,6 +7,7 @@ import { setupFormModal } from './modules/formModal.js';
 import { initCasesModals } from './modules/casesModal.js';
 import { reviewsSlider } from './modules/reviewsSlider.js';
 import { initReviewsModals } from './modules/reviewsModal.js';
+import { initAccordion } from './modules/accordion.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   burgerMenu();
@@ -37,4 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Инициализация модальных окон отзывов
   initReviewsModals();
+
+  // Инициализация аккордеона
+  initAccordion();
 });

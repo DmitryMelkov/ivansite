@@ -2840,7 +2840,7 @@ input[type=number] {
   box-shadow: 0px -19px 18.6px 0px rgba(0, 0, 0, 0.05);
 }
 .reviews__container {
-  margin-bottom: 50px;
+  padding-bottom: 50px;
 }
 .reviews__title {
   margin-bottom: 20px;
@@ -3152,6 +3152,116 @@ input[type=number] {
   }
   .reviews-modal__span {
     font-size: 10px;
+  }
+}
+.answers {
+  margin-top: -10px;
+  padding-top: 65px;
+  padding-bottom: 50px;
+  border-radius: 15px 15px 0 0;
+  background-color: #f5f7f9;
+  box-shadow: 0px -19px 18.6px 0px rgba(0, 0, 0, 0.05);
+}
+.answers__title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.answers__title span {
+  color: #415be7;
+}
+.answers__descr {
+  text-align: center;
+}
+.answers__accordion {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.answers__accordion-item {
+  padding: 20px;
+  background-color: #FFF;
+  border-radius: 10px;
+  border: 1px solid #e7e7ef;
+}
+
+.accordion-item__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: opacity 0.3s ease-in-out;
+}
+@media (min-width: 1024px) {
+  .accordion-item__header:hover {
+    opacity: 0.5;
+  }
+}
+.accordion-item__header:active {
+  opacity: 0.5;
+}
+.accordion-item__title span {
+  color: #415be7;
+}
+.accordion-item__toggle {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+.accordion-item__icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-color: #415be7;
+  transition: transform 0.3s ease-in-out;
+}
+.accordion-item__icon--horizontal {
+  width: 30px;
+  height: 1px;
+  transform: translate(-50%, -50%);
+}
+.accordion-item__icon--vertical {
+  width: 1px;
+  height: 30px;
+  transform: translate(-50%, -50%);
+}
+.accordion-item__toggle.active {
+  transform: rotate(45deg);
+}
+.accordion-item__toggle.active .accordion-item__icon--horizontal {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.accordion-item__toggle.active .accordion-item__icon--vertical {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.accordion-item__content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+  padding: 0 0 0 15px;
+}
+.accordion-item__content.active {
+  max-height: 200px;
+  padding: 10px 0 0 0;
+}
+
+@media (max-width: 1279px) {
+  .answers {
+    padding-top: 40px;
+    padding-bottom: 70px;
+  }
+}
+@media (max-width: 1279px) {
+  .answers {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  .accordion-item__title {
+    max-width: 180px;
   }
 }
 .footer {
