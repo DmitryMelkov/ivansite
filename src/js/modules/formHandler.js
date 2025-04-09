@@ -4,6 +4,16 @@ import { closeModal } from './formModal.js';
 export function initFormHandler(formId) {
   const contactForm = document.getElementById(formId);
   if (contactForm) {
+    // Инициализация маски для поля телефона
+    const phoneInput = contactForm.querySelector('input[type="tel"]');
+    if (phoneInput) {
+      phoneInput.cleave = new Cleave(phoneInput, {
+        phone: true,
+        phoneRegionCode: 'RU', // Формат для России
+        delimiter: ' ', // Разделитель между частями номера
+      });
+    }
+
     // Валидация на лету (input)
     contactForm.addEventListener('input', (event) => {
       handleValidation(event.target);
@@ -29,7 +39,12 @@ export function initFormHandler(formId) {
         const data = {};
 
         formData.forEach((value, key) => {
-          data[key] = value;
+          const input = contactForm.querySelector(`[name="${key}"]`);
+          if (input && input.cleave) {
+            data[key] = input.cleave.getRawValue(); // Используем "чистое" значение
+          } else {
+            data[key] = value; // Используем стандартное значение
+          }
         });
 
         console.log(data); // Вывод данных формы в консоль

@@ -24,14 +24,21 @@ export const validateEmailField = (input, message) => {
   return true;
 };
 
-export const validatePhoneField = (input, message) => {
-  if (!input.value.trim()) {
+export const validatePhoneField = (input, message, strict = false) => {
+  // Проверяем, есть ли у поля телефона маска Cleave.js
+  const rawValue = input.cleave ? input.cleave.getRawValue() : input.value;
+
+  if (!rawValue.trim()) {
     showError(input, message);
     return false;
-  } else if (!/^\+?\d{10,15}$/.test(input.value)) {
+  }
+
+  // Если строгая проверка (strict = true), проверяем полный формат
+  if (strict && !/^(\+?7\d{10})$/.test(rawValue)) {
     showError(input, 'Неверный формат номера телефона.');
     return false;
   }
+
   showSuccess(input);
   return true;
 };
