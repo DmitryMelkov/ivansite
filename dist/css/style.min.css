@@ -1017,7 +1017,8 @@ input[type=number] {
 }
 .modal__select {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
+  height: 36px;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -2629,6 +2630,9 @@ input[type=number] {
   flex-direction: column;
   justify-content: space-between;
 }
+.discuss-project__info--mobile {
+  display: none;
+}
 .discuss-project__title {
   margin-bottom: 20px;
   color: #FFF;
@@ -2668,10 +2672,8 @@ input[type=number] {
 .discuss-project__list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-.discuss-project__list {
   align-items: center;
+  gap: 10px;
 }
 .discuss-project__item {
   width: 100%;
@@ -2735,7 +2737,8 @@ input[type=number] {
 }
 .discuss-project__select {
   width: 100%;
-  padding: 10px;
+  padding: 5px;
+  height: 36px;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -2816,6 +2819,13 @@ input[type=number] {
 @media (max-width: 767px) {
   .discuss-project__container {
     flex-direction: column-reverse;
+  }
+  .discuss-project__info--mobile {
+    display: block;
+    margin-bottom: 20px;
+  }
+  .discuss-project__title, .discuss-project__descr {
+    text-align: center;
   }
   .discuss-project__social {
     justify-content: center;
@@ -3246,7 +3256,7 @@ input[type=number] {
 }
 .accordion-item__content.active {
   max-height: 200px;
-  padding: 10px 0 0 0;
+  padding: 15px 0 0 0;
 }
 
 @media (max-width: 1279px) {
@@ -3264,7 +3274,7 @@ input[type=number] {
     max-width: 180px;
   }
 }
-.footer {
+.questions {
   padding-top: 40px;
   padding-bottom: 20px;
   background-image: url("../img/creation-or-refinement-bg.jpg");
@@ -3272,6 +3282,217 @@ input[type=number] {
   background-size: cover;
   background-position: center center;
   border-radius: 15px 15px 0 0;
+  width: 100%;
+  height: 100%;
+}
+.questions__container {
+  background-color: #415be7;
+  padding: 40px;
+  border-radius: 30px;
+}
+.questions__title {
+  color: #FFF;
+  margin-bottom: 20px;
+}
+.questions__descr {
+  color: #FFF;
+  margin-bottom: 25px;
+}
+.questions__list {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 10px;
+}
+.questions__item {
+  width: 100%;
+  grid-column: span 3;
+}
+.questions__item--textarea {
+  grid-column: span 8;
+}
+.questions__input, .questions__textarea {
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #25262F;
+  font-family: "Raleway", sans-serif;
+  border: 1px solid rgba(65, 91, 231, 0.4);
+  border-radius: 5px;
+  transition: opacity 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+.questions__input::placeholder, .questions__textarea::placeholder {
+  font-size: 14px;
+  color: rgba(37, 38, 47, 0.6);
+  font-family: "Raleway", sans-serif;
+}
+@media (min-width: 1024px) {
+  .questions__input:hover, .questions__textarea:hover {
+    opacity: 0.5;
+  }
+}
+.questions__input:active, .questions__textarea:active {
+  opacity: 0.5;
+}
+.questions__input:focus, .questions__textarea:focus {
+  border-color: #415be7;
+  outline: none;
+  opacity: 1;
+}
+.questions__input:focus:hover, .questions__input:focus:active, .questions__textarea:focus:hover, .questions__textarea:focus:active {
+  opacity: 1;
+}
+.questions__input {
+  height: 36px;
+}
+.questions__textarea {
+  resize: none;
+}
+.questions__form-btn-container {
+  grid-column: span 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.questions__form-btn {
+  width: 100%;
+  height: 39px;
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #FFF;
+  font-family: "Raleway", sans-serif;
+}
+.questions__select {
+  width: 100%;
+  height: 36px;
+  padding: 5px;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: rgba(37, 38, 47, 0.6);
+  font-family: "Raleway", sans-serif;
+  border: 1px solid rgba(65, 91, 231, 0.4);
+  border-radius: 5px;
+  background-color: #fff;
+  transition: border-color 0.3s ease-in-out;
+}
+.questions__select:focus {
+  border-color: #415be7;
+  outline: none;
+}
+.questions__label--checkbox {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: #FFF;
+}
+
+/* Основные стили для инпутов */
+.input-error {
+  border: 1px solid red;
+}
+
+.input-success {
+  border: 1px solid green;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Стиль для лейбла с ошибкой */
+.label-error {
+  color: red;
+}
+
+/* Стиль для контейнера чекбокса */
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Стиль для контейнера при ошибке */
+.checkbox-container.error {
+  border: 1px solid red;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+/* Стиль для лейбла с ошибкой */
+.label-error {
+  color: red;
+}
+
+@media (max-width: 1279px) {
+  .questions__container {
+    padding: 30px;
+  }
+  .questions__input, .questions__textarea {
+    font-size: 12px;
+  }
+  .questions__input::placeholder, .questions__textarea::placeholder {
+    font-size: 12px;
+  }
+  .questions__select {
+    font-size: 14px;
+  }
+  .questions__form-btn {
+    font-size: 14px;
+    max-width: 286px;
+  }
+  .questions__item {
+    grid-column: span 6;
+  }
+  .questions__item--textarea {
+    grid-column: span 12;
+  }
+  .questions__form-btn-container {
+    grid-column: span 12;
+  }
+}
+@media (max-width: 767px) {
+  .questions__container {
+    background-color: transparent;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .questions__title {
+    text-align: center;
+  }
+  .questions__descr {
+    text-align: center;
+    max-width: 300px;
+  }
+  .questions__form {
+    display: flex;
+    justify-content: center;
+  }
+  .questions__list {
+    max-width: 239px;
+  }
+  .questions__item {
+    grid-column: span 12;
+  }
+  .questions__label--checkbox {
+    font-size: 10px;
+  }
+}
+.footer {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-image: url("../img/creation-or-refinement-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
   width: 100%;
   height: 100%;
   min-height: 157px;

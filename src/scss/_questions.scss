@@ -1,89 +1,41 @@
 @use '_variables' as *;
 @use '_mixins' as *;
 
-.modal {
-  visibility: hidden;
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
+.questions {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-image: url('../img/creation-or-refinement-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  border-radius: 15px 15px 0 0;
   width: 100%;
   height: 100%;
-  overflow: auto;
-  background-color: rgba(0, 0, 0, 0.7);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-  &__content {
-    margin: 10% auto;
-    padding: 40px;
-    width: 100%;
-    max-width: 570px;
-    position: relative;
-
-    background-color: $white;
-    border-radius: 10px;
-    border: 1px solid #888;
-
-    transform: translateY(-20px);
-    transition: transform 0.3s ease-in-out;
-  }
-  &__close {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: -16px;
-    right: -22px;
-    z-index: 1;
-
-    font-size: 30px;
-    color: $qing-dynasty-dragon;
-
-    background-color: $white;
-    border: 2px solid $qing-dynasty-dragon;
-    border-radius: 50%;
-
-    transition: background-color 0.3s, color 0.3s;
-    cursor: pointer;
-    @media (min-width: 1024px) {
-      &:hover {
-        background-color: $qing-dynasty-dragon;
-        color: $white;
-      }
-    }
-    &:active {
-      background-color: $qing-dynasty-dragon;
-      color: $white;
-    }
-    &:focus-visible {
-      background-color: $qing-dynasty-dragon;
-      color: $white;
-      outline: none;
-    }
-  }
   &__container {
-    max-width: 446px;
-    margin: 0 auto;
+    background-color: $qing-dynasty-dragon;
+    padding: 40px;
+    border-radius: 30px;
   }
   &__title {
+    color: $white;
     margin-bottom: 20px;
-    @include text-style(35px, 90%, 500, $black);
-    text-align: center;
-    font-family: 'Manrope', sans-serif;
-    span {
-      color: $qing-dynasty-dragon;
-    }
   }
   &__descr {
-    margin-bottom: 20px;
-    text-align: center;
-    @include text-style(16px, 20px, 400, $black);
+    color: $white;
+    margin-bottom: 25px;
   }
-  &__form {
-    display: flex;
-    flex-direction: column;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+  }
+  &__item {
+    width: 100%;
+    grid-column: span 3;
+  }
+  &__item--textarea {
+    grid-column: span 8;
   }
   &__input,
   &__textarea {
@@ -123,43 +75,27 @@
   }
   &__textarea {
     resize: none;
-    height: 72px;
+
   }
   &__form-btn-container {
-    margin-top: 20px;
+    grid-column: span 4;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
   }
   &__form-btn {
     width: 100%;
-    max-width: 274px;
     height: 39px;
     padding: 5px 10px;
     @include text-style(16px, 20px, 400, $white);
     font-family: 'Raleway', sans-serif;
   }
-  &__list {
-    display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    gap: 10px;
-  }
-  &__item {
-    grid-column: span 5;
-  }
-  &__item--textarea {
-    grid-column: span 10;
-  }
-  &__item--checkbox {
-    grid-column: span 10;
-    display: flex;
-    align-items: center;
-    gap: 7px;
-  }
   &__select {
     width: 100%;
-    padding: 5px;
     height: 36px;
+    padding: 5px;
 
     @include text-style(14px, 18px, 400, rgba($black, 0.6));
     font-family: 'Raleway', sans-serif;
@@ -174,17 +110,8 @@
     outline: none;
   }
   &__label--checkbox {
-    @include text-style(12px, 16px, 400, rgba($black, 0.6));
+    @include text-style(12px, 16px, 400, $white);
   }
-}
-
-.modal.show {
-  visibility: visible;
-  opacity: 1;
-}
-
-.modal.show .modal__content {
-  transform: translateY(0);
 }
 
 /* Основные стили для инпутов */
@@ -226,18 +153,11 @@
 }
 
 @media (max-width: 1279px) {
-  .modal {
-    &__content {
+  .questions {
+    &__container {
       padding: 30px;
     }
-    &__title {
-      font-size: 25px;
-    }
-    &__descr {
-      font-size: 14px;
-    }
-    &__input,
-    &__textarea {
+    &__input, &__textarea {
       font-size: 12px;
       &::placeholder {
         font-size: 12px;
@@ -248,35 +168,50 @@
     }
     &__form-btn {
       font-size: 14px;
+      max-width: 286px;
+    }
+    &__item {
+      grid-column: span 6;
+    }
+    &__item--textarea {
+      grid-column: span 12;
+    }
+    &__form-btn-container {
+      grid-column: span 12;
     }
   }
 }
 
+
 @media (max-width: 767px) {
-  .modal {
-    &__content {
-      padding: 20px;
-      max-width: 280px;
-      margin-top: 40px;
-      margin-bottom: 40px;
+  .questions {
+    &__container {
+      background-color: transparent;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     &__title {
-      margin-bottom: 15px;
+      text-align: center;
     }
     &__descr {
-      margin-bottom: 15px;
+      text-align: center;
+      max-width: 300px;
+    }
+    &__form {
+      display: flex;
+      justify-content: center;
+
+    }
+    &__list {
+      max-width: 239px;
     }
     &__item {
-      grid-column: span 10;
-    }
-    &__item--checkbox {
-      gap: 4px;
+      grid-column: span 12;
     }
     &__label--checkbox {
       font-size: 10px;
-    }
-    &__textarea {
-      height: 57px;
     }
   }
 }
