@@ -15,6 +15,10 @@ export const reviewsSlider = () => {
         slidesPerView: 1,
       },
       520: {
+        slidesPerView: 2,
+        spaceBetween: 15,
+      },
+      768: {
         slidesPerView: 3,
         spaceBetween: 15,
       },
