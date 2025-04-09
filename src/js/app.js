@@ -41,4 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Инициализация аккордеона
   initAccordion();
+
+  // Инициализация валидации формы
+  initFormHandler('questionsForm');
 });

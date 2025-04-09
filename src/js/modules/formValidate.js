@@ -88,17 +88,17 @@ export const showSuccess = (input) => {
 };
 
 export const handleValidation = (target) => {
-  if (target.matches('#name, #discussName')) {
+  if (target.matches('#name, #discussName, #questionsName')) {
     validateField(target, 'Пожалуйста, введите ваше имя.');
-  } else if (target.matches('#phone, #discussPhone')) {
+  } else if (target.matches('#phone, #discussPhone, #questionsPhone')) {
     validatePhoneField(target, 'Пожалуйста, введите номер телефона.');
-  } else if (target.matches('#email, #discussEmail')) {
+  } else if (target.matches('#email, #discussEmail, #questionsEmail')) {
     validateEmailField(target, 'Пожалуйста, введите ваш email.');
-  } else if (target.matches('#contactMethod, #discussContactMethod')) {
+  } else if (target.matches('#contactMethod, #discussContactMethod, #questionsContactMethod')) {
     validateSelectField(target, 'Пожалуйста, выберите способ связи.');
-  } else if (target.matches('#taskDescription, #discussTaskDescription')) {
+  } else if (target.matches('#taskDescription, #discussTaskDescription, #questionsTaskDescription')) {
     validateField(target, 'Пожалуйста, опишите задачу.');
-  } else if (target.matches('#agreement, #duscussAgreement')) {
+  } else if (target.matches('#agreement, #duscussAgreement, #questionsAgreement')) {
     validateCheckboxField(target, 'Необходимо согласиться с политикой конфиденциальности.');
   }
 };
@@ -106,13 +106,41 @@ export const handleValidation = (target) => {
 export const validateForm = (form, formId) => {
   let isValid = true;
 
-  const nameInput = form.querySelector(`#${formId === 'universalForm' ? 'name' : 'discussName'}`);
-  const phoneInput = form.querySelector(`#${formId === 'universalForm' ? 'phone' : 'discussPhone'}`);
-  const emailInput = form.querySelector(`#${formId === 'universalForm' ? 'email' : 'discussEmail'}`);
-  const contactMethodInput = form.querySelector(`#${formId === 'universalForm' ? 'contactMethod' : 'discussContactMethod'}`);
-  const taskDescriptionInput = form.querySelector(`#${formId === 'universalForm' ? 'taskDescription' : 'discussTaskDescription'}`);
-  const agreementInput = form.querySelector(`#${formId === 'universalForm' ? 'agreement' : 'duscussAgreement'}`);
+  // Определяем селекторы в зависимости от ID формы
+  const nameInput = form.querySelector(
+    `#${formId === 'universalForm' ? 'name' : formId === 'discussForm' ? 'discussName' : 'questionsName'}`
+  );
+  const phoneInput = form.querySelector(
+    `#${formId === 'universalForm' ? 'phone' : formId === 'discussForm' ? 'discussPhone' : 'questionsPhone'}`
+  );
+  const emailInput = form.querySelector(
+    `#${formId === 'universalForm' ? 'email' : formId === 'discussForm' ? 'discussEmail' : 'questionsEmail'}`
+  );
+  const contactMethodInput = form.querySelector(
+    `#${
+      formId === 'universalForm'
+        ? 'contactMethod'
+        : formId === 'discussForm'
+        ? 'discussContactMethod'
+        : 'questionsContactMethod'
+    }`
+  );
+  const taskDescriptionInput = form.querySelector(
+    `#${
+      formId === 'universalForm'
+        ? 'taskDescription'
+        : formId === 'discussForm'
+        ? 'discussTaskDescription'
+        : 'questionsTaskDescription'
+    }`
+  );
+  const agreementInput = form.querySelector(
+    `#${
+      formId === 'universalForm' ? 'agreement' : formId === 'discussForm' ? 'duscussAgreement' : 'questionsAgreement'
+    }`
+  );
 
+  // Проверяем каждое поле
   if (!validateField(nameInput, 'Пожалуйста, введите ваше имя.')) isValid = false;
   if (!validatePhoneField(phoneInput, 'Пожалуйста, введите номер телефона.')) isValid = false;
   if (!validateEmailField(emailInput, 'Пожалуйста, введите ваш email.')) isValid = false;

@@ -10,20 +10,23 @@
 
     <form class="questions__form" id="questionsForm" novalidate>
       <ul class="questions__list list-reset">
+        <!-- Имя -->
         <li class="questions__item">
-          <label for="questionsName"></label>
-          <input class="questions__input" type="text" id="questionsName" name="questionsName" placeholder="Ваше имя" required>
+          <input class="questions__input" type="text" id="questionsName" name="questionsName" placeholder="Ваше имя"
+            required />
         </li>
+        <!-- Телефон -->
         <li class="questions__item">
-          <label for="questionsPhone"></label>
-          <input class="questions__input" type="tel" id="questionsPhone" name="questionsPhone" placeholder="Ваш номер телефона" required>
+          <input class="questions__input" type="tel" id="questionsPhone" name="questionsPhone"
+            placeholder="Ваш номер телефона" required />
         </li>
+        <!-- Email -->
         <li class="questions__item">
-          <label for="questionsEmail"></label>
-          <input class="questions__input" type="email" id="questionsEmail" name="questionsEmail" placeholder="Ваш email" required>
+          <input class="questions__input" type="email" id="questionsEmail" name="questionsEmail" placeholder="Ваш email"
+            required />
         </li>
+        <!-- Способ связи -->
         <li class="questions__item">
-          <label for="questionsContactMethod"></label>
           <select class="questions__select" id="questionsContactMethod" name="questionsContactMethod" required>
             <option value="" disabled selected>Как с вами связаться?</option>
             <option value="email">Email</option>
@@ -31,15 +34,22 @@
             <option value="messenger">Мессенджер</option>
           </select>
         </li>
-        <li class="questions__item questions__item--textarea" >
-          <label for="questionsTaskDescription"></label>
-          <textarea class="questions__textarea" id="questionsTaskDescription" name="questionsTaskDescription" placeholder="Краткое описание задачи" required></textarea>
+        <!-- Описание задачи -->
+        <li class="questions__item questions__item--textarea">
+          <textarea class="questions__textarea" id="questionsTaskDescription" name="questionsTaskDescription"
+            placeholder="Краткое описание задачи" required></textarea>
         </li>
+        <!-- Кнопка отправки и чекбокс -->
         <li class="questions__item questions__form-btn-container">
-          <button class="questions__form-btn tertiary-btn btn-reset" type="submit">Отправить</button>
+          <button class="questions__form-btn tertiary-btn btn-reset" type="submit">
+            Отправить
+          </button>
           <div class="checkbox-container">
-            <input class="questions__input-checkbox" type="checkbox" id="questionsAgreement" name="questionsAgreement" required>
-            <label class="questions__label--checkbox" for="questionsAgreement">Согласие с политикой конфиденциальности</label>
+            <input class="questions__input-checkbox" type="checkbox" id="questionsAgreement" name="questionsAgreement"
+              required />
+            <label class="questions__label--checkbox" for="questionsAgreement">
+              Согласие с политикой конфиденциальности
+            </label>
           </div>
         </li>
       </ul>
