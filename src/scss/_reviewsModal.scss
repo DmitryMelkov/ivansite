@@ -1,0 +1,165 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+.reviews-modal {
+  visibility: hidden;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+  &.active &__content {
+    transform: translateY(0);
+  }
+
+  &__content {
+    margin: 10% auto;
+    padding: 40px;
+    width: 100%;
+    max-width: 646px;
+    position: relative;
+
+    background-color: $white;
+    border-radius: 10px;
+    border: 1px solid #888;
+
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-in-out;
+  }
+  &__close {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -16px;
+    right: -22px;
+    z-index: 1;
+
+    font-size: 30px;
+    color: $qing-dynasty-dragon;
+
+    background-color: $white;
+    border: 2px solid $qing-dynasty-dragon;
+    border-radius: 50%;
+
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    @media (min-width: 1024px) {
+      &:hover {
+        background-color: $qing-dynasty-dragon;
+        color: $white;
+      }
+    }
+    &:active {
+      background-color: $qing-dynasty-dragon;
+      color: $white;
+    }
+    &:focus-visible {
+      background-color: $qing-dynasty-dragon;
+      color: $white;
+      outline: none;
+    }
+  }
+  &__header {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+  &__avatar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    flex-shrink: 0;
+  }
+  &__avatar img {
+    width: 46px;
+    height: 46px;
+  }
+  &__title-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+  }
+  &__spans {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  &__span {
+    padding: 5px;
+    @include text-style(12px, 100%, 400, $white);
+    font-family: 'Tilda-Sans', sans-serif;
+    border-radius: 5px;
+    background-color: $qing-dynasty-dragon;
+  }
+  &__descr {
+    margin-bottom: 30px;
+  }
+  &__link-container {
+    display: flex;
+    justify-content: center;
+  }
+  &__link {
+    padding: 10px 70px;
+    @include text-style(16px, 100%, 400, $white);
+  }
+}
+
+@media (max-width: 1279px) {
+  .reviews-modal {
+    &__content {
+      max-width: 570px;
+      padding: 30px 60px;
+    }
+    &__link {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .reviews-modal {
+    &__content {
+      max-width: 280px;
+      padding: 20px;
+    }
+    &__link {
+      text-align: center;
+      width: 100%;
+      padding: 10px;
+      font-size: 14px;
+    }
+    &__avatar img {
+      width: 60px;
+      height: 60px;
+    }
+    &__title-content {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 5px;
+    }
+    &__spans {
+      gap: 5px;
+    }
+    &__span {
+      font-size: 10px;
+    }
+  }
+}

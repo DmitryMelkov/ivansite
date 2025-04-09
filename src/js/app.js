@@ -6,6 +6,7 @@ import { initTabs } from './modules/tabs.js';
 import { setupFormModal } from './modules/formModal.js';
 import { initCasesModals } from './modules/casesModal.js';
 import { reviewsSlider } from './modules/reviewsSlider.js';
+import { initReviewsModals } from './modules/reviewsModal.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   burgerMenu();
@@ -32,5 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initFormHandler('discussForm');
 
   // слайдер отзывов
-  reviewsSlider()
+  reviewsSlider();
+
+  // Инициализация модальных окон отзывов
+  initReviewsModals();
 });
