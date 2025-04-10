@@ -3,9 +3,8 @@
 @use '../../node_modules/swiper/swiper.scss';
 @use '../../node_modules/swiper/modules/navigation/navigation.scss';
 @use '../../node_modules/swiper/modules/pagination/pagination.scss';
-@use '../../node_modules/swiper/modules/grid/grid.scss';
-@use '../../node_modules/swiper/modules/free-mode/free-mode.scss';
-@use '../../node_modules/swiper/modules/thumbs/thumbs.scss';
+@use '../../node_modules/@fancyapps/ui/dist/fancybox/fancybox.css';
+
 *,
 *:before,
 *:after {
@@ -202,7 +201,7 @@ input::placeholder {
 .primary-link {
   background-color: $qing-dynasty-dragon;
   border-radius: 5px;
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   @media (min-width: 1024px) {
     &:hover {
       opacity: 0.5;
@@ -283,4 +282,8 @@ input[type='number'] {
 .slider__button-next:focus-visible .slider__button-next-svg,
 .slider__button-prev:focus-visible .slider__button-prev-svg {
   color: $pinball;
+}
+
+.is-close-btn {
+  right: -20px !important;
 }

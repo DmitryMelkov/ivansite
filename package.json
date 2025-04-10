@@ -15,7 +15,6 @@
   "devDependencies": {
     "browser-sync": "^2.27.9",
     "del": "^6.0.0",
-    "gsap": "^3.11.1",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-clean-css": "^4.3.0",
@@ -39,15 +38,14 @@
     "gulp-webp-html-nosvg": "^1.0.6",
     "gulp-webpcss": "^1.1.1",
     "gulp-zip": "^5.1.0",
-    "nouislider": "^15.6.1",
     "sass": "^1.86.3",
-    "swiper": "^8.4.7",
     "vinyl-ftp": "^0.6.1",
     "webp-converter": "2.2.3",
     "webpack": "^5.70.0",
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
-    "cleave.js": "^1.6.0"
+    "@fancyapps/ui": "^5.0.36",
+    "swiper": "^8.4.7"
   }
 }

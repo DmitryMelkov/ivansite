@@ -10,6 +10,7 @@ import { initReviewsModals } from './modules/reviewsModal.js';
 import { initAccordion } from './modules/accordion.js';
 import { initSmoothScroll } from './modules/smoothScroll.js';
 import { setupSuccessModal } from './modules/successModal.js';
+import { initFancybox } from './modules/fancyboxgallery.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   burgerMenu();
@@ -52,4 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Инициализация модального окна успешной отправки формы
   setupSuccessModal();
+
+  // Инициализируем Fancybox
+  initFancybox();
 });

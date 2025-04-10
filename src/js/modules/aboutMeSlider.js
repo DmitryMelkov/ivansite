@@ -1,4 +1,4 @@
-import Swiper, { Navigation } from "swiper";
+import Swiper, { Navigation } from 'swiper';
 
 export const aboutMeSlider = () => {
   const swiper = new Swiper('.about-me__slider', {
@@ -24,4 +24,4 @@ export const aboutMeSlider = () => {
       },
     },
   });
-}
+};
