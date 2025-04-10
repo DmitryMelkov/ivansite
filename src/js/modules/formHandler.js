@@ -5,12 +5,25 @@ export function initFormHandler(formId) {
   const contactForm = document.getElementById(formId);
   if (contactForm) {
     // Инициализация маски для поля телефона
+    // Инициализация маски для поля телефона
     const phoneInput = contactForm.querySelector('input[type="tel"]');
     if (phoneInput) {
+      // Создаем экземпляр Cleave.js
       phoneInput.cleave = new Cleave(phoneInput, {
         phone: true,
         phoneRegionCode: 'RU', // Формат для России
         delimiter: ' ', // Разделитель между частями номера
+      });
+
+      // Добавляем обработчик для автоматической подстановки +7
+      phoneInput.addEventListener('input', (event) => {
+        const inputValue = event.target.value;
+
+        // Если первая цифра - это 7, заменяем её на +7
+        if (/^7/.test(inputValue)) {
+          event.target.value = '+7' + inputValue.slice(1); // Заменяем 7 на +7
+          phoneInput.cleave.setRawValue(event.target.value); // Обновляем значение Cleave.js
+        }
       });
     }
 
