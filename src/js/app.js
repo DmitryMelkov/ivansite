@@ -11,6 +11,7 @@ import { initAccordion } from './modules/accordion.js';
 import { initSmoothScroll } from './modules/smoothScroll.js';
 import { setupSuccessModal } from './modules/successModal.js';
 import { initFancybox } from './modules/fancyboxgallery.js';
+import { setupErrorSendFormModal } from './modules/errorSendFormModal.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   // Инициализация бургер-меню (есть на всех страницах)
@@ -65,4 +66,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Инициализация Fancybox
   initFancybox();
+
+  // Инициализация модального окна ошибки
+  if (document.getElementById('errorSendForm')) {
+    setupErrorSendFormModal();
+  }
 });

@@ -1,6 +1,7 @@
 import { clearErrors, handleValidation, validateForm } from './formValidate.js';
 import { closeModal } from './formModal.js';
 import { openSuccessModal } from './successModal.js';
+import { openErrorSendFormModal } from './errorSendFormModal.js';
 
 export function initFormHandler(formId) {
   const contactForm = document.getElementById(formId);
@@ -39,38 +40,51 @@ export function initFormHandler(formId) {
     });
 
     // Валидация при отправке формы
-    contactForm.addEventListener('submit', (event) => {
+    contactForm.addEventListener('submit', async (event) => {
       event.preventDefault();
-
-      // Очищаем предыдущие ошибки
       clearErrors(contactForm);
 
-      // Валидация формы
       const isValid = validateForm(contactForm, formId);
       if (isValid) {
-        const formData = new FormData(contactForm);
-        const data = {};
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalBtnText = submitBtn.textContent;
 
-        formData.forEach((value, key) => {
-          const input = contactForm.querySelector(`[name="${key}"]`);
-          if (input && input.cleave) {
-            data[key] = input.cleave.getRawValue();
-          } else {
-            data[key] = value;
+        try {
+          submitBtn.textContent = 'Отправка...';
+          submitBtn.disabled = true;
+
+          const formData = new FormData(contactForm);
+          const data = {};
+
+          formData.forEach((value, key) => {
+            const input = contactForm.querySelector(`[name="${key}"]`);
+            data[key] = input?.cleave?.getRawValue() || value;
+          });
+
+          const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          });
+
+          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+
+          const result = await response.json();
+          console.log('Успешный ответ:', result);
+
+          contactForm.reset();
+          closeModal();
+          openSuccessModal();
+        } catch (error) {
+          console.error('Ошибка:', error);
+          closeModal();
+          openErrorSendFormModal(); // Используем функцию открытия
+        } finally {
+          if (submitBtn) {
+            submitBtn.textContent = originalBtnText;
+            submitBtn.disabled = false;
           }
-        });
-
-        // Здесь можно добавить реальную отправку формы через fetch
-        console.log('Form data:', data);
-
-        // Очищаем форму
-        contactForm.reset();
-
-        // Закрываем текущее модальное окно
-        closeModal();
-
-        // Показываем модалку успеха
-        openSuccessModal();
+        }
       }
     });
   } else {
