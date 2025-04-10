@@ -17,9 +17,23 @@ export const js = () => {
         output: {
           filename: "app.min.js",
         },
+        devtool: app.isDev ? 'inline-source-map' : false, // Добавляем эту строку
+        module: {
+          rules: [
+            {
+              test: /\.js$/,
+              exclude: /node_modules/,
+              use: {
+                loader: 'babel-loader',
+                options: {
+                  presets: ['@babel/preset-env']
+                }
+              }
+            }
+          ]
+        }
       })
     )
-
     .pipe(app.gulp.dest(app.path.build.js))
     .pipe(app.plugins.browsersync.stream());
 };
