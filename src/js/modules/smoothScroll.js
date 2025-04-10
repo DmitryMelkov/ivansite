@@ -1,5 +1,3 @@
-import { closeBurgerMenu } from "./utils.js";
-
 export const initSmoothScroll = () => {
   const smoothScroll = (targetId) => {
     const targetElement = document.querySelector(targetId);
@@ -13,13 +11,25 @@ export const initSmoothScroll = () => {
     }
   };
 
-  const menuLinks = document.querySelectorAll('.header__link');
-  menuLinks.forEach((link) => {
+  // Обработка ссылок в хедере
+  const headerLinks = document.querySelectorAll('.header__link');
+  headerLinks.forEach((link) => {
     link.addEventListener('click', (event) => {
       event.preventDefault();
       const targetId = link.getAttribute('href');
       smoothScroll(targetId);
       closeBurgerMenu();
+    });
+  });
+
+  // Обработка ссылок в футере
+  const footerLinks = document.querySelectorAll('.footer__link');
+  footerLinks.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const targetId = link.getAttribute('href');
+      smoothScroll(targetId);
+      closeBurgerMenu(); // Добавляем закрытие бургер-меню и для футера
     });
   });
 };
