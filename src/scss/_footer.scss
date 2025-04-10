@@ -64,7 +64,7 @@
     width: 100%;
     gap: 15px;
   }
-  &__link {
+  &__link, &__policy {
     @include text-style(12px, 16px, 400, $white);
     transition: color 0.3s ease-in-out;
     @media (min-width: 1024px) {
