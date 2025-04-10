@@ -566,7 +566,8 @@
 
     <!-- Контент табов -->
     <div class="cases__content">
-      <div class="tabs__content tabs__content--active">
+      <!-- Первый таб (Лендинг) -->
+      <div class="tabs__content tabs__content--active" data-tab-content="landing">
         <ul class="cases__list">
           <li class="cases__item">
             <img src="img/cases-bg-1.jpg" alt="img">
@@ -607,18 +608,23 @@
             </div>
           </li>
         </ul>
+        <div class="cases__btn-container">
+          <button class="cases__btn btn-reset">Показать еще</button>
+        </div>
       </div>
-      <div class="tabs__content">
+
+      <!-- Второй таб (Интернет-магазин) -->
+      <div class="tabs__content" data-tab-content="shop">
         <p>Контент для интернет-магазина: товары, корзина, оплата.</p>
       </div>
+
+      <!-- Третий таб (Многостраничный сайт) -->
       <div class="tabs__content" data-tab-content="multi-page">
         <p>Контент для многостраничного сайта: разделы, навигация, SEO.</p>
       </div>
     </div>
 
-    <div class="cases__btn-container">
-      <button class="cases__btn btn-reset">Показать еще</button>
-    </div>
+
   </div>
 </section>
     <section class="discuss-project">

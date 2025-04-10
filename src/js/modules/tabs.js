@@ -8,10 +8,16 @@ export function initTabs() {
       tabsBtns.forEach((item) => item.classList.remove('tabs__btn--active'));
       tabsContents.forEach((item) => item.classList.remove('tabs__content--active'));
 
-      // Добавляем активный класс к текущей кнопке и соответствующему контенту
+      // Добавляем активный класс к текущей кнопке
       btn.classList.add('tabs__btn--active');
-      const tabContent = document.querySelector(`[data-tab-content="${btn.dataset.tab}"]`);
-      tabContent.classList.add('tabs__content--active');
+
+      // Находим соответствующий контент по data-tab-content
+      const tabId = btn.dataset.tab;
+      const tabContent = document.querySelector(`.tabs__content[data-tab-content="${tabId}"]`);
+
+      if (tabContent) {
+        tabContent.classList.add('tabs__content--active');
+      }
     });
   });
 }

@@ -2271,6 +2271,11 @@ input[type=number] {
   min-height: 313px;
 }
 .cases__item img {
+  min-height: 247px;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: left;
   border-radius: 10px;
 }
 .cases__span {
@@ -2420,12 +2425,6 @@ input[type=number] {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
-  }
-  .cases__item img {
-    min-height: 247px;
-    width: 100%;
-    object-fit: cover;
-    object-position: left;
   }
 }
 @media (max-width: 767px) {

@@ -33,7 +33,13 @@
     width: 100%;
     min-height: 313px;
   }
+
   &__item img {
+    min-height: 247px;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left;
     border-radius: 10px;
   }
   &__span {
@@ -178,12 +184,7 @@
       align-items: flex-start;
       gap: 15px;
     }
-    &__item img {
-      min-height: 247px;
-      width: 100%;
-      object-fit: cover;
-      object-position: left;
-    }
+
   }
 }
 
