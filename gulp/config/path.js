@@ -13,6 +13,7 @@ export const path = {
     images: `${buildFolder}/img/`,
     fonts: `${buildFolder}/fonts/`,
     files: `${buildFolder}/files/`,
+    lib: `${buildFolder}/js/lib/`, // Путь для копирования lib
   },
   src: {
     js: `${srcFolder}/js/app.js`,
@@ -22,6 +23,7 @@ export const path = {
     html: `${srcFolder}/*.html`,
     files: `${srcFolder}/files/**/*.*`,
     svgicons: `${srcFolder}/svgicons/*.svg`,
+    lib: `${srcFolder}/js/lib/**/*.*`, // Путь к исходной папке lib
   },
   watch: {
     js: `${srcFolder}/js/**/*.js`,
@@ -30,6 +32,7 @@ export const path = {
     images: `${srcFolder}/img/**/*.{jpg,jpeg,png,svg,gif,webp}`,
     files: `${srcFolder}/files/**/*.*`,
     svgicons: `${srcFolder}/svgicons/*.svg`,
+    lib: `${srcFolder}/js/lib/**/*.*`, // Наблюдение за папкой lib
   },
   clean: buildFolder,
   buildFolder: buildFolder,
