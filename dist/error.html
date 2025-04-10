@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>error</title>
+</head>
+
+
+<body class="error-body">
+  <header class="header">
+    <div class="header__box">
+      <div class="container header__container">
+        <div class="header__menu">
+          <div class="header__burger-close-box">
+            <button class="header__burger-close btn-reset">
+              <span class="header__burger-close-line"></span>
+              <span class="header__burger-close-line"></span>
+            </button>
+          </div>
+          <a class="header__logo" href="../index.html">
+            ivan
+            <span>site</span>
+          </a>
+          <nav class="header__nav">
+            <ul class="header__list">
+              <li class="header__item">
+                <a class="header__link" href="#about-me">Обо мне</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#pricing">Стоимость</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#cases">Кейсы</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#reviews">Отзывы</a>
+              </li>
+              <li class="header__item">
+                <a class="header__link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <button class="header__btn primary-btn btn-reset" data-open-modal
+            data-modal-title="Бесплатная консультация">Консультация</button>
+        </div>
+        <a class="header__logo header__logo--mobile" href="../index.html">
+          ivan
+          <span>site</span>
+        </a>
+        <button class="header__burger btn-reset">
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+          <span class="header__burger-line"></span>
+        </button>
+        <div class="header__overlay"></div>
+      </div>
+    </div>
+
+  </header>
+  <main class="error-main">
+    <section class="error">
+      <div class="container error__container">
+        <h1 class="error__title title-reset">Ошибка <span>404</span></h1>
+        <p class="error__descr descr-reset">Такой страницы не существует</p>
+        <div class="error__link-container">
+          <a class="error__link primary-link btn-reset" href="./index.html">Вернуться на главную</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" id="contacts">
+    <div class="container footer__container">
+      <div class="footer__left">
+        <a class="footer__logo" href="../index.html">
+          ivansite
+        </a>
+        <div class="footer__contacts">
+          <a class="footer__contacts-link" href="#">+7(666) 999 69 69</a>
+          <a class="footer__contacts-link" href="#">Мой сайт</a>
+        </div>
+      </div>
+      <div class="footer__center">
+        <nav class="footer__nav">
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#about-me">
+                Обо мне
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#pricing">
+                Стоимость
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#cases">
+                Кейсы
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#reviews">
+                Отзывы
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#contacts">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <span class="footer__span footer__rules--desctop">2025, Все права защищены</span>
+      </div>
+      <div class="footer__right">
+        <ul class="footer__social">
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#telegram"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#whatsapp"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#vk"></use>
+              </svg>
+            </a>
+          </li>
+          <li class="footer__social-item">
+            <a class="footer__social-link" href="#">
+              <svg>
+                <use xlink:href="img/icons/icons.svg#instagram"></use>
+              </svg>
+            </a>
+          </li>
+        </ul>
+        <div class="footer__politic-container">
+          <span class="footer__span footer__rules--mobile">2025, Все права защищены</span>
+          <a class="footer__link" href="#">Политика конфиденциальности</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- form-modals -->
+  <div class="modal" id="universalModal">
+    <div class="modal__content">
+      <button class="modal__close btn-reset" id="closeUniversalModal">&times;</button>
+      <div class="modal__container">
+        <h2 class="modal__title title-reset" id="modalTitle">Заголовок по умолчанию</h2>
+        <p class="modal__descr descr-reset">
+          Заполните форму и я свяжусь с вами в ближайшее время
+        </p>
+        <form class="modal__form" id="universalForm" novalidate>
+          <ul class="modal__list list-reset">
+            <li class="modal__item">
+              <label for="name"></label>
+              <input class="modal__input" type="text" id="name" name="name" placeholder="Ваше имя" required>
+            </li>
+            <li class="modal__item">
+              <label for="phone"></label>
+              <input class="modal__input" type="tel" id="phone" name="phone" placeholder="Ваш номер телефона" required>
+            </li>
+            <li class="modal__item">
+              <label for="email"></label>
+              <input class="modal__input" type="email" id="email" name="email" placeholder="Ваш email" required>
+            </li>
+            <li class="modal__item">
+              <label for="contactMethod"></label>
+              <select class="modal__select" id="contactMethod" name="contactMethod" required>
+                <option value="" disabled selected>Как с вами связаться?</option>
+                <option value="email">Email</option>
+                <option value="phone">Телефон</option>
+                <option value="messenger">Мессенджер</option>
+              </select>
+            </li>
+            <li class="modal__item modal__item--textarea">
+              <label for="taskDescription"></label>
+              <textarea class="modal__textarea" id="taskDescription" name="taskDescription"
+                placeholder="Краткое описание задачи" required></textarea>
+            </li>
+            <li class="modal__item modal__item--checkbox">
+              <div class="checkbox-container">
+                <input class="modal__input-checkbox" type="checkbox" id="agreement" name="agreement" required>
+                <label class="modal__label--checkbox" for="agreement">Согласие с политикой конфиденциальности</label>
+              </div>
+            </li>
+          </ul>
+          <div class="modal__form-btn-container">
+            <button class="modal__form-btn secondary-btn btn-reset" type="submit">Отправить</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <!-- success-modal -->
+  <div class="success-modal" id="successModal">
+    <div class="success-modal__content">
+      <button class="success-modal__close" id="closeSuccessModal">
+        &times;
+      </button>
+      <h2 class="success-modal__title title-reset">Я получил <span>вашу</span> заявку</h2>
+      <p class="success-modal__descr descr-reset">Свяжусь с вами в ближайшее время</p>
+      <div class="success-modal__btn-container">
+        <button class="success-modal__button primary-link btn-reset" id="successModalOkButton">Вернуться</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Подключение Cleave.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/cleave.min.js"></script>
+  <!-- Подключение phone-type-formatter для России -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.6.0/addons/cleave-phone.ru.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>

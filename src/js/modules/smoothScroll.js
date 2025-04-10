@@ -1,3 +1,5 @@
+import { closeBurgerMenu } from "./utils.js";
+
 export const initSmoothScroll = () => {
   const smoothScroll = (targetId) => {
     const targetElement = document.querySelector(targetId);

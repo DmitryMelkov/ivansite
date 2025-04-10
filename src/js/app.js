@@ -13,18 +13,21 @@ import { setupSuccessModal } from './modules/successModal.js';
 import { initFancybox } from './modules/fancyboxgallery.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Инициализация бургер-меню (есть на всех страницах)
   burgerMenu();
 
-  // Настройка универсальной модалки
-  setupFormModal();
+  // Инициализация модалки только если она есть на странице
+  if (document.getElementById('universalModal')) {
+    setupFormModal();
+    initFormHandler('universalForm');
+  }
 
-  // Инициализация обработчика формы модалки
-  initFormHandler('universalForm');
+  // Инициализация слайдера "Обо мне" только если он есть
+  if (document.querySelector('.about-me__slider')) {
+    aboutMeSlider();
+  }
 
-  // Слайдер в секции обо мне
-  aboutMeSlider();
-
-  // Инициализация логики активной карточки
+  // Инициализация активных карточек
   initActiveCard();
 
   // Инициализация табов
@@ -33,11 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
   // Инициализация модальных окон кейсов
   initCasesModals();
 
-  // Инициализация обработчика формы discussProject
-  initFormHandler('discussForm');
+  // Инициализация формы обсуждения проекта
+  if (document.getElementById('discussForm')) {
+    initFormHandler('discussForm');
+  }
 
-  // слайдер отзывов
-  reviewsSlider();
+  // Инициализация слайдера отзывов
+  if (document.querySelector('.reviews__slider')) {
+    reviewsSlider();
+  }
 
   // Инициализация модальных окон отзывов
   initReviewsModals();
@@ -45,15 +52,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Инициализация аккордеона
   initAccordion();
 
-  // Инициализация валидации формы
-  initFormHandler('questionsForm');
+  // Инициализация формы вопросов
+  if (document.getElementById('questionsForm')) {
+    initFormHandler('questionsForm');
+  }
 
   // Инициализация плавного скролла
   initSmoothScroll();
 
-  // Инициализация модального окна успешной отправки формы
+  // Инициализация модального окна успеха
   setupSuccessModal();
 
-  // Инициализируем Fancybox
+  // Инициализация Fancybox
   initFancybox();
 });

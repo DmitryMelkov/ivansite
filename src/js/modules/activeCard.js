@@ -2,6 +2,7 @@ export function initActiveCard() {
   const title = document.querySelector('#sticky-title');
   const items = document.querySelectorAll('.creation-website__item');
 
+  if (title) {
   // Функция для обновления активной карточки
   const updateActiveItem = () => {
     let referencePoint;
@@ -50,4 +51,7 @@ export function initActiveCard() {
 
   // Инициализация при загрузке страницы
   updateActiveItem();
+  }
+
+
 }

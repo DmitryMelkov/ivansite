@@ -4888,6 +4888,74 @@ input[type=number] {
     margin-bottom: 20px;
   }
 }
+.error {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  background-image: url("../img/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+}
+.error-body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.error-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.error__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex: 1;
+}
+.error__title {
+  text-align: center;
+  font-size: 80px;
+  line-height: 90%;
+  font-weight: 400;
+  color: #25262F;
+  font-family: "Manrope", sans-serif;
+  margin-bottom: 30px;
+}
+.error__title span {
+  color: #415be7;
+}
+.error__descr {
+  margin-bottom: 30px;
+  text-align: center;
+}
+.error__link-container {
+  display: flex;
+  justify-content: center;
+}
+.error__link {
+  padding: 15px 40px;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: #FFF;
+}
+
+@media (max-width: 1279px) {
+  .error__title {
+    margin-bottom: 20px;
+    font-size: 60;
+  }
+  .error__link {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
 .footer {
   padding-top: 40px;
   padding-bottom: 20px;

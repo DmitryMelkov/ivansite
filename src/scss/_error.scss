@@ -1,0 +1,70 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+
+.error {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 60px;
+  background-image: url("../img/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  &-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  &-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1;
+  }
+  &__title {
+    text-align: center;
+    @include text-style(80px, 90%, 400, $black);
+    font-family: 'Manrope', sans-serif;
+    span {
+      color: $qing-dynasty-dragon;
+    }
+    margin-bottom: 30px;
+  }
+  &__descr {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  &__link-container {
+    display: flex;
+    justify-content: center;
+  }
+  &__link {
+    padding: 15px 40px;
+    @include text-style(16px, 22px, 400, $white);
+
+  }
+
+}
+
+@media (max-width: 1279px) {
+  .error {
+    &__title {
+      margin-bottom: 20px;
+      font-size: 60;
+    }
+    &__link {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
