@@ -1,0 +1,124 @@
+@use '_variables' as *;
+@use '_mixins' as *;
+
+.success-modal {
+  visibility: hidden;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  &__content {
+    margin: 10% auto;
+    padding: 40px;
+    width: 100%;
+    max-width: 646px;
+    position: relative;
+
+    background-color: $white;
+    border-radius: 10px;
+    border: 1px solid #888;
+
+    transform: translateY(-20px);
+    transition: transform 0.3s ease-in-out;
+  }
+  &__close {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -16px;
+    right: -22px;
+    z-index: 1;
+
+    font-size: 30px;
+    color: $qing-dynasty-dragon;
+
+    background-color: $white;
+    border: 2px solid $qing-dynasty-dragon;
+    border-radius: 50%;
+
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+    @media (min-width: 1024px) {
+      &:hover {
+        background-color: $qing-dynasty-dragon;
+        color: $white;
+      }
+    }
+    &:active {
+      background-color: $qing-dynasty-dragon;
+      color: $white;
+    }
+    &:focus-visible {
+      background-color: $qing-dynasty-dragon;
+      color: $white;
+      outline: none;
+    }
+  }
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    span {
+      color: $qing-dynasty-dragon;
+    }
+  }
+  &__descr {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__btn-container {
+    display: flex;
+    justify-content: center;
+  }
+  &__button {
+    max-width: 274px;
+    width: 100%;
+    padding: 10px;
+    @include text-style(16px, 20px, 400, $white);
+  }
+}
+
+
+.success-modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.success-modal.show .success-modal__content {
+  transform: translateY(0);
+}
+
+@media (max-width: 1279px) {
+  .success-modal {
+    &__content {
+      max-width: 570px;
+    }
+    &__button {
+      font-size: 14px;
+      line-height: 18px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .success-modal {
+    &__content {
+      max-width: 280px;
+    }
+    &__title {
+      margin-bottom: 15px;
+    }
+    &__descr {
+      margin-bottom: 20px;
+    }
+
+  }
+}

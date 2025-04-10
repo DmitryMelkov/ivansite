@@ -1,5 +1,6 @@
 import { clearErrors, handleValidation, validateForm } from './formValidate.js';
 import { closeModal } from './formModal.js';
+import { openSuccessModal } from './successModal.js';
 
 export function initFormHandler(formId) {
   const contactForm = document.getElementById(formId);
@@ -47,23 +48,29 @@ export function initFormHandler(formId) {
       // Валидация формы
       const isValid = validateForm(contactForm, formId);
       if (isValid) {
-        // Если форма валидна, собираем данные
         const formData = new FormData(contactForm);
         const data = {};
 
         formData.forEach((value, key) => {
           const input = contactForm.querySelector(`[name="${key}"]`);
           if (input && input.cleave) {
-            data[key] = input.cleave.getRawValue(); // Используем "чистое" значение
+            data[key] = input.cleave.getRawValue();
           } else {
-            data[key] = value; // Используем стандартное значение
+            data[key] = value;
           }
         });
 
-        console.log(data); // Вывод данных формы в консоль
+        // Здесь можно добавить реальную отправку формы через fetch
+        console.log('Form data:', data);
 
-        // Закрываем модальное окно после отправки формы
+        // Очищаем форму
+        contactForm.reset();
+
+        // Закрываем текущее модальное окно
         closeModal();
+
+        // Показываем модалку успеха
+        openSuccessModal();
       }
     });
   } else {
