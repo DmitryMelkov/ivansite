@@ -12,12 +12,14 @@
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.7);
   opacity: 0;
-  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    visibility 0.3s ease-in-out;
   &__content {
     margin: 10% auto;
     padding: 40px;
     width: 100%;
-    max-width: 570px;
+    max-width: 646px;
     position: relative;
 
     background-color: $white;
@@ -45,7 +47,9 @@
     border: 2px solid $qing-dynasty-dragon;
     border-radius: 50%;
 
-    transition: background-color 0.3s, color 0.3s;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
     cursor: pointer;
     @media (min-width: 1024px) {
       &:hover {
@@ -63,6 +67,63 @@
       outline: none;
     }
   }
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    span {
+      color: $qing-dynasty-dragon;
+    }
+  }
+  &__descr {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  &__link {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+    @include text-style(20px, 100%, 500, $black);
+    font-family: 'Manrope', sans-serif;
+    transition: opacity 0.3s ease-in-out;
+    @media (min-width: 1024px) {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    &:active {
+      opacity: 0.5;
+    }
+    &:focus-visible {
+      opacity: 0.5;
+    }
+  }
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+  &__social-link {
+    outline: none;
+  }
+  &__social-link svg {
+    width: 58px;
+    height: 58px;
+    color: $qing-dynasty-dragon;
+    transition: color 0.3s ease-in-out;
+  }
+  @media (min-width: 1024px) {
+    &__social-link:hover svg {
+      color: $pinball;
+    }
+  }
+  &__social-link:active svg {
+    color: $pinball;
+  }
+  &__social-link:focus-visible svg {
+    color: $pinball;
+  }
 }
 
 .error-send-form.show {
@@ -72,4 +133,34 @@
 
 .error-send-form.show .error-send-form__content {
   transform: translateY(0);
+}
+
+@media (max-width: 1279px) {
+  .error-send-form {
+    &__content {
+      max-width: 570px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .error-send-form {
+    &__content {
+      padding: 20px;
+      max-width: 280px;
+    }
+    &__title {
+      margin-bottom: 15px;
+    }
+    &__descr {
+      margin-bottom: 15px;
+    }
+    &__social {
+      gap: 20px;
+    }
+    &__social-link svg {
+      width: 45px;
+      height: 45px;
+    }
+  }
 }

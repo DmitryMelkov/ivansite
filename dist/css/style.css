@@ -6413,7 +6413,7 @@ input[type=number] {
   margin: 10% auto;
   padding: 40px;
   width: 100%;
-  max-width: 570px;
+  max-width: 646px;
   position: relative;
   background-color: #FFF;
   border-radius: 10px;
@@ -6466,6 +6466,74 @@ input[type=number] {
   color: #FFF;
   outline: none;
 }
+.error-send-form__title {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.error-send-form__title span {
+  color: #415be7;
+}
+.error-send-form__descr {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.error-send-form__link {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+  line-height: 100%;
+  font-weight: 500;
+  color: #25262F;
+  font-family: "Manrope", sans-serif;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+@media (min-width: 1024px) {
+  .error-send-form__link:hover {
+    opacity: 0.5;
+  }
+}
+.error-send-form__link:active {
+  opacity: 0.5;
+}
+.error-send-form__link:focus-visible {
+  opacity: 0.5;
+}
+.error-send-form__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 25px;
+}
+.error-send-form__social-link {
+  outline: none;
+}
+.error-send-form__social-link svg {
+  width: 58px;
+  height: 58px;
+  color: #415be7;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+@media (min-width: 1024px) {
+  .error-send-form__social-link:hover svg {
+    color: #d3d3d3;
+  }
+}
+.error-send-form__social-link:active svg {
+  color: #d3d3d3;
+}
+.error-send-form__social-link:focus-visible svg {
+  color: #d3d3d3;
+}
 
 .error-send-form.show {
   visibility: visible;
@@ -6478,6 +6546,30 @@ input[type=number] {
           transform: translateY(0);
 }
 
+@media (max-width: 1279px) {
+  .error-send-form__content {
+    max-width: 570px;
+  }
+}
+@media (max-width: 767px) {
+  .error-send-form__content {
+    padding: 20px;
+    max-width: 280px;
+  }
+  .error-send-form__title {
+    margin-bottom: 15px;
+  }
+  .error-send-form__descr {
+    margin-bottom: 15px;
+  }
+  .error-send-form__social {
+    gap: 20px;
+  }
+  .error-send-form__social-link svg {
+    width: 45px;
+    height: 45px;
+  }
+}
 .footer {
   padding-top: 40px;
   padding-bottom: 20px;
