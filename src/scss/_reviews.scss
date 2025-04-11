@@ -110,9 +110,17 @@
       width: 30px;
       height: 30px;
     }
+    &__descr {
+      margin-bottom: 30px;
+    }
     &__slide-descr {
       margin-bottom: 10px;
       font-size: 12px;
+      display: -webkit-box;
+      -webkit-line-clamp: 7; /* Ограничиваем количество строк */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     &__link-container {
       flex-direction: column-reverse;

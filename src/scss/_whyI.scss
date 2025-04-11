@@ -91,8 +91,20 @@
 
 @media (max-width: 1279px) {
   .why-i {
+    margin-top: 16px;
+    &__title {
+      margin-bottom: 12px;
+    }
+    &__list {
+      gap: 15px;
+    }
     &__item {
-      min-width: 140px;
+      min-height: 140px;
+      grid-column: span 6;
+    }
+    &__item-descr {
+      font-size: 14px;
+      line-height: 18px;
     }
     &__svg {
       width: 30px;
@@ -101,7 +113,7 @@
   }
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 767px) {
   .why-i {
     &__item {
       min-height: auto;

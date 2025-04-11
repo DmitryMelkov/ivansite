@@ -55,30 +55,37 @@ export function initFormHandler(formId) {
 
           const formData = new FormData(contactForm);
           const data = {};
+          const formTitle = contactForm.querySelector('h2, h3, .form-title')?.textContent || 'Форма';
+          data.formTitle = formTitle;
 
           formData.forEach((value, key) => {
             const input = contactForm.querySelector(`[name="${key}"]`);
             data[key] = input?.cleave?.getRawValue() || value;
           });
 
-          const response = await fetch('https://jsonplaceholder.typicode.com/posts', {
+          const response = await fetch('/local/test.php', {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+              'Content-Type': 'application/json',
+              'X-Requested-With': 'XMLHttpRequest',
+            },
             body: JSON.stringify(data),
           });
 
-          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
-
           const result = await response.json();
-          console.log('Успешный ответ:', result);
 
+          if (!response.ok || !result.success) {
+            throw new Error(result.message || 'Ошибка отправки формы');
+          }
+
+          console.log('Форма отправлена:', result);
           contactForm.reset();
           closeModal();
           openSuccessModal();
         } catch (error) {
-          console.error('Ошибка:', error);
+          console.error('Ошибка:', error.message);
           closeModal();
-          openErrorSendFormModal(); // Используем функцию открытия
+          openErrorSendFormModal(error.message);
         } finally {
           if (submitBtn) {
             submitBtn.textContent = originalBtnText;

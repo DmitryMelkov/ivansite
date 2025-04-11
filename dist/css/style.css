@@ -2522,7 +2522,7 @@ input::placeholder {
 }
 @media (max-width: 1279px) {
   .container {
-    max-width: 688px;
+    max-width: 708px;
   }
 }
 
@@ -3238,12 +3238,12 @@ input[type=number] {
     min-width: 100px;
   }
   .header__nav {
-    padding: 10px 25px;
+    padding: 6px 25px;
     max-width: 355px;
   }
   .header__link {
-    font-size: 12px;
-    line-height: 12px;
+    font-size: 10px;
+    line-height: 10px;
   }
   .header__btn {
     padding: 8px 25px;
@@ -3460,7 +3460,8 @@ input[type=number] {
 @media (max-width: 1279px) {
   .intro {
     padding-top: 85px;
-    min-height: 426px;
+    margin-bottom: 42px;
+    min-height: 294px;
   }
   .intro__container {
     gap: 20px;
@@ -3479,11 +3480,12 @@ input[type=number] {
     line-height: 18px;
   }
   .intro__svg-1 {
-    top: 70%;
+    top: 66%;
+    left: 25px;
   }
   .intro__svg-2 {
-    top: 65%;
-    right: 6%;
+    top: 56%;
+    right: 2%;
   }
   .intro__svg-3 {
     display: none;
@@ -3619,12 +3621,23 @@ input[type=number] {
   }
   .about-me__descr {
     max-width: 396px;
-    margin-bottom: 10px;
+    margin-bottom: 23px;
     font-size: 14px;
     line-height: 18px;
   }
+  .about-me__subtitle {
+    margin-left: 19px;
+    margin-top: 35px;
+  }
   .about-me__right-img {
     max-width: 216px;
+  }
+  .about-me__button-prev, .about-me__button-next {
+    top: 36% !important;
+  }
+  .about-me__button-prev svg, .about-me__button-next svg {
+    width: 7px;
+    height: 12px;
   }
 }
 @media (max-width: 767px) {
@@ -3779,15 +3792,30 @@ input[type=number] {
 }
 
 @media (max-width: 1279px) {
+  .why-i {
+    margin-top: 16px;
+  }
+  .why-i__title {
+    margin-bottom: 12px;
+  }
+  .why-i__list {
+    gap: 15px;
+  }
   .why-i__item {
-    min-width: 140px;
+    min-height: 140px;
+    -ms-grid-column-span: 6;
+    grid-column: span 6;
+  }
+  .why-i__item-descr {
+    font-size: 14px;
+    line-height: 18px;
   }
   .why-i__svg {
     width: 30px;
     height: 30px;
   }
 }
-@media (max-width: 1279px) {
+@media (max-width: 767px) {
   .why-i__item {
     min-height: auto;
     -ms-grid-column-span: 12;
@@ -4004,6 +4032,9 @@ input[type=number] {
 }
 
 @media (max-width: 1279px) {
+  .what-can-i-do {
+    padding-top: 81px;
+  }
   .what-can-i-do__subtitle {
     padding: 20px;
     font-size: 16px;
@@ -4011,6 +4042,7 @@ input[type=number] {
   }
   .what-can-i-do__price-list {
     padding: 20px;
+    gap: 20px;
   }
   .what-can-i-do__price-description, .what-can-i-do__price-value {
     font-size: 14px;
@@ -4018,6 +4050,8 @@ input[type=number] {
   }
   .what-can-i-do__result {
     padding: 20px;
+    padding-top: 15px;
+    padding-bottom: 30px;
   }
   .what-can-i-do__result-text {
     max-width: 230px;
@@ -4189,7 +4223,8 @@ input[type=number] {
 
 @media (max-width: 1279px) {
   .creation-or-refinement {
-    min-height: 245px;
+    margin-top: 73px;
+    min-height: 231px;
   }
   .creation-or-refinement__btn {
     padding: 10px 37px;
@@ -4384,20 +4419,34 @@ input[type=number] {
   .creation-website {
     padding-top: 29px;
   }
+  .creation-website__right {
+    max-width: 334px;
+  }
   .creation-website__title {
     max-width: 288px;
   }
-  .creation-website__item {
-    padding: 20px;
+  .creation-website__list {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+  }
+  .creation-website__item {
+    width: 100%;
+    padding: 20px;
+    gap: 10px;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+  .creation-website__item-list {
+    max-width: 227px;
   }
   .creation-website__item-list-item {
     font-size: 14px;
     line-height: 18px;
   }
   .creation-website__result {
+    margin-top: 10px;
     padding: 20px;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4679,6 +4728,12 @@ input[type=number] {
 }
 
 @media (max-width: 1279px) {
+  .tabs {
+    margin-bottom: 18px;
+  }
+  .cases {
+    padding-top: 73px;
+  }
   .cases__item-descr-content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4688,6 +4743,20 @@ input[type=number] {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 15px;
+  }
+  .cases__item {
+    min-height: 250px;
+  }
+  .cases__item-btn {
+    padding: 5px 20px;
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .cases__list {
+    margin-bottom: 25px;
+  }
+  .cases__btn-container {
+    padding-bottom: 46px;
   }
 }
 @media (max-width: 767px) {
@@ -5165,9 +5234,24 @@ input[type=number] {
 }
 
 @media (max-width: 1279px) {
+  .discuss-project {
+    min-height: 414px;
+  }
+  .discuss-project__container {
+    padding: 0 10px;
+  }
+  .discuss-project__list {
+    gap: 5px;
+  }
   .discuss-project__social-link svg {
     width: 43px;
     height: 43px;
+  }
+  .discuss-project__input {
+    height: 32px;
+  }
+  .discuss-project__textarea {
+    height: 53px;
   }
   .discuss-project__input, .discuss-project__textarea {
     font-size: 12px;
@@ -5189,9 +5273,13 @@ input[type=number] {
   }
   .discuss-project__select {
     font-size: 14px;
+    height: 32px;
   }
   .discuss-project__form-btn {
     font-size: 14px;
+  }
+  .discuss-project__social {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 767px) {
@@ -5364,9 +5452,17 @@ input[type=number] {
     width: 30px;
     height: 30px;
   }
+  .reviews__descr {
+    margin-bottom: 30px;
+  }
   .reviews__slide-descr {
     margin-bottom: 10px;
     font-size: 12px;
+    display: -webkit-box;
+    -webkit-line-clamp: 7; /* Ограничиваем количество строк */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .reviews__link-container {
     -webkit-box-orient: vertical;
@@ -5752,11 +5848,15 @@ input[type=number] {
 
 @media (max-width: 1279px) {
   .answers {
+    margin-top: 0;
     padding-top: 40px;
-    padding-bottom: 70px;
+    padding-bottom: 85px;
+  }
+  .answers__accordion-item {
+    padding: 15px;
   }
 }
-@media (max-width: 1279px) {
+@media (max-width: 767px) {
   .answers {
     padding-top: 30px;
     padding-bottom: 30px;

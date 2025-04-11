@@ -145,6 +145,7 @@
 
 @media (max-width: 1279px) {
   .what-can-i-do {
+    padding-top: 81px;
     &__subtitle {
       padding: 20px;
       font-size: 16px;
@@ -152,6 +153,7 @@
     }
     &__price-list {
       padding: 20px;
+      gap: 20px;
     }
     &__price-description,
     &__price-value {
@@ -160,6 +162,8 @@
     }
     &__result {
       padding: 20px;
+      padding-top: 15px;
+      padding-bottom: 30px;
     }
     &__result-text {
       max-width: 230px;

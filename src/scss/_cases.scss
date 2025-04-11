@@ -178,13 +178,30 @@
 }
 
 @media (max-width: 1279px) {
+  .tabs {
+    margin-bottom: 18px;
+  }
   .cases {
+    padding-top: 73px;
     &__item-descr-content {
       flex-direction: column;
       align-items: flex-start;
       gap: 15px;
     }
-
+    &__item {
+      min-height: 250px;
+    }
+    &__item-btn {
+      padding: 5px 20px;
+      font-size: 14px;
+      line-height: 14px;
+    }
+    &__list {
+      margin-bottom: 25px;
+    }
+    &__btn-container {
+      padding-bottom: 46px;
+    }
   }
 }
 

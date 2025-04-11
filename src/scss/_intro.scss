@@ -39,7 +39,8 @@
     padding: 15px 40px;
     @include text-style(16px, 20px, 400, $white);
     border-radius: 10px;
-    background: linear-gradient(90deg, $qing-dynasty-dragon 0%, rgba($qing-dynasty-dragon, 0.8) 100%) padding-box,
+    background:
+      linear-gradient(90deg, $qing-dynasty-dragon 0%, rgba($qing-dynasty-dragon, 0.8) 100%) padding-box,
       linear-gradient(90deg, $qing-dynasty-dragon 0%, $qing-dynasty-dragon 93%, rgba($qing-dynasty-dragon, 0.3) 100%);
     transition: opacity 0.9s ease-in-out;
     @media (min-width: 1024px) {
@@ -90,7 +91,8 @@
 @media (max-width: 1279px) {
   .intro {
     padding-top: 85px;
-    min-height: 426px;
+    margin-bottom: 42px;
+    min-height: 294px;
     &__container {
       gap: 20px;
     }
@@ -108,11 +110,12 @@
       line-height: 18px;
     }
     &__svg-1 {
-      top: 70%;
+      top: 66%;
+      left: 25px;
     }
     &__svg-2 {
-      top: 65%;
-      right: 6%;
+      top: 56%;
+      right: 2%;
     }
     &__svg-3 {
       display: none;
