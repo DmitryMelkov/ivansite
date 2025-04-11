@@ -115,9 +115,14 @@
 
 @media (max-width: 767px) {
   .why-i {
+    margin-top: 60px;
     &__item {
       min-height: auto;
       grid-column: span 12;
+      padding: 15px;
+    }
+    &__title {
+      margin-bottom: 35px;
     }
   }
 }

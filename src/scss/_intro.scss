@@ -125,6 +125,10 @@
 
 @media (max-width: 767px) {
   .intro {
+    min-height: 313px;
+    &__container {
+      gap: 15px;
+    }
     &__title {
       font-size: 30px;
     }

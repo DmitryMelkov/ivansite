@@ -116,10 +116,12 @@
     &__right-img {
       max-width: 216px;
     }
-    &__button-prev, &__button-next {
+    &__button-prev,
+    &__button-next {
       top: 36% !important;
     }
-    &__button-prev svg, &__button-next svg {
+    &__button-prev svg,
+    &__button-next svg {
       width: 7px;
       height: 12px;
     }
@@ -131,7 +133,7 @@
     padding-top: 20px;
     &__left {
       max-width: 280px;
-      padding: 20px;
+      padding: 19px;
     }
     &__title {
       max-width: max-content;
@@ -141,6 +143,28 @@
     }
     &__right-img {
       max-width: max-content;
+    }
+    &__slider {
+      padding-left: 30px;
+      padding-right: 30px;
+      margin: 0 auto;
+    }
+    &__button-prev {
+      left: 0 !important;
+    }
+    &__button-next {
+      right: 0 !important;
+    }
+    &__right-img {
+      min-height: 280px;
+    }
+    &__subtitle {
+      margin-left: 0;
+      margin-top: 26px;
+      margin-bottom: 30px;
+    }
+    &__slide img {
+      max-height: 280px;
     }
   }
 }
@@ -154,5 +178,7 @@
     &__left {
       max-width: 397px;
     }
+
+
   }
 }

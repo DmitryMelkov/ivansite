@@ -201,6 +201,7 @@
 
 @media (max-width: 767px) {
   .what-can-i-do {
+    padding-top: 40px;
     &__price--ml {
       margin-left: 0;
       font-size: 12px;
@@ -211,6 +212,7 @@
       line-height: 16px;
     }
     &__result {
+      padding-bottom: 10px;
       flex-direction: column;
     }
     &__result-text {
@@ -228,6 +230,8 @@
       justify-content: flex-end;
     }
     &__cards {
+      margin-top: 22px;
+      gap: 10px;
       flex-direction: column;
     }
     &__cards-subtitle-container {
@@ -236,7 +240,7 @@
     }
     &__cards-item {
       width: 100%;
-      min-height: 248px;
+      min-height: 230px;
     }
     &__cards-item img {
 
@@ -244,10 +248,11 @@
 
     }
     &__seo {
+      gap: 40px;
       flex-direction: column;
     }
     &__seo-descr {
-      max-width: max-content;
+      max-width: 229px;
     }
   }
 }

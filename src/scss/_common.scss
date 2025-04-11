@@ -133,6 +133,10 @@ input::placeholder {
   @media (max-width: 1279px) {
     max-width: 708px;
   }
+  @media (max-width: 767px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 .section {
   padding-top: 70px;
@@ -286,4 +290,13 @@ input[type='number'] {
 
 .is-close-btn {
   right: -20px !important;
+  @media (max-width: 767px) {
+    right: 0 !important;
+    top: -25px !important;
+  }
+}
+
+.fancybox-image {
+  height: 90%;
+  width: 90%;
 }
