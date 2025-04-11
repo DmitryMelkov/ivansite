@@ -3084,8 +3084,8 @@ input[type=number] {
   display: none;
 }
 .header__nav {
-  padding: 15px 30px;
-  max-width: 467px;
+  padding: 12px 30px;
+  max-width: 437px;
   width: 100%;
   background-color: #FFF;
   border-radius: 20px;
@@ -3105,8 +3105,8 @@ input[type=number] {
   gap: 10px;
 }
 .header__link {
-  font-size: 14px;
-  line-height: 14px;
+  font-size: 12px;
+  line-height: 12px;
   font-weight: 400;
   color: #25262F;
   -webkit-transition: color 0.3s ease-in-out;
@@ -3362,7 +3362,7 @@ input[type=number] {
   background-position: center center;
   width: 100%;
   height: 100%;
-  min-height: 560px;
+  min-height: 544px;
 }
 .intro__container {
   min-height: inherit;
@@ -3428,8 +3428,8 @@ input[type=number] {
 }
 .intro__svg-1 {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 60px;
+  left: -53px;
   z-index: 0;
 }
 .intro__svg-1 svg {
@@ -3438,7 +3438,7 @@ input[type=number] {
 }
 .intro__svg-2 {
   position: absolute;
-  top: 6%;
+  top: 3%;
   right: 20%;
   z-index: 0;
 }
@@ -3448,8 +3448,8 @@ input[type=number] {
 }
 .intro__svg-3 {
   position: absolute;
-  bottom: 7%;
-  right: 0%;
+  bottom: 16%;
+  right: -62px;
   z-index: 0;
 }
 .intro__svg-3 svg {
@@ -3533,6 +3533,9 @@ input[type=number] {
   font-weight: 400;
   color: #25262F;
 }
+.about-me__descr:last-child {
+  margin-bottom: 0;
+}
 .about-me__right-img {
   max-width: 397px;
   width: 100%;
@@ -3542,6 +3545,7 @@ input[type=number] {
   border-radius: 15px;
 }
 .about-me__subtitle {
+  margin-left: 30px;
   margin-top: 40px;
   margin-bottom: 20px;
 }
@@ -3550,8 +3554,6 @@ input[type=number] {
 }
 .about-me__slider-container {
   position: relative;
-  padding-left: 50px;
-  padding-right: 50px;
   z-index: 0;
 }
 .about-me__slider {
@@ -3588,6 +3590,20 @@ input[type=number] {
 .about-me__slide:focus-visible {
   opacity: 0.5;
   outline: none;
+}
+.about-me__slide img {
+  max-height: 230px;
+}
+.about-me__button-prev {
+  left: -50px !important;
+}
+.about-me__button-next {
+  right: -50px !important;
+}
+.about-me__button-prev svg, .about-me__button-next svg {
+  width: 13px;
+  height: 25px;
+  color: #415be7 !important;
 }
 
 @media (max-width: 1279px) {
@@ -3741,6 +3757,7 @@ input[type=number] {
   height: 40px;
 }
 .why-i__item-descr {
+  max-width: 364px;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -4111,7 +4128,7 @@ input[type=number] {
   }
 }
 .creation-or-refinement {
-  margin-top: 100px;
+  margin-top: 111px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4132,7 +4149,7 @@ input[type=number] {
   border-radius: 15px 15px 0 0;
   width: 100%;
   height: 100%;
-  min-height: 355px;
+  min-height: 341px;
 }
 .creation-or-refinement__container {
   width: 100%;
@@ -4239,9 +4256,10 @@ input[type=number] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 .creation-website__item {
+  max-width: 563px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4270,7 +4288,7 @@ input[type=number] {
   gap: 20px;
 }
 .creation-website__item-list {
-  max-width: 378px;
+  max-width: 407px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4278,7 +4296,7 @@ input[type=number] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 15px;
+  gap: 10px;
 }
 .creation-website__item-list-item {
   position: relative;
@@ -4460,7 +4478,7 @@ input[type=number] {
   text-align: center;
 }
 .cases__list {
-  margin-bottom: 40px;
+  margin-bottom: 33px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[12];
@@ -4558,7 +4576,7 @@ input[type=number] {
   color: #25262F;
 }
 .cases__btn-container {
-  padding-bottom: 100px;
+  padding-bottom: 98px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4914,6 +4932,7 @@ input[type=number] {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
+  padding: 0 46px;
 }
 .discuss-project__left {
   display: -webkit-box;
@@ -4938,6 +4957,7 @@ input[type=number] {
   color: #FFF;
 }
 .discuss-project__social {
+  margin-bottom: 43px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -4950,8 +4970,8 @@ input[type=number] {
   outline: none;
 }
 .discuss-project__social-link svg {
-  width: 58px;
-  height: 58px;
+  width: 43px;
+  height: 43px;
   color: #FFF;
   -webkit-transition: color 0.3s ease-in-out;
   transition: color 0.3s ease-in-out;
@@ -5055,7 +5075,7 @@ input[type=number] {
   height: 72px;
 }
 .discuss-project__form-btn-container {
-  margin-top: 20px;
+  margin-top: 5px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5206,7 +5226,7 @@ input[type=number] {
   }
 }
 .reviews {
-  margin-top: -10px;
+  margin-top: -44px;
   padding-top: 65px;
   border-radius: 15px 15px 0 0;
   background-color: #f5f7f9;
@@ -5606,9 +5626,9 @@ input[type=number] {
   }
 }
 .answers {
-  margin-top: -10px;
+  margin-top: 2px;
   padding-top: 65px;
-  padding-bottom: 50px;
+  padding-bottom: 74px;
   border-radius: 15px 15px 0 0;
   background-color: #f5f7f9;
   -webkit-box-shadow: 0px -19px 18.6px 0px rgba(0, 0, 0, 0.05);
@@ -5625,7 +5645,7 @@ input[type=number] {
   text-align: center;
 }
 .answers__accordion {
-  margin-top: 30px;
+  margin-top: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -5633,10 +5653,10 @@ input[type=number] {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 20px;
+  gap: 15px;
 }
 .answers__accordion-item {
-  padding: 20px;
+  padding: 30px;
   background-color: #FFF;
   border-radius: 10px;
   border: 1px solid #e7e7ef;
@@ -5746,7 +5766,7 @@ input[type=number] {
   }
 }
 .questions {
-  padding-top: 40px;
+  padding-top: 38px;
   padding-bottom: 20px;
   background-image: url("../img/creation-or-refinement-bg.jpg");
   background-repeat: no-repeat;
@@ -5766,6 +5786,7 @@ input[type=number] {
   margin-bottom: 20px;
 }
 .questions__descr {
+  max-width: 372px;
   color: #FFF;
   margin-bottom: 25px;
 }
@@ -6571,7 +6592,7 @@ input[type=number] {
   }
 }
 .footer {
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 20px;
   background-image: url("../img/creation-or-refinement-bg.jpg");
   background-repeat: no-repeat;

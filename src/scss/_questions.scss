@@ -2,7 +2,7 @@
 @use '_mixins' as *;
 
 .questions {
-  padding-top: 40px;
+  padding-top: 38px;
   padding-bottom: 20px;
   background-image: url('../img/creation-or-refinement-bg.jpg');
   background-repeat: no-repeat;
@@ -21,6 +21,7 @@
     margin-bottom: 20px;
   }
   &__descr {
+    max-width: 372px;
     color: $white;
     margin-bottom: 25px;
   }

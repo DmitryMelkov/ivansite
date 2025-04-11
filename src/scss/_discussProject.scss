@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    padding: 0 46px;
   }
   &__left {
     display: flex;
@@ -33,6 +34,7 @@
     color: $white;
   }
   &__social {
+    margin-bottom: 43px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -41,8 +43,8 @@
     outline: none;
   }
   &__social-link svg {
-    width: 58px;
-    height: 58px;
+    width: 43px;
+    height: 43px;
     color: $white;
     transition: color 0.3s ease-in-out;
   }
@@ -114,7 +116,7 @@
     height: 72px;
   }
   &__form-btn-container {
-    margin-top: 20px;
+    margin-top: 5px;
     display: flex;
     justify-content: center;
     align-items: center;

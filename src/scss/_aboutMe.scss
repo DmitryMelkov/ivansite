@@ -28,6 +28,9 @@
     max-width: 491px;
     @include text-style(16px, 20px, 400, $black);
   }
+  &__descr:last-child {
+    margin-bottom: 0;
+  }
   &__right-img {
     max-width: 397px;
     width: 100%;
@@ -36,6 +39,7 @@
     border-radius: 15px;
   }
   &__subtitle {
+    margin-left: 30px;
     margin-top: 40px;
     margin-bottom: 20px;
     span {
@@ -44,8 +48,6 @@
   }
   &__slider-container {
     position: relative;
-    padding-left: 50px;
-    padding-right: 50px;
     z-index: 0;
   }
   &__slider {
@@ -73,6 +75,20 @@
       opacity: 0.5;
       outline: none;
     }
+  }
+  &__slide img {
+    max-height: 230px;
+  }
+  &__button-prev {
+    left: -50px !important;
+  }
+  &__button-next {
+    right: -50px !important;
+  }
+  &__button-prev svg, &__button-next svg {
+    width: 13px;
+    height: 25px;
+    color: $qing-dynasty-dragon !important;
   }
 }
 

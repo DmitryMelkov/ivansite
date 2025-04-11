@@ -17,7 +17,7 @@
     text-align: center;
   }
   &__list {
-    margin-bottom: 40px;
+    margin-bottom: 33px;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20px;
@@ -89,7 +89,7 @@
     @include text-style(16px, 22px, 400, $black);
   }
   &__btn-container {
-    padding-bottom: 100px;
+    padding-bottom: 98px;
     display: flex;
     justify-content: center;
   }

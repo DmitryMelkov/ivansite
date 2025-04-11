@@ -31,8 +31,8 @@
     display: none;
   }
   &__nav {
-    padding: 15px 30px;
-    max-width: 467px;
+    padding: 12px 30px;
+    max-width: 437px;
     width: 100%;
     background-color: $white;
     border-radius: 20px;
@@ -45,7 +45,7 @@
     gap: 10px;
   }
   &__link {
-    @include text-style(14px, 14px, 400, $black);
+    @include text-style(12px, 12px, 400, $black);
     transition: color 0.3s ease-in-out;
     @media (min-width: 1024px) {
       &:hover {

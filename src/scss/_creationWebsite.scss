@@ -39,9 +39,10 @@
   &__list {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
   }
   &__item {
+    max-width: 563px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -59,10 +60,10 @@
     gap: 20px;
   }
   &__item-list {
-    max-width: 378px;
+    max-width: 407px;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 10px;
   }
   &__item-list-item {
     position: relative;

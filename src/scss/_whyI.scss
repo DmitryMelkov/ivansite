@@ -69,6 +69,7 @@
     height: 40px;
   }
   &__item-descr {
+    max-width: 364px;
     @include text-style(16px, 20px, 400, $black);
     transition: color 0.3s ease-in-out;
   }
